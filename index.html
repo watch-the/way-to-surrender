@@ -1,0 +1,550 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap' rel='stylesheet' type='text/css' /><link href='https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&display=swap' rel='stylesheet' type='text/css' /><link href='https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --head: 'Crimson Text';
+  --body: 'Alegreya', sans-serif;
+  --mono: 'Source Code Pro';
+  font-family: var(--body);
+  font-size: 12pt;
+
+  --offwhite: #fcf5e5;
+  --green: #e0e5c1;
+  --yellow: #c9ad6a;
+  --red: #822000;
+  --purple: #704cd9;
+}
+
+/** Background **/
+
+content, .typora-export-content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  background-image: url("file:///C://Users//danny//AppData//Roaming//Typora/themes/torillic/torillic-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+.typora-export-content {
+  top: 0;
+}
+content:after, .typora-export-content:after {
+  content: "Background: Dmitry Demidov via Pexels [#3843969]";
+  position: fixed;
+  bottom: 1cm;
+  left: 0;
+  width: 6.5cm;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: -1;
+  font-size: 8pt;
+  padding: 2mm 3mm;
+  border-radius: 0 2mm 2mm 0;
+}
+
+/** Page **/
+#write, #typora-source {
+  position: relative;
+  margin: 4rem auto;
+  width: 21cm;
+  min-height: 80vh;
+  padding: 2cm;
+  overflow-y: hidden;
+  box-shadow:
+    inset 0cm -0cm 0.1cm 0.05cm rgba(0, 0, 0, 0.1),
+    1cm 1cm 1cm 1cm rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  background-image: url("https://www.dndbeyond.com/content/1-0-1895-0/skins/waterdeep/images/mon-summary/paper-texture.png");
+  background-color: var(--offwhite);
+  /* Add columns */
+  column-count: 2;
+  column-gap: 0.5cm;
+  column-width: 8cm;
+}
+#typora-source {
+  font-family: var(--mono) !important;
+  column-count: 1 !important;
+  column-width: auto !important;
+}
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre {
+  width: auto;
+}
+#write > *:first-child {
+  margin-block-start: 0;
+}
+.ty-on-typewriter-mode #write {
+  column-count: 1;
+  padding-bottom: 50%;
+}
+
+/** Responsivity **/
+/* Compress for small windows */
+@media only screen and (max-width: 22cm) {
+  #write, #typora-source {
+    column-count: 1;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+  }
+}
+/* Hide background credit if there's no width */
+@media only screen and (max-width: 37cm) {
+  content:after, .typora-export-content:after {
+    left: -6.1cm
+  }
+}
+
+/** Export **/
+@media print {
+    content, .typora-export-content {
+      position: relative;
+      background: none;
+      overflow-y: visible;
+    }
+    content:after, .typora-export-content:after {
+      display: none;
+    }
+    #write, #typora-source {
+        min-height: 0;
+        padding: 0;
+        overflow-y: visible;
+        box-shadow: none;
+        background: none;
+    }
+}
+
+/** Headings **/
+
+/* All headings */
+h1, h2, h3, h4, h5, h6 {
+  margin-block-end: 2pt;
+  margin-block-start: 1em;
+  line-height: 1em;
+  break-inside: avoid;
+  break-after: avoid;
+}
+
+/* Major headings */
+h1, h2, h3, h4 {
+  font-family: var(--head);
+  font-weight: 700;
+  font-variant: small-caps;
+  color: var(--red);
+}
+
+/* Individual headings */
+h1 {
+  font-size: 36pt;
+  column-span: all;
+}
+
+h2 {
+  font-size: 28pt;
+  column-span: all;
+}
+
+h3 {
+  font-size: 24pt;
+}
+
+h4 {
+  font-size: 18pt;
+  border-bottom: 1pt solid var(--yellow);
+  border-bottom: 1pt solid var(--yellow);
+}
+h4 a {
+  text-decoration: none;
+}
+
+h5 {
+  font-size: 14pt;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12pt;
+}
+
+h6 {
+  font-size: 12pt;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+}
+
+hr {
+  /* Common to all hr's */
+  border-top: 2pt solid transparent;
+  border-bottom: 2pt solid transparent;
+  border-left-style: solid;
+  border-left-color: var(--red);
+
+  /* Top-level hr (aka page delineator) */
+  column-span: all;
+  border-left-width: 16cm;
+  margin-top: 18pt;
+  margin-bottom: 36pt;
+}
+
+blockquote hr {
+  /* Within a blockquote (aka fancy underline) */
+  column-span: none;
+  border-left-width: 6cm;
+  margin-top: 2pt;
+  margin-bottom: 2pt;
+}
+
+/** Body **/
+p {
+  margin-block-start: 2pt;
+  break-inside: avoid;
+}
+
+strong {
+  color: var(--red);
+}
+
+a {
+  color: var(--text-color);
+  text-decoration-color: var(--yellow);
+}
+a:visited {
+  text-decoration-color: var(--green);
+}
+a:hover {
+  color: var(--text-color);
+  text-decoration-color: var(--purple);
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+strong a {
+  color: var(--red);
+}
+
+del {
+  text-decoration-color: var(--red);
+}
+
+mark {
+  background-color: var(--green);
+}
+
+code, pre {
+  background: auto;
+  font-family: var(--mono);
+}
+
+ol, ul {
+  padding-left: 1rem;
+}
+
+li::marker {
+  font-weight: 700;
+  color: var(--red);
+}
+
+/** Tables **/
+table {
+  break-inside: avoid;
+}
+
+thead, th {
+  font-weight: 700;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--green);
+}
+
+blockquote tbody tr:nth-child(odd), pre blockquote tbody tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+td, th {
+  padding: 3pt 6pt;
+}
+
+/** Blocks **/
+pre, pre.md-meta-block {
+  background-color: var(--green);
+  padding: 6pt;
+}
+
+blockquote {
+  background-color: var(--green);
+  padding: 12pt;
+  border-top: 3pt solid var(--red);
+  border-bottom: 3pt solid var(--red);
+  break-inside: avoid;
+}
+
+blockquote blockquote {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/** Images **/
+
+.md-image {
+  z-index: 0;
+}
+
+.md-image:before {
+  position: absolute;
+  top: -1.5cm;
+  left: -1.5cm;
+  right: -1.5cm;
+  bottom: -0.5cm;
+  background-image: url("file:///C://Users//danny//AppData//Roaming//Typora/themes/torillic/splash.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  content: " ";
+  z-index: -1;
+}
+.on-focus-mode .md-image:before {
+  opacity: 0.2;
+}
+
+
+</style><title>index</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><p><img src="./assets/caughy-up-now.webp" referrerpolicy="no-referrer" alt="caughy-up-now"></p><p>&nbsp;</p><iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/gyttv4NHJGyp/"></iframe><p>&nbsp;</p><p><strong><span>Revelation 3.10</span></strong>
+<span>Because thou hast kept the word of my patience, I also will keep thee from the hour of temptation, which shall come upon all the world, to try them that dwell upon the earth.</span></p><hr /><p><strong><span>Revelation 4.1</span></strong>
+<span>After this I looked, and, behold, a door was opened in heaven: and the first voice which I heard was as it were of a trumpet talking with me; which said, Come up hither, and I will shew thee things which must be hereafter.</span></p><p><strong><span>Revelation 4.2</span></strong>
+<span>And immediately I was in the spirit: and, behold, a throne was set in heaven, and one sat on the throne.</span></p><p><strong><span>Revelation 4.3</span></strong>
+<span>And he that sat was to look upon like a jasper and a sardine stone: and there was a rainbow round about the throne, in sight like unto an emerald.</span></p><p><strong><span>Revelation 4.4</span></strong>
+<span>And round about the throne were four and twenty seats: and upon the seats I saw four and twenty </span><font color="#00b050"><span>elders</span></font><span> sitting, clothed in white raiment; and they had on their heads crowns of gold.</span></p><hr /><p><strong><span>Revelation 4.10</span></strong>
+<span>The four and twenty </span><font color="#00b050"><span>elders</span></font><span> fall down before him that sat on the throne, and worship him that liveth for ever and ever, and cast their crowns before the throne, saying,</span></p><p><strong><span>Revelation 4.11</span></strong>
+<span>Thou art worthy, O Lord, to receive glory and honour and power: for thou hast created all things, and for thy pleasure they are and were created.</span></p><hr /><p><strong><span>Exodus 23.10-11</span></strong>
+<span>10 And six years thou shalt sow thy land, and shalt gather in the fruits thereof:</span></p><p><span>11 But the seventh </span><em><span>year</span></em><span> thou shalt let it rest and lie still; that the poor of thy people may eat: and what they leave the beasts of the field shall eat. In like manner thou shalt deal with thy vineyard, </span><em><span>and</span></em><span> with thy oliveyard.</span></p><hr /><p><strong><span>Leviticus 23.22</span></strong>
+<span>22  And when ye reap the harvest of your land, thou shalt not make clean riddance of the corners of thy field when thou reapest, neither shalt thou gather any gleaning of thy harvest: thou shalt leave them unto the poor, and to the stranger: I </span><em><span>am</span></em><span> the Lord your God.</span></p><hr /><p><strong><span>Matthew 24.29</span></strong>
+<span>Immediately after the tribulation of those days shall the sun be darkened, and the moon shall not give her light, and the stars shall fall from heaven, and the powers of the heavens shall be shaken:</span></p><p><strong><span>Matthew 24.30</span></strong>
+<span>And then shall appear the sign of the Son of man in heaven: and then shall all the tribes of the earth mourn, and they shall see the Son of man coming in the clouds of heaven with power and great glory.</span></p><p><strong><span>Matthew 24.31</span></strong>
+<span>And he shall send his angels with a great sound of a trumpet, and they shall gather together his elect from the four winds, from one end of heaven to the other.</span></p><hr /><p><strong><span>1 Thessalonians 5</span></strong>
+<span>BUT of the times and the seasons, brethren, ye have no need that I write unto you.</span></p><p><span>2 For yourselves know perfectly that the day of the Lord so cometh as a thief in the night.</span></p><p><span>3 For when they shall say, Peace and safety; then sudden destruction cometh upon them, as travail upon a woman with child; and they shall not escape.</span></p><p><span>4 But ye, brethren, are not in darkness, that that day should overtake you as a thief.</span></p><p><span>5 Ye are all the children of light, and the children of the day: we are not of the night, nor of darkness.</span></p><p><span>6 Therefore let us not sleep, as </span><em><span>do</span></em><span> others; but let us watch and be sober.</span></p><p><span>7 For they that sleep sleep in the night; and they that be drunken are drunken in the night.</span></p><p><span>8 But let us, who are of the day, be sober, putting on the breastplate of faith and love; and for an helmet, the hope of salvation.</span></p><p><span>9 For God hath not appointed us to wrath, but to obtain salvation by our Lord Jesus Christ,</span></p><p><span>10 Who died for us, that, whether we wake or sleep, we should live together with him.</span></p><p><span>11 Wherefore comfort yourselves together, and edify one another, even as also ye do.</span></p><p><span>12 And we beseech you, brethren, to know them which labour among you, and are over you in the Lord, and admonish you;</span></p><p><span>13 And to esteem them very highly in love for their work’s sake. </span><em><span>And</span></em><span> be at peace among yourselves.</span></p><p><span>14 Now we exhort you, brethren, warn them that are unruly, comfort the feebleminded, support the weak, be patient toward all </span><em><span>men</span></em><span>.</span></p><p><span>15 See that none render evil for evil unto any </span><em><span>man;</span></em><span> but ever follow that which is good, both among yourselves, and to all </span><em><span>men</span></em><span>.</span></p><p><span>16 Rejoice evermore.</span></p><p><span>17 Pray without ceasing.</span></p><p><span>18 In every thing give thanks: for this is the will of God in Christ Jesus concerning you.</span></p><p><span>19 Quench not the Spirit.</span></p><p><span>20 Despise not prophesyings.</span></p><p><span>21 Prove all things; hold fast that which is good.</span></p><p><span>22 Abstain from all appearance of evil.</span></p><p><span>23 And the very God of peace sanctify you wholly; and </span><em><span>I</span></em><span> </span><em><span>pray</span></em><span> </span><em><span>God</span></em><span> your whole spirit and soul and body be preserved blameless unto the coming of our Lord Jesus Christ.</span></p><p><span>24 Faithful </span><em><span>is</span></em><span> he that calleth you, who also will do </span><em><span>it</span></em><span>.</span></p><p><span>25 Brethren, pray for us.</span></p><p><span>26 Greet all the brethren with an holy kiss.</span></p><p><span>27 I charge you by the Lord that this epistle be read unto all the holy brethren.</span></p><p><span>28 The grace of our Lord Jesus Christ </span><em><span>be</span></em><span> with you. Amen.</span></p><p><span>            ¶ The first </span><em><span>epistle</span></em><span> unto the Thessalonians was written from Athens.</span></p><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/FpFGvSSEh28?si=VNGwT95PfRfEg2NB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/rwFsyFJ_-38?si=N5o-qA1-2DoE1q06" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/ejt_5XQo-9Y?si=yz6DqC2hRRT3H005" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><p>&nbsp;</p><hr /><p><img src="./assets/The-road-to-salvation.webp" referrerpolicy="no-referrer" alt="The-road-to-salvation"></p><p><a href='assets/the-road-to-salvation.pdf'><span>Download the document here</span></a><span> </span></p><p>&nbsp;</p><p>&nbsp;</p><hr /><p><img src="./assets/sites-of-interest.webp" referrerpolicy="no-referrer" alt="sites-of-interest"></p><h2 id='jd-farag'><span>J.D. Farag</span></h2><p><a href='https://www.jdfarag.org/'><span>Website</span></a>
+<a href='https://www.youtube.com/@JDFaragTV'><span>YouTube</span></a></p><hr /><h2 id='watchman-river'><span>Watchman River</span></h2><p><a href='https://watchmanriver.org/'><span>WebSite</span></a>
+<a href='https://www.youtube.com/@WatchmanRiver'><span>YouTube</span></a></p><hr /><h2 id='faith-in-the-fire-777'><span>Faith In The Fire 777</span></h2><p><a href='https://www.youtube.com/@FaithInTheFire777'><span>YouTube</span></a></p><hr /><h2 id='encourage-men'><span>Encourage Men</span></h2><p><a href='https://encouragemen.blog/blog/'><span>Blog 4 encouragements</span></a></p><hr /><h2 id='generation2434'><span>Generation2434</span></h2><p><a href='https://www.youtube.com/@Generation2434'><span>YouTube</span></a></p><hr /><h2 id='last-days-awakening'><span>Last Days AWAKENING</span></h2><p><a href='https://www.youtube.com/@LastDaysAWAKENING'><span>YouTube</span></a></p><hr /><h2 id='red-letter-radio'><span>Red Letter Radio</span></h2><p><a href='https://www.bitchute.com/channel/hke6emnNyvWj/'><span>BitChute</span></a></p><hr /><h2 id='rev310'><span>REV310</span></h2><p><a href='https://www.rev310.net/'><span>WebSite</span></a></p><hr /><h2 id='pastor-d'><span>Pastor D</span></h2><p><a href='https://www.deanodle.org/'><span>Dean Odle</span></a></p><hr /><h2 id='mark-hemans'><span>Mark Hemans</span></h2><p><a href='https://www.jesusencounterministries.com/'><span>Jesus Encounter Ministries</span></a>
+<a href='https://www.youtube.com/channel/UCmMLO7vxbA78hTr6EgguIYA'><span>YouTube</span></a></p><hr /><h2 id='jamie-walden'><span>Jamie Walden</span></h2><p><a href='https://www.omegadynamics.org/'><span>Omega Dynamics</span></a>
+<a href='https://www.calicobuffalobasecamp.com/'><span>Buffalo Base Camp</span></a>
+<a href='https://www.youtube.com/@jamiewalden756'><span>YouTube</span></a></p><hr /><h2 id='richie-from-boston'><span>Richie From Boston</span></h2><p><a href='https://richiefromboston.tv/'><span>richiefromboston.tv</span></a>
+<a href='https://www.bitchute.com/channel/juH53r3AyWVW/'><span>BitChute</span></a>
+<a href='https://www.tiktok.com/@richiefromboston'><span>TikTok</span></a></p><hr /><h2 id='jason-zelda'><span>Jason Zelda</span></h2><p><a href='https://www.youtube.com/@jasonzelda/featured'><span>YouTube</span></a></p><hr /><h2 id='the-last-reformation'><span>The Last Reformation</span></h2><p><a href='https://thelastreformation.com/'><span>thelastreformation.com</span></a>
+<a href='https://map.thelastreformation.com/#'><span>Map</span></a>
+<a href='https://www.youtube.com/@TheLastReformation'><span>YouTube</span></a>
+<a href='https://friendsoftorben.com/'><span>Friends of Torben</span></a></p><hr /><h2 id='edith-neumaier'><span>Edith Neumaier</span></h2><p><a href='https://www.bitchute.com/channel/OVxXA0uDWdVr/'><span>BitChute</span></a>
+<span>ㅤ</span></p><hr /><h2 id='growing-in-the-gospel-with-cary-schmidt'><span>Growing in the Gospel with Cary Schmidt</span></h2><p><a href='https://www.youtube.com/@pastorcaryschmidt'><span>YouTube</span></a></p><hr /><p><img src="./assets/telegram.webp" referrerpolicy="no-referrer" alt="telegram"></p><p>&nbsp;</p><p><a href='https://t.me/s/beholdisraelchannel'><span>Behold Israel</span></a></p><p><a href='https://t.me/s/Generation2434'><span>Generation2434</span></a></p><p><a href='https://t.me/s/WatchmanRiverTom'><span>Watchman River</span></a></p><hr /><p><img src="./assets/download-this-website.webp" referrerpolicy="no-referrer" alt="download-this-website"></p><p><a href='./assets/public_html.zip'><span>Here</span></a></p><p>&nbsp;</p></div></div>
+</body>
+</html>
