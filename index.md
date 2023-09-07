@@ -1,35 +1,33 @@
 ![caughy-up-now](./assets/caughy-up-now.webp)
 
-
+---
 
 <iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/gyttv4NHJGyp/"></iframe>
 
-
+---
 
 **Revelation 3.10**
-Because thou hast kept the word of my patience, I also will keep thee from the hour of temptation, which shall come upon all the world, to try them that dwell upon the earth.
+10 Because thou hast kept the word of my patience, I also will keep thee from the hour of temptation, which shall come upon all the world, to try them that dwell upon the earth.
 
 ---
 
-**Revelation 4.1**
-After this I looked, and, behold, a door was opened in heaven: and the first voice which I heard was as it were of a trumpet talking with me; which said, Come up hither, and I will shew thee things which must be hereafter.
+**Revelation 4.1-4**
 
-**Revelation 4.2**
-And immediately I was in the spirit: and, behold, a throne was set in heaven, and one sat on the throne.
+AFTER this I looked, and, behold, a door *was* opened in heaven: and the first voice which I heard *was* as it were of a trumpet talking with me; which said, Come up hither, and I will shew thee things which must be hereafter.
 
-**Revelation 4.3**
-And he that sat was to look upon like a jasper and a sardine stone: and there was a rainbow round about the throne, in sight like unto an emerald.
+2 And immediately I was in the spirit: and, behold, a throne was set in heaven, and *one* sat on the throne.
 
-**Revelation 4.4**
-And round about the throne were four and twenty seats: and upon the seats I saw four and twenty <font color="#00b050">elders</font> sitting, clothed in white raiment; and they had on their heads crowns of gold.
+3 And he that sat was to look upon like a jasper and a sardine stone: and *there* *was* a rainbow round about the throne, in sight like unto an emerald.
+
+4 And round about the throne *were* four and twenty seats: and upon the seats I saw four and twenty elders sitting, clothed in white raiment; and they had on their heads crowns of gold.
 
 ---
 
-**Revelation 4.10**
-The four and twenty <font color="#00b050">elders</font> fall down before him that sat on the throne, and worship him that liveth for ever and ever, and cast their crowns before the throne, saying,
+**Revelation 4.10-11**
 
-**Revelation 4.11**
-Thou art worthy, O Lord, to receive glory and honour and power: for thou hast created all things, and for thy pleasure they are and were created.
+10 The four and twenty **elders** fall down before him that sat on the throne, and worship him that liveth for ever and ever, and cast their crowns before the throne, saying,
+
+11 Thou art worthy, O Lord, to receive glory and honour and power: for thou hast created all things, and for thy pleasure they are and were created.
 
 ---
 
@@ -45,18 +43,18 @@ Thou art worthy, O Lord, to receive glory and honour and power: for thou hast cr
 
 ---
 
-**Matthew 24.29**
-Immediately after the tribulation of those days shall the sun be darkened, and the moon shall not give her light, and the stars shall fall from heaven, and the powers of the heavens shall be shaken:
+**Matthew 24.29-31**
 
-**Matthew 24.30**
-And then shall appear the sign of the Son of man in heaven: and then shall all the tribes of the earth mourn, and they shall see the Son of man coming in the clouds of heaven with power and great glory.
+29 Immediately after the tribulation of those days shall the sun be darkened, and the moon shall not give her light, and the stars shall fall from heaven, and the powers of the heavens shall be shaken:
 
-**Matthew 24.31**
-And he shall send his angels with a great sound of a trumpet, and they shall gather together his elect from the four winds, from one end of heaven to the other.
+30 And then shall appear the sign of the Son of man in heaven: and then shall all the tribes of the earth mourn, and they shall see the Son of man coming in the clouds of heaven with power and great glory.
+
+31 And he shall send his angels with a great sound of a trumpet, and they shall gather together his elect from the four winds, from one end of heaven to the other.
 
 ---
 
 **1 Thessalonians 5**
+
 BUT of the times and the seasons, brethren, ye have no need that I write unto you.
 
 2 For yourselves know perfectly that the day of the Lord so cometh as a thief in the night.
@@ -67,11 +65,11 @@ BUT of the times and the seasons, brethren, ye have no need that I write unto yo
 
 5 Ye are all the children of light, and the children of the day: we are not of the night, nor of darkness.
 
-6 Therefore let us not sleep, as _do_ others; but let us watch and be sober.
+6 Therefore let us not sleep, as *do* others; but let us watch and be sober.
 
-7 For they that sleep sleep in the night; and they that be drunken are drunken in the night.
+7 For they that sleep sleep in the night; and they that be drunken are drunken in the night.
 
-8 But let us, who are of the day, be sober, putting on the breastplate of faith and love; and for an helmet, the hope of salvation.
+8 But let us, who are of the day, be sober, putting on the breastplate of faith and love; and for an helmet, the hope of salvation.
 
 9 For God hath not appointed us to wrath, but to obtain salvation by our Lord Jesus Christ,
 
@@ -79,13 +77,13 @@ BUT of the times and the seasons, brethren, ye have no need that I write unto yo
 
 11 Wherefore comfort yourselves together, and edify one another, even as also ye do.
 
-12 And we beseech you, brethren, to know them which labour among you, and are over you in the Lord, and admonish you;
+12 And we beseech you, brethren, to know them which labour among you, and are over you in the Lord, and admonish you;
 
-13 And to esteem them very highly in love for their work’s sake. _And_ be at peace among yourselves.
+13 And to esteem them very highly in love for their work’s sake. *And* be at peace among yourselves.
 
-14 Now we exhort you, brethren, warn them that are unruly, comfort the feebleminded, support the weak, be patient toward all _men_.
+14 Now we exhort you, brethren, warn them that are unruly, comfort the feebleminded, support the weak, be patient toward all *men*.
 
-15 See that none render evil for evil unto any _man;_ but ever follow that which is good, both among yourselves, and to all _men_.
+15 See that none render evil for evil unto any *man;* but ever follow that which is good, both among yourselves, and to all *men*.
 
 16 Rejoice evermore.
 
@@ -101,19 +99,19 @@ BUT of the times and the seasons, brethren, ye have no need that I write unto yo
 
 22 Abstain from all appearance of evil.
 
-23 And the very God of peace sanctify you wholly; and _I_ _pray_ _God_ your whole spirit and soul and body be preserved blameless unto the coming of our Lord Jesus Christ.
+23 And the very God of peace sanctify you wholly; and *I* *pray* *God* your whole spirit and soul and body be preserved blameless unto the coming of our Lord Jesus Christ.
 
-24 Faithful _is_ he that calleth you, who also will do _it_.
+24 Faithful *is* he that calleth you, who also will do *it*.
 
 25 Brethren, pray for us.
 
-26 Greet all the brethren with an holy kiss.
+26 Greet all the brethren with an holy kiss.
 
-27 I charge you by the Lord that this epistle be read unto all the holy brethren.
+27 I charge you by the Lord that this epistle be read unto all the holy brethren.
 
-28 The grace of our Lord Jesus Christ _be_ with you. Amen.
+28 The grace of our Lord Jesus Christ *be* with you. Amen.
 
-            ¶ The first _epistle_ unto the Thessalonians was written from Athens.
+​      ¶ The first *epistle* unto the Thessalonians was written from Athens.
 
 ---
 
@@ -126,8 +124,6 @@ BUT of the times and the seasons, brethren, ye have no need that I write unto yo
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ejt_5XQo-9Y?si=yz6DqC2hRRT3H005" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
 
 ---
 
