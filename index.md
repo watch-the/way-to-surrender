@@ -127,9 +127,15 @@ BUT of the times and the seasons, brethren, ye have no need that I write unto yo
 
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/95p-Fzxk2aQ?si=Mrbt6i3Ll6fOBSzu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
 ![The-road-to-salvation](./assets/The-road-to-salvation.webp)
 
-[Download the document here](assets/the-road-to-salvation.pdf) 
+
+
+![download-32](./assets/download-32.webp) [Download the document here](assets/the-road-to-salvation.pdf) ![download-32](./assets/download-32.webp)
 
 
 
@@ -241,9 +247,47 @@ ___
 
 ![download-this-website](./assets/download-this-website.webp)
 
-[Here](./assets/public_html.zip)
+![download-32](./assets/download-32.webp) [Download file Here](./assets/public_html.zip) ![download-32](./assets/download-32.webp)
 
 
 
 ---
 
+![INDEX BIBLE](./assets/INDEX%20BIBLE.webp)
+ㅤㅤ
+We are spreading God's word, 
+at a time where people want to ban the (King James Version) bible. 
+
+
+
+You are not allowed to sell, charge anything for this bible, 
+but please share it with everyone around you.
+
+
+
+There are 4 download locations for the bible.
+
+The bible most likely will only be available for a limited time, 
+so please hurry, grab your free copy.
+
+
+
+I've made sure that there is no virus in the zipped file, 
+but what happens on the internet, I can not take responsibility for. 
+nor any damage you may face, using this software.
+
+---
+
+Download Locations: 
+[First Location](https://drive.google.com/file/d/12claUn5wws8BNZ15TrtzrjkHqA6AjI_W/view?usp=sharing) 
+[Second Location](https://drive.google.com/file/d/1nIob4Lk8895arc1_rpdLj4Nz3uKY1JSI/view?usp=sharing) 
+[Third Location](https://drive.google.com/file/d/12GOanEAg04X7tkq3dVH9Z7wF0yHC81pB/view?usp=sharing) 
+[Forth Location](https://drive.google.com/file/d/1ZIA2dnyxV4hOm00BzIZQzxnrKAkR0C04/view?usp=sharing)  
+
+---
+
+May you be lead by the HOLY SPIRIT, and maybe we'll meet in the sky really soon.  
+God bless you. If you want to try the bible before downloading it, please go:
+[Here](https://caught-up.net/bible/index.html)
+
+___
