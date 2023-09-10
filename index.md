@@ -2,16 +2,24 @@
 
 ---
 
-<iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/gyttv4NHJGyp/"></iframe>
+![rapture](./assets/rapture.jpg)
+
+Download this wallpaper: [Here](./assets/rapture.jpg).
 
 ---
 
-**Revelation 3.10**
+<iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/gyttv4NHJGyp/"></iframe>
+
+You can find more videos from this author: [Here](https://www.bitchute.com/channel/lTzFq9ZFR8Dw/).
+
+---
+
+![sc-1](./assets/sc-1-1694375637291-51.webp)
 10 Because thou hast kept the word of my patience, I also will keep thee from the hour of temptation, which shall come upon all the world, to try them that dwell upon the earth.
 
 ---
 
-**Revelation 4.1-4**
+![sc-2](./assets/sc-2-1694373474715-20.webp)
 
 AFTER this I looked, and, behold, a door *was* opened in heaven: and the first voice which I heard *was* as it were of a trumpet talking with me; which said, Come up hither, and I will shew thee things which must be hereafter.
 
@@ -23,7 +31,7 @@ AFTER this I looked, and, behold, a door *was* opened in heaven: and the first v
 
 ---
 
-**Revelation 4.10-11**
+![sc-3](./assets/sc-3-1694373553985-22.webp)
 
 10 The four and twenty **elders** fall down before him that sat on the throne, and worship him that liveth for ever and ever, and cast their crowns before the throne, saying,
 
@@ -31,19 +39,19 @@ AFTER this I looked, and, behold, a door *was* opened in heaven: and the first v
 
 ---
 
-**Exodus 23.10-11**
+![sc-4](./assets/sc-4-1694373644531-24.webp)
 10 And six years thou shalt sow thy land, and shalt gather in the fruits thereof:
 
 11 But the seventh _year_ thou shalt let it rest and lie still; that the poor of thy people may eat: and what they leave the beasts of the field shall eat. In like manner thou shalt deal with thy vineyard, _and_ with thy oliveyard.
 
 ---
 
-**Leviticus 23.22**
+![sc-5](./assets/sc-5-1694373733026-26.webp)
 22  And when ye reap the harvest of your land, thou shalt not make clean riddance of the corners of thy field when thou reapest, neither shalt thou gather any gleaning of thy harvest: thou shalt leave them unto the poor, and to the stranger: I _am_ the Lord your God.
 
 ---
 
-**Matthew 24.29-31**
+![sc-6](./assets/sc-6-1694373810044-28.webp)
 
 29 Immediately after the tribulation of those days shall the sun be darkened, and the moon shall not give her light, and the stars shall fall from heaven, and the powers of the heavens shall be shaken:
 
@@ -53,7 +61,7 @@ AFTER this I looked, and, behold, a door *was* opened in heaven: and the first v
 
 ---
 
-**1 Thessalonians 5**
+![sc-7](./assets/sc-7.webp)
 
 BUT of the times and the seasons, brethren, ye have no need that I write unto you.
 
@@ -117,110 +125,151 @@ BUT of the times and the seasons, brethren, ye have no need that I write unto yo
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XOUybVX9wnU?si=UXAuCABFP1WqeJsp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+You can find more videos from this author: [Here](https://www.peace.org.au/).
+
 ---
 
+
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FpFGvSSEh28?si=VNGwT95PfRfEg2NB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+You can find more videos from this author: [Here](https://www.youtube.com/@WatchmanRiver).
 
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rwFsyFJ_-38?si=N5o-qA1-2DoE1q06" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+You can find more videos from this author: [Here](https://www.youtube.com/@FaithInTheFire777).
+
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ejt_5XQo-9Y?si=yz6DqC2hRRT3H005" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/8THrHTnduIk7/"></iframe>
+
+---
+
+<iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/YfiXBcK7O8Yf/"></iframe>
+
+---
+
+<iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/Ke0c5nGTFMM/"></iframe>
+
+---
+
+<iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/BOwv0zKU1Vc/"></iframe>
+
+---
+
+<iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/OCJAuZ6lMks/"></iframe>
+
+---
+
+<iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/JqoI5kGEGqeC/"></iframe>
+
+You can find more videos from this author: [Here](https://www.bitchute.com/channel/hke6emnNyvWj/).
+
+---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9wMXu-pllzs?si=QdGKlfK52W6IviC0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/95p-Fzxk2aQ?si=Mrbt6i3Ll6fOBSzu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
----
-
-![The-road-to-salvation](./assets/The-road-to-salvation.webp)
-
-
-
-![download-32](./assets/download-32.webp) [Download the document here](assets/the-road-to-salvation.pdf) ![download-32](./assets/download-32.webp)
-
-
+You can find more videos from this author: [Here](https://www.youtube.com/channel/UCmMLO7vxbA78hTr6EgguIYA).
 
 ---
 
 ![sites-of-interest](./assets/sites-of-interest.webp)
 
-## J.D. Farag
+---
+
+![lk-1](./assets/lk-1.webp)
+
 [Website](https://www.jdfarag.org/)
 [YouTube](https://www.youtube.com/@JDFaragTV)
 
 ---
 
-## Watchman River
+![lk-2](./assets/lk-2-1694374231772-35.webp)
+
 [WebSite](https://watchmanriver.org/)
 [YouTube](https://www.youtube.com/@WatchmanRiver)
 
 ---
 
-## Faith In The Fire 777
+![lk-3](./assets/lk-3.webp)
 
 [YouTube](https://www.youtube.com/@FaithInTheFire777)
 
 ---
 
-## Encourage Men
+![lk-4](./assets/lk-4.webp)
 
 [Blog 4 encouragements](https://encouragemen.blog/blog/)
 
 ---
 
-## Generation2434
+![lk-5](./assets/lk-5.webp)
+
 [YouTube](https://www.youtube.com/@Generation2434)
 
 ---
 
-## Last Days AWAKENING
+![lk-6](./assets/lk-6.webp)
+
 [YouTube](https://www.youtube.com/@LastDaysAWAKENING)
 
 ---
 
-## Red Letter Radio
+![lk-7](./assets/lk-7.webp)
+
 [BitChute](https://www.bitchute.com/channel/hke6emnNyvWj/)
 
 ---
-## REV310
+
+![lk8](./assets/lk8.webp)
+
 [WebSite](https://www.rev310.net/)
 
 ---
 
-## Pastor D
+![lk-9](./assets/lk-9.webp)
+
 [Dean Odle](https://www.deanodle.org/)
 
 ---
 
-## Mark Hemans
+![lk-10](./assets/lk-10.webp)
+
 [Jesus Encounter Ministries](https://www.jesusencounterministries.com/)
 [YouTube](https://www.youtube.com/channel/UCmMLO7vxbA78hTr6EgguIYA)
 
 ---
 
-## Jamie Walden
+![lk-11](./assets/lk-11.webp)
+
 [Omega Dynamics](https://www.omegadynamics.org/)
 [Buffalo Base Camp](https://www.calicobuffalobasecamp.com/)
 [YouTube](https://www.youtube.com/@jamiewalden756)
 
 ---
 
-## Richie From Boston
+![lk-12](./assets/lk-12.webp)
+
 [richiefromboston.tv](https://richiefromboston.tv/)
 [BitChute](https://www.bitchute.com/channel/juH53r3AyWVW/)
 [TikTok](https://www.tiktok.com/@richiefromboston)
 
 ---
 
-## Jason Zelda
+![lk-13](./assets/lk-13.webp)
+
 [YouTube](https://www.youtube.com/@jasonzelda/featured)
 
 ---
 
-## The Last Reformation
+![lk-14](./assets/lk-14.webp)
+
 [thelastreformation.com](https://thelastreformation.com/)
 [Map](https://map.thelastreformation.com/#)
 [YouTube](https://www.youtube.com/@TheLastReformation)
@@ -228,11 +277,14 @@ BUT of the times and the seasons, brethren, ye have no need that I write unto yo
 
 ---
 
-## Edith Neumaier
+![lk-15](./assets/lk-15.webp)
+
 [BitChute](https://www.bitchute.com/channel/OVxXA0uDWdVr/)
-ㅤ
-___
-## Growing in the Gospel with Cary Schmidt
+
+---
+
+![lk-16](./assets/lk-16.webp)
+
 [YouTube](https://www.youtube.com/@pastorcaryschmidt)
 
 ---
@@ -283,15 +335,64 @@ nor any damage you may face, using this software.
 ---
 
 Download Locations: 
-[First Location](https://drive.google.com/file/d/12claUn5wws8BNZ15TrtzrjkHqA6AjI_W/view?usp=sharing) 
-[Second Location](https://drive.google.com/file/d/1nIob4Lk8895arc1_rpdLj4Nz3uKY1JSI/view?usp=sharing) 
-[Third Location](https://drive.google.com/file/d/12GOanEAg04X7tkq3dVH9Z7wF0yHC81pB/view?usp=sharing) 
-[Forth Location](https://drive.google.com/file/d/1ZIA2dnyxV4hOm00BzIZQzxnrKAkR0C04/view?usp=sharing)  
+![download-32](./assets/download-32.webp) [First Location](https://drive.google.com/file/d/12claUn5wws8BNZ15TrtzrjkHqA6AjI_W/view?usp=sharing) ![download-32](./assets/download-32.webp)
+![download-32](./assets/download-32.webp) [Second Location](https://drive.google.com/file/d/1nIob4Lk8895arc1_rpdLj4Nz3uKY1JSI/view?usp=sharing) ![download-32](./assets/download-32.webp)
+![download-32](./assets/download-32.webp) [Third Location](https://drive.google.com/file/d/12GOanEAg04X7tkq3dVH9Z7wF0yHC81pB/view?usp=sharing) ![download-32](./assets/download-32.webp)
+![download-32](./assets/download-32.webp) [Forth Location](https://drive.google.com/file/d/1ZIA2dnyxV4hOm00BzIZQzxnrKAkR0C04/view?usp=sharing)  ![download-32](./assets/download-32.webp)
 
 ---
 
-May you be lead by the HOLY SPIRIT, and maybe we'll meet in the sky really soon.  
+May you be lead by the HOLY SPIRIT, and maybe we'll meet in the sky really soon. 
 God bless you. If you want to try the bible before downloading it, please go:
 [Here](https://caught-up.net/bible/index.html)
 
 ___
+
+![The-road-to-salvation](./assets/The-road-to-salvation.webp)
+
+Dear Heavenly ***Father***
+You know *everything* about me,
+and you know that I’m a *sinner*.
+
+
+
+For many years, I have *loved my sins*.
+I hereby *repent* from all *my sinful ways*.
+
+
+
+I’m willing to *change with **Your** help*,
+I receive your *forgiveness*, and I pray that ***you** help me*
+*forgive* those, who have *hurt me*.
+
+
+
+I know I only receive *forgiveness*, as I *forgive others*.
+
+
+
+Thank You that *Jesus **Christ** died* on the cross for *us all*.
+Thank You that He offers His *righteousness* to me,
+and today this very day, I receive that *righteousness*.
+
+
+
+I *hereby* put my *faith* in Him, the ***savior*** of the world.
+So please God have *mercy* on me, a *sinner*.
+***Save me Jesus Christ***, and today this very day,
+***I commit my life to you Lord Jesus Christ***.
+
+![amen](./assets/amen.webp)
+
+---
+
+![The-road-to-salvation](./assets/The-road-to-salvation.webp)
+
+Download the document here:
+
+![download-32](./assets/download-32.webp) [PDF](./assets/the-road-to-salvation-main.pdf) ![download-32](./assets/download-32.webp)
+
+![download-32](./assets/download-32.webp) [Webp](./assets/the-road-to-salvation-main.webp) ![download-32](./assets/download-32.webp)
+
+---
+
