@@ -14,6 +14,20 @@ You can find more videos from this author: [Here](https://www.bitchute.com/chann
 
 ---
 
+<iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/Z2Cy6jRNAGjT/"></iframe>
+
+You can find more videos from this author: [Here](https://www.bitchute.com/channel/hNVjsYmtRqcR/).
+
+---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fBtJ1EtoCN8?si=1JY7pQ5eoqTZdG-H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bDnA_coA168?si=3lhbnTHJNGvAvyPS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
 ![sc-1](./assets/sc-1-1694375637291-51.webp)
 10 Because thou hast kept the word of my patience, I also will keep thee from the hour of temptation, which shall come upon all the world, to try them that dwell upon the earth.
 
@@ -393,6 +407,22 @@ Download the document here:
 ![download-32](./assets/download-32.webp) [PDF](./assets/the-road-to-salvation-main.pdf) ![download-32](./assets/download-32.webp)
 
 ![download-32](./assets/download-32.webp) [Webp](./assets/the-road-to-salvation-main.webp) ![download-32](./assets/download-32.webp)
+
+You can also see the document as a web-page: [Here](the-road-to-salvation.html).
+
+---
+
+![logo-1](./assets/logo-1.webp)
+
+If you have demonic powers effecting your life,
+
+you might want to look at this prayer.
+
+![download-32](./assets/download-32.webp) [PDF](./assets/prayer-of-deliverance.pdf) ![download-32](./assets/download-32.webp)
+
+![download-32](./assets/download-32.webp) [Webp](./assets/prayer-of-deliverance.webp) ![download-32](./assets/download-32.webp)
+
+You can also see the document as a web-page: [Here](prayer-of-deliverance.html).
 
 ---
 
