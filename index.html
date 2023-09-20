@@ -3,7 +3,7 @@
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<link href='https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100;16..144,300;16..144,500;16..144,700&display=swap' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+<link href='https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100;16..144,300;16..144,500;16..144,700&display=swap' rel='stylesheet' type='text/css' /><link href='https://fonts.googleapis.com/css2?family=Lemon&display=swap' rel='stylesheet' type='text/css' /><link href='https://fonts.googleapis.com/css2?family=Rochester&display=swap' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, h4, h5 { white-space: pre-wrap; }
@@ -206,16 +206,18 @@ mjx-container { break-inside: avoid; }
 
 
 @import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100;16..144,300;16..144,500;16..144,700&display=swap');
+@import url('file:///C://Users//danny//AppData//Roaming//Typora/themes/https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('file:///C://Users//danny//AppData//Roaming//Typora/themes/https://fonts.googleapis.com/css2?family=Rochester&display=swap');
 
 :root {
-  --side-bar-bg-color: #180018;
+  --side-bar-bg-color: rgb(44, 0, 44);
   --control-text-color: #aaa;
   --active-file-bg-color: #383838;
   --control-text-hover-color: #ddd;
   --item-hover-bg-color: #404040;
   --text-color: #c0c0c0;
   --blur-text-color: #80808080;
-  --bg-color: rgb(24, 0, 24);
+  --bg-color: #2c002c;
   --select-text-bg-color: #663f3f !important;
   --monospace: "IBM Plex Mono", "Fira Code", "微软雅黑", monospace !important;
   --window-border: 1px solid #404040;
@@ -240,7 +242,8 @@ mjx-container { break-inside: avoid; }
 }
 
 html {
-  font-size: 20px;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 body {
@@ -248,7 +251,6 @@ body {
     Helvetica, Arial, sans-serif;
   color: aqua;
   font-weight: 100;
-  background-color: var(--bg-color);
   line-height: 1.75;
   scroll-behavior: smooth;
 }
@@ -285,9 +287,15 @@ input {
 }
 
 #write a:hover {
-  color: fuchsia;
   text-decoration: none !important;
   border-bottom: 1px solid #a7d959;
+  font-weight: 300;
+}
+
+#write a:hover, p:hover {
+  background-color: #000;
+  padding: 4px 8px;
+  color: fuchsia;
   font-weight: 300;
 }
 
@@ -311,7 +319,8 @@ h6 {
   position: relative;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: bold;
+  font-family: "Lemon";
+  font-weight: 400;
   line-height: 1.4;
   cursor: text;
 }
@@ -386,15 +395,6 @@ li > ol,
 li > ul {
   margin: 0 0;
 }
-hr {
-  height: 2px;
-  padding: 0;
-  margin: 32px 0;
-  background-color: #180018;
-  border: 0 none;
-  overflow: hidden;
-  box-sizing: content-box;
-}
 
 li p.first {
   display: inline-block;
@@ -435,7 +435,8 @@ thead {
   background-color: #180018;
 }
 table tr th {
-  font-weight: bold;
+  font-family: "Lemon";
+  font-weight: 400;
   border: 1px solid #383838;
   border-bottom: 0;
   text-align: left;
@@ -827,7 +828,8 @@ span.file-list-item-file-name-part {
 }
 .cm-header,
 .cm-strong {
-  font-weight: 700;
+  font-family: "Lemon";
+  font-weight: 400;
 }
 .cm-del {
   text-decoration: line-through;
@@ -928,23 +930,14 @@ input */{
   font-family: var(--monospace);
 }
 
-hr {
-  /* Common to all hr's */
-  border-top: 2pt solid transparent;
-  border-bottom: 2pt solid transparent;
-  border-left-style: solid;
-  border-left-color: yellow;
-
-  /* Top-level hr (aka page delineator) */
-  border-left-width: 16cm;
-  margin-top: 18pt;
-  margin-bottom: 36pt;
-}
-
 i,
-  em {
+em {
+  font-family: 'Rochester', cursive;
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 400;
   color: yellow;
-  font-weight: 300;
+  margin-right: 2px;
 }
 
 h1,
@@ -956,45 +949,127 @@ h6,
 b,
 strong {
   color: #05f35e;
-  font-weight: 700;
+  font-family: "Lemon";
+  font-weight: 400;
 }
 
 strong {
-  font-weight: 500;
+  font-size: 18px;
 }
 
+strong::after {
+  content: " 💕 ";
+}
+
+hr {
+  /* Common to all hr's */
+  border-top: 2pt solid transparent;
+  border-bottom: 2pt solid transparent;
+  border-left-style: solid;
+  border-left-color: yellow;
+
+  /* Top-level hr (aka page delineator) */
+  border-left-width: 16cm;
+  margin-top: 20pt;
+  margin-bottom: 40pt;
+}
 
 
 </style><title>index</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><p><img src="./assets/caughy-up-now.webp" referrerpolicy="no-referrer" alt="caughy-up-now"></p><hr /><p><img src="./assets/rapture.jpg" referrerpolicy="no-referrer" alt="rapture"></p><p><span>Download this wallpaper: </span><a href='./assets/rapture.jpg'><span>Here</span></a><span>.</span></p><hr /><iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/gyttv4NHJGyp/"></iframe><p><span>You can find more videos from this author: </span><a href='https://www.bitchute.com/channel/lTzFq9ZFR8Dw/'><span>Here</span></a><span>.</span></p><hr /><iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/Z2Cy6jRNAGjT/"></iframe><p><span>You can find more videos from this author: </span><a href='https://www.bitchute.com/channel/hNVjsYmtRqcR/'><span>Here</span></a><span>.</span></p><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/fBtJ1EtoCN8?si=1JY7pQ5eoqTZdG-H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/bDnA_coA168?si=3lhbnTHJNGvAvyPS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><hr /><p><img src="./assets/sc-1-1694375637291-51.webp" referrerpolicy="no-referrer" alt="sc-1">
-<span>10 Because thou hast kept the word of my patience, I also will keep thee from the hour of temptation, which shall come upon all the world, to try them that dwell upon the earth.</span></p><hr /><p><img src="./assets/sc-2-1694373474715-20.webp" referrerpolicy="no-referrer" alt="sc-2"></p><p><span>AFTER this I looked, and, behold, a door </span><em><span>was</span></em><span> opened in heaven: and the first voice which I heard </span><em><span>was</span></em><span> as it were of a trumpet talking with me; which said, Come up hither, and I will shew thee things which must be hereafter.</span></p><p><span>2 And immediately I was in the spirit: and, behold, a throne was set in heaven, and </span><em><span>one</span></em><span> sat on the throne.</span></p><p><span>3 And he that sat was to look upon like a jasper and a sardine stone: and </span><em><span>there</span></em><span> </span><em><span>was</span></em><span> a rainbow round about the throne, in sight like unto an emerald.</span></p><p><span>4 And round about the throne </span><em><span>were</span></em><span> four and twenty seats: and upon the seats I saw four and twenty elders sitting, clothed in white raiment; and they had on their heads crowns of gold.</span></p><hr /><p><img src="./assets/sc-3-1694373553985-22.webp" referrerpolicy="no-referrer" alt="sc-3"></p><p><span>10 The four and twenty </span><strong><span>elders</span></strong><span> fall down before him that sat on the throne, and worship him that liveth for ever and ever, and cast their crowns before the throne, saying,</span></p><p><span>11 Thou art worthy, O Lord, to receive glory and honour and power: for thou hast created all things, and for thy pleasure they are and were created.</span></p><hr /><p><img src="./assets/sc-4-1694373644531-24.webp" referrerpolicy="no-referrer" alt="sc-4">
-<span>10 And six years thou shalt sow thy land, and shalt gather in the fruits thereof:</span></p><p><span>11 But the seventh </span><em><span>year</span></em><span> thou shalt let it rest and lie still; that the poor of thy people may eat: and what they leave the beasts of the field shall eat. In like manner thou shalt deal with thy vineyard, </span><em><span>and</span></em><span> with thy oliveyard.</span></p><hr /><p><img src="./assets/sc-5-1694373733026-26.webp" referrerpolicy="no-referrer" alt="sc-5">
-<span>22  And when ye reap the harvest of your land, thou shalt not make clean riddance of the corners of thy field when thou reapest, neither shalt thou gather any gleaning of thy harvest: thou shalt leave them unto the poor, and to the stranger: I </span><em><span>am</span></em><span> the Lord your God.</span></p><hr /><p><img src="./assets/sc-6-1694373810044-28.webp" referrerpolicy="no-referrer" alt="sc-6"></p><p><span>29 Immediately after the tribulation of those days shall the sun be darkened, and the moon shall not give her light, and the stars shall fall from heaven, and the powers of the heavens shall be shaken:</span></p><p><span>30 And then shall appear the sign of the Son of man in heaven: and then shall all the tribes of the earth mourn, and they shall see the Son of man coming in the clouds of heaven with power and great glory.</span></p><p><span>31 And he shall send his angels with a great sound of a trumpet, and they shall gather together his elect from the four winds, from one end of heaven to the other.</span></p><hr /><p><img src="./assets/sc-7.webp" referrerpolicy="no-referrer" alt="sc-7"></p><p><span>BUT of the times and the seasons, brethren, ye have no need that I write unto you.</span></p><p><span>2 For yourselves know perfectly that the day of the Lord so cometh as a thief in the night.</span></p><p><span>3 For when they shall say, Peace and safety; then sudden destruction cometh upon them, as travail upon a woman with child; and they shall not escape.</span></p><p><span>4 But ye, brethren, are not in darkness, that that day should overtake you as a thief.</span></p><p><span>5 Ye are all the children of light, and the children of the day: we are not of the night, nor of darkness.</span></p><p><span>6 Therefore let us not sleep, as </span><em><span>do</span></em><span> others; but let us watch and be sober.</span></p><p><span>7 For they that sleep sleep in the night; and they that be drunken are drunken in the night.</span></p><p><span>8 But let us, who are of the day, be sober, putting on the breastplate of faith and love; and for an helmet, the hope of salvation.</span></p><p><span>9 For God hath not appointed us to wrath, but to obtain salvation by our Lord Jesus Christ,</span></p><p><span>10 Who died for us, that, whether we wake or sleep, we should live together with him.</span></p><p><span>11 Wherefore comfort yourselves together, and edify one another, even as also ye do.</span></p><p><span>12 And we beseech you, brethren, to know them which labour among you, and are over you in the Lord, and admonish you;</span></p><p><span>13 And to esteem them very highly in love for their work’s sake. </span><em><span>And</span></em><span> be at peace among yourselves.</span></p><p><span>14 Now we exhort you, brethren, warn them that are unruly, comfort the feebleminded, support the weak, be patient toward all </span><em><span>men</span></em><span>.</span></p><p><span>15 See that none render evil for evil unto any </span><em><span>man;</span></em><span> but ever follow that which is good, both among yourselves, and to all </span><em><span>men</span></em><span>.</span></p><p><span>16 Rejoice evermore.</span></p><p><span>17 Pray without ceasing.</span></p><p><span>18 In every thing give thanks: for this is the will of God in Christ Jesus concerning you.</span></p><p><span>19 Quench not the Spirit.</span></p><p><span>20 Despise not prophesyings.</span></p><p><span>21 Prove all things; hold fast that which is good.</span></p><p><span>22 Abstain from all appearance of evil.</span></p><p><span>23 And the very God of peace sanctify you wholly; and </span><em><span>I</span></em><span> </span><em><span>pray</span></em><span> </span><em><span>God</span></em><span> your whole spirit and soul and body be preserved blameless unto the coming of our Lord Jesus Christ.</span></p><p><span>24 Faithful </span><em><span>is</span></em><span> he that calleth you, who also will do </span><em><span>it</span></em><span>.</span></p><p><span>25 Brethren, pray for us.</span></p><p><span>26 Greet all the brethren with an holy kiss.</span></p><p><span>27 I charge you by the Lord that this epistle be read unto all the holy brethren.</span></p><p><span>28 The grace of our Lord Jesus Christ </span><em><span>be</span></em><span> with you. Amen.</span></p><p><span>      ¶ The first </span><em><span>epistle</span></em><span> unto the Thessalonians was written from Athens.</span></p><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/XOUybVX9wnU?si=UXAuCABFP1WqeJsp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><p><span>You can find more videos from this author: </span><a href='https://www.peace.org.au/'><span>Here</span></a><span>.</span></p><hr /><p>&nbsp;</p><iframe width="560" height="315" src="https://www.youtube.com/embed/FpFGvSSEh28?si=VNGwT95PfRfEg2NB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><p><span>You can find more videos from this author: </span><a href='https://www.youtube.com/@WatchmanRiver'><span>Here</span></a><span>.</span></p><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/rwFsyFJ_-38?si=N5o-qA1-2DoE1q06" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><p><span>You can find more videos from this author: </span><a href='https://www.youtube.com/@FaithInTheFire777'><span>Here</span></a><span>.</span></p><hr /><iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/8THrHTnduIk7/"></iframe><hr /><iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/YfiXBcK7O8Yf/"></iframe><hr /><iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/Ke0c5nGTFMM/"></iframe><hr /><iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/BOwv0zKU1Vc/"></iframe><hr /><iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/OCJAuZ6lMks/"></iframe><hr /><iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/JqoI5kGEGqeC/"></iframe><p><span>You can find more videos from this author: </span><a href='https://www.bitchute.com/channel/hke6emnNyvWj/'><span>Here</span></a><span>.</span></p><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/9wMXu-pllzs?si=QdGKlfK52W6IviC0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/95p-Fzxk2aQ?si=Mrbt6i3Ll6fOBSzu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><p><span>You can find more videos from this author: </span><a href='https://www.youtube.com/channel/UCmMLO7vxbA78hTr6EgguIYA'><span>Here</span></a><span>.</span></p><hr /><p><img src="./assets/sites-of-interest.webp" referrerpolicy="no-referrer" alt="sites-of-interest"></p><hr /><p><img src="./assets/lk-1.webp" referrerpolicy="no-referrer" alt="lk-1"></p><p><a href='https://www.jdfarag.org/'><span>Website</span></a>
-<a href='https://www.youtube.com/@JDFaragTV'><span>YouTube</span></a></p><hr /><p><img src="./assets/lk-2-1694374231772-35.webp" referrerpolicy="no-referrer" alt="lk-2"></p><p><a href='https://watchmanriver.org/'><span>WebSite</span></a>
-<a href='https://www.youtube.com/@WatchmanRiver'><span>YouTube</span></a></p><hr /><p><img src="./assets/lk-3.webp" referrerpolicy="no-referrer" alt="lk-3"></p><p><a href='https://www.youtube.com/@FaithInTheFire777'><span>YouTube</span></a></p><hr /><p><img src="./assets/lk-4.webp" referrerpolicy="no-referrer" alt="lk-4"></p><p><a href='https://encouragemen.blog/blog/'><span>Blog 4 encouragements</span></a></p><hr /><p><img src="./assets/lk-5.webp" referrerpolicy="no-referrer" alt="lk-5"></p><p><a href='https://www.youtube.com/@Generation2434'><span>YouTube</span></a></p><hr /><p><img src="./assets/lk-6.webp" referrerpolicy="no-referrer" alt="lk-6"></p><p><a href='https://www.youtube.com/@LastDaysAWAKENING'><span>YouTube</span></a></p><hr /><p><img src="./assets/lk-7.webp" referrerpolicy="no-referrer" alt="lk-7"></p><p><a href='https://www.bitchute.com/channel/hke6emnNyvWj/'><span>BitChute</span></a></p><hr /><p><img src="./assets/lk8.webp" referrerpolicy="no-referrer" alt="lk8"></p><p><a href='https://www.rev310.net/'><span>WebSite</span></a></p><hr /><p><img src="./assets/lk-9.webp" referrerpolicy="no-referrer" alt="lk-9"></p><p><a href='https://www.deanodle.org/'><span>Dean Odle</span></a></p><hr /><p><img src="./assets/lk-10.webp" referrerpolicy="no-referrer" alt="lk-10"></p><p><a href='https://www.jesusencounterministries.com/'><span>Jesus Encounter Ministries</span></a>
-<a href='https://www.youtube.com/channel/UCmMLO7vxbA78hTr6EgguIYA'><span>YouTube</span></a></p><hr /><p><img src="./assets/lk-11.webp" referrerpolicy="no-referrer" alt="lk-11"></p><p><a href='https://www.omegadynamics.org/'><span>Omega Dynamics</span></a>
-<a href='https://www.calicobuffalobasecamp.com/'><span>Buffalo Base Camp</span></a>
-<a href='https://www.youtube.com/@jamiewalden756'><span>YouTube</span></a></p><hr /><p><img src="./assets/lk-12.webp" referrerpolicy="no-referrer" alt="lk-12"></p><p><a href='https://richiefromboston.tv/'><span>richiefromboston.tv</span></a>
-<a href='https://www.bitchute.com/channel/juH53r3AyWVW/'><span>BitChute</span></a>
-<a href='https://www.tiktok.com/@richiefromboston'><span>TikTok</span></a></p><hr /><p><img src="./assets/lk-13.webp" referrerpolicy="no-referrer" alt="lk-13"></p><p><a href='https://www.youtube.com/@jasonzelda/featured'><span>YouTube</span></a></p><hr /><p><img src="./assets/lk-14.webp" referrerpolicy="no-referrer" alt="lk-14"></p><p><a href='https://thelastreformation.com/'><span>thelastreformation.com</span></a>
-<a href='https://map.thelastreformation.com/#'><span>Map</span></a>
-<a href='https://www.youtube.com/@TheLastReformation'><span>YouTube</span></a>
-<a href='https://friendsoftorben.com/'><span>Friends of Torben</span></a></p><hr /><p><img src="./assets/lk-15.webp" referrerpolicy="no-referrer" alt="lk-15"></p><p><a href='https://www.bitchute.com/channel/OVxXA0uDWdVr/'><span>BitChute</span></a></p><hr /><p><img src="./assets/lk-16.webp" referrerpolicy="no-referrer" alt="lk-16"></p><p><a href='https://www.youtube.com/@pastorcaryschmidt'><span>YouTube</span></a></p><hr /><p><img src="./assets/telegram.webp" referrerpolicy="no-referrer" alt="telegram"></p><p>&nbsp;</p><p><a href='https://t.me/s/beholdisraelchannel'><span>Behold Israel</span></a></p><p><a href='https://t.me/s/Generation2434'><span>Generation2434</span></a></p><p><a href='https://t.me/s/WatchmanRiverTom'><span>Watchman River</span></a></p><hr /><p><img src="./assets/download-this-website.webp" referrerpolicy="no-referrer" alt="download-this-website"></p><p><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='./assets/public_html.zip'><span>Download file Here</span></a><span> </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"></p><p>&nbsp;</p><hr /><p><img src="./assets/INDEX%20BIBLE.webp" referrerpolicy="no-referrer" alt="INDEX BIBLE">
-<span>ㅤㅤ</span>
-<span>We are spreading God&#39;s word, </span>
-<span>at a time where people want to ban the (King James Version) bible. </span></p><p>&nbsp;</p><p><span>You are not allowed to sell, charge anything for this bible, </span>
-<span>but please share it with everyone around you.</span></p><p>&nbsp;</p><p><span>There are 4 download locations for the bible.</span></p><p><span>The bible most likely will only be available for a limited time, </span>
-<span>so please hurry, grab your free copy.</span></p><p>&nbsp;</p><p><span>I&#39;ve made sure that there is no virus in the zipped file, </span>
-<span>but what happens on the internet, I can not take responsibility for. </span>
-<span>nor any damage you may face, using this software.</span></p><hr /><p><span>Download Locations: </span>
-<img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='https://drive.google.com/file/d/12claUn5wws8BNZ15TrtzrjkHqA6AjI_W/view?usp=sharing'><span>First Location</span></a><span> </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32">
-<img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='https://drive.google.com/file/d/1nIob4Lk8895arc1_rpdLj4Nz3uKY1JSI/view?usp=sharing'><span>Second Location</span></a><span> </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32">
-<img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='https://drive.google.com/file/d/12GOanEAg04X7tkq3dVH9Z7wF0yHC81pB/view?usp=sharing'><span>Third Location</span></a><span> </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32">
-<img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='https://drive.google.com/file/d/1ZIA2dnyxV4hOm00BzIZQzxnrKAkR0C04/view?usp=sharing'><span>Forth Location</span></a><span>  </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"></p><hr /><p><span>May you be lead by the HOLY SPIRIT, and maybe we&#39;ll meet in the sky really soon. </span>
-<span>God bless you. If you want to try the bible before downloading it, please go:</span>
-<a href='https://caught-up.net/bible/index.html'><span>Here</span></a></p><hr /><p><img src="./assets/The-road-to-salvation.webp" referrerpolicy="no-referrer" alt="The-road-to-salvation"></p><p><span>Dear Heavenly </span><em><strong><span>Father</span></strong></em>
+<div id='write'  class=''><p><img src="./assets/s1.webp" referrerpolicy="no-referrer" alt="s1"></p><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/1f8uTVA_47A?si=E1ZSY-D2xnHC6v0K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><p><img src="./assets/s11.webp" referrerpolicy="no-referrer" alt="s11"></p><p><strong><span>14</span></strong><span>¶ And Jesus returned in the power of the Spirit into Galilee: and there went out a fame of him through all the region round about.</span>
+<strong><span>15</span></strong><span>And he taught in their synagogues, being glorified of all.</span></p><p><strong><span>16</span></strong><span>¶ And he came to Nazareth, where he had been brought up: and, as his custom was, he went into the synagogue on the sabbath day, and stood up for to read.</span>
+<strong><span>17</span></strong><span>And there was delivered unto him the book of the prophet Esaias. And when he had opened the book, he found the place where it was written,</span>
+<strong><span>18</span></strong><span>The Spirit of the Lord </span><em><span>is</span></em><span> upon me, because he hath anointed me to preach the gospel to the poor; he hath sent me to heal the brokenhearted, to preach deliverance to the captives, and recovering of sight to the blind, to set at liberty them that are bruised,</span>
+<strong><span>19</span></strong><span>To preach the acceptable year of the Lord.</span>
+<strong><span>20</span></strong><span>And he closed the book, and he gave </span><em><span>it</span></em><span> again to the minister, and sat down. And the eyes of all them that were in the synagogue were fastened on him.</span>
+<strong><span>21</span></strong><span>And he began to say unto them, This day is this scripture fulfilled in your ears.</span></p><hr /><p><img src="./assets/s12.webp" referrerpolicy="no-referrer" alt="s12"></p><p><strong><span>1</span></strong><span>The Spirit of the Lord GOD </span><em><span>is</span></em><span> upon me; because the LORD hath anointed me to preach good tidings unto the meek; he hath sent me to bind up the brokenhearted, to proclaim liberty to the captives, and the opening of the prison to </span><em><span>them</span></em><span> </span><em><span>that</span></em><span> </span><em><span>are</span></em><span> bound;</span>
+<strong><span>2</span></strong><font color="#ffff00"><span>To proclaim the acceptable year of the LORD</span></font><span>, and the </span><font color="#ff0000"><span>day of vengeance of our God; to comfort all that mourn</span></font><span>;</span>
+<strong><span>3</span></strong><span>To appoint unto them that mourn in Zion, to give unto them beauty for ashes, the oil of joy for mourning, the garment of praise for the spirit of heaviness; that they might be called trees of righteousness, the planting of the LORD, that he might be glorified.</span></p><hr /><p><img src="./assets/s13.webp" referrerpolicy="no-referrer" alt="s13"></p><p><strong><span>Category:</span></strong><span> General Epistles</span></p><p><strong><span>1</span></strong><span>That which was from the beginning, which we have heard, which we have seen with our eyes, which we have looked upon, and our hands have handled, of the Word of life;</span>
+<strong><span>2</span></strong><span>(For the life was manifested, and we have seen </span><em><span>it</span></em><span>, and bear witness, and shew unto you that eternal life, which was with the Father, and was manifested unto us;)</span>
+<strong><span>3</span></strong><span>That which we have seen and heard declare we unto you, that ye also may have fellowship with us: and truly our fellowship </span><em><span>is</span></em><span> with the Father, and with his Son Jesus Christ.</span>
+<strong><span>4</span></strong><span>And these things write we unto you, that your joy may be full.</span>
+<strong><span>5</span></strong><span>This then is the message which we have heard of him, and declare unto you, that God is light, and in him is no darkness at all.</span>
+<strong><span>6</span></strong><span>If we say that we have fellowship with him, and walk in darkness, we lie, and do not the truth:</span>
+<strong><span>7</span></strong><span>But if we walk in the light, as he is in the light, we have fellowship one with another, and the blood of Jesus Christ his Son cleanseth us from all sin.</span>
+<strong><span>8</span></strong><span>If we say that we have no sin, we deceive ourselves, and the truth is not in us.</span>
+<strong><span>9</span></strong><span>If we confess our sins, he is faithful and just to forgive us </span><em><span>our</span></em><span> sins, and to cleanse us from all unrighteousness.</span>
+<strong><span>10</span></strong><span>If we say that we have not sinned, we make him a liar, and his word is not in us.</span></p><hr /><iframe src="https://player.rss.com/good-old-news/1133304" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1133304/">Delated Rapture | RSS.com</a></iframe><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/Wa-RGnCfb9k?si=eJ48XSyHv2_6aFPn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/UZZr2rbVtzk?si=0vaFr5Kfzlq_660U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/n7sbdh5QWcQ?si=JITDF6FEFL7Sjr13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/_liL8E9t9_Y?si=_lZbLLG7dOQJK_ED" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><p><img src="./assets/s5.webp" referrerpolicy="no-referrer" alt="s5"></p><p><strong><span>22</span></strong><font color="#ff0000"><span>And except those days should be shortened, there should no flesh be saved: but for the elect’s sake those days shall be shortened</span></font><span>.</span></p><hr /><p><img src="./assets/s6.webp" referrerpolicy="no-referrer" alt="s6"></p><p><strong><span>9*</span></strong><span>Even* </span><em><span>him</span></em><span>, whose coming is after the working of Satan with all power and signs and lying wonders,</span>
+<strong><span>10</span></strong><span>And with all deceivableness of unrighteousness in them that perish; because they received not the love of the truth, that they might be saved.</span>
+<strong><span>11</span></strong><span>And for this cause God shall send them strong delusion, that they should believe a lie:</span>
+<strong><span>12</span></strong><span>That they all might be damned who believed not the truth, but had pleasure in unrighteousness.</span></p><hr /><p><img src="./assets/s7.webp" referrerpolicy="no-referrer" alt="s7"></p><p><strong><span>24</span></strong><font color="#ff0000"><span>For there shall arise false Christs, and false prophets, and shall shew great signs and wonders; insomuch that, if</span></font><span> </span><em><span>it</span></em><span> </span><em><span>were</span></em><span> </span><font color="#ff0000"><span>possible, they shall deceive the very elect</span></font><span>.</span></p><hr /><p><img src="./assets/s8.webp" referrerpolicy="no-referrer" alt="s8"></p><p><strong><span>28</span></strong><font color="#ff0000"><span>And when these things begin to come to pass, then look up, and lift up your heads; for your redemption draweth nigh</span></font><span>.</span></p><hr /><p><img src="./assets/s8-1695146688418-1.webp" referrerpolicy="no-referrer" alt="s8"></p><p><strong><span>1</span></strong><span>I beseech you therefore, brethren, by the mercies of God, that ye present your bodies a living sacrifice, holy, acceptable unto God, </span><em><span>which</span></em><span> </span><em><span>is</span></em><span> your reasonable service.</span>
+<strong><span>2</span></strong><span>And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what </span><em><span>is</span></em><span> that good, and acceptable, and perfect, will of God.</span>
+<strong><span>3</span></strong><span>For I say, through the grace given unto me, to every man that is among you, not to think </span><em><span>of</span></em><span> </span><em><span>himself</span></em><span> more highly than he ought to think; but to think soberly, according as God hath dealt to every man the measure of faith.</span></p><hr /><p><img src="./assets/s9.webp" referrerpolicy="no-referrer" alt="s9"></p><p><strong><span>13</span></strong><span>And not as Moses, </span><em><span>which</span></em><span> put a vail over his face, that the children of Israel could not stedfastly look to the end of that which is abolished:</span>
+<strong><span>14</span></strong><span>But their minds were blinded: for until this day remaineth the same vail untaken away in the reading of the old testament; which </span><em><span>vail</span></em><span> is done away in Christ.</span>
+<strong><span>15</span></strong><span>But even unto this day, when Moses is read, the vail is upon their heart.</span>
+<strong><span>16</span></strong><span>Nevertheless when it shall turn to the Lord, the vail shall be taken away.</span>
+<strong><span>17</span></strong><span>Now the Lord is that Spirit: and where the Spirit of the Lord </span><em><span>is</span></em><span>, there </span><em><span>is</span></em><span> liberty.</span>
+<strong><span>18</span></strong><span>But we all, with open face beholding as in a glass the glory of the Lord, are changed into the same image from glory to glory, </span><em><span>even</span></em><span> as by the Spirit of the Lord.</span></p><hr /><p><img src="./assets/s10.webp" referrerpolicy="no-referrer" alt="s10"></p><p><strong><span>7</span></strong><span>And lest I should be exalted above measure through the abundance of the revelations, there was given to me a thorn in the flesh, the messenger of Satan to buffet me, lest I should be exalted above measure.</span>
+<strong><span>8</span></strong><span>For this thing I besought the Lord thrice, that it might depart from me.</span>
+<strong><span>9</span></strong><span>And he said unto me, My grace is sufficient for thee: for my strength is made perfect in weakness. Most gladly therefore will I rather glory in my infirmities, that the power of Christ may rest upon me.</span>
+<strong><span>10</span></strong><span>Therefore I take pleasure in infirmities, in reproaches, in necessities, in persecutions, in distresses for Christ’s sake: for when I am weak, then am I strong.</span></p><hr /><iframe src="https://player.rss.com/good-old-news/1129120" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1129120/">Joel | RSS.com</a></iframe><p><img src="./assets/s2.webp" alt="s2"  /></p><p><strong><span>Category:</span></strong><span> Minor Prophets</span></p><p><strong><span>1</span></strong><span>The word of the LORD that came to Joel the son of Pethuel.</span>
+<strong><span>2</span></strong><span>Hear this, ye old men, and give ear, all ye inhabitants of the land. Hath this been in your days, or even in the days of your fathers?</span>
+<strong><span>3</span></strong><span>Tell ye your children of it, and </span><em><span>let</span></em><span> your children </span><em><span>tell</span></em><span> their children, and their children another generation.</span>
+<strong><span>4</span></strong><span>That which the palmerworm hath left hath the locust eaten; and that which the locust hath left hath the cankerworm eaten; and that which the cankerworm hath left hath the caterpiller eaten.</span>
+<strong><span>5</span></strong><span>Awake, ye drunkards, and weep; and howl, all ye drinkers of wine, because of the new wine; for it is cut off from your mouth.</span>
+<strong><span>6</span></strong><span>For a nation is come up upon my land, strong, and without number, whose teeth </span><em><span>are</span></em><span> the teeth of a lion, and he hath the cheek teeth of a great lion.</span>
+<strong><span>7</span></strong><span>He hath laid my vine waste, and barked my fig tree: he hath made it clean bare, and cast </span><em><span>it</span></em><span> away; the branches thereof are made white.</span></p><p><strong><span>8</span></strong><span>¶ Lament like a virgin girded with sackcloth for the husband of her youth.</span>
+<strong><span>9</span></strong><span>The meat offering and the drink offering is cut off from the house of the LORD; the priests, the LORD’S ministers, mourn.</span>
+<strong><span>10</span></strong><span>The field is wasted, the land mourneth; for the corn is wasted: the new wine is dried up, the oil languisheth.</span>
+<strong><span>11</span></strong><span>Be ye ashamed, O ye husbandmen; howl, O ye vinedressers, for the wheat and for the barley; because the harvest of the field is perished.</span>
+<strong><span>12</span></strong><span>The vine is dried up, and the fig tree languisheth; the pomegranate tree, the palm tree also, and the apple tree, </span><em><span>even</span></em><span> all the trees of the field, are withered: because joy is withered away from the sons of men.</span>
+<strong><span>13</span></strong><span>Gird yourselves, and lament, ye priests: howl, ye ministers of the altar: come, lie all night in sackcloth, ye ministers of my God: for the meat offering and the drink offering is withholden from the house of your God.</span></p><p><strong><span>14</span></strong><span>¶ Sanctify ye a fast, call a solemn assembly, gather the elders </span><em><span>and</span></em><span> all the inhabitants of the land </span><em><span>into</span></em><span> the house of the LORD your God, and cry unto the LORD,</span>
+<strong><span>15</span></strong><span>Alas for the day! for the day of the LORD </span><em><span>is</span></em><span> at hand, and as a destruction from the Almighty shall it come.</span>
+<strong><span>16</span></strong><span>Is not the meat cut off before our eyes, </span><em><span>yea</span></em><span>, joy and gladness from the house of our God?</span>
+<strong><span>17</span></strong><span>The seed is rotten under their clods, the garners are laid desolate, the barns are broken down; for the corn is withered.</span>
+<strong><span>18</span></strong><span>How do the beasts groan! the herds of cattle are perplexed, because they have no pasture; yea, the flocks of sheep are made desolate.</span>
+<strong><span>19</span></strong><span>O LORD, to thee will I cry: for the fire hath devoured the pastures of the wilderness, and the flame hath burned all the trees of the field.</span>
+<strong><span>20</span></strong><span>The beasts of the field cry also unto thee: for the rivers of waters are dried up, and the fire hath devoured the pastures of the wilderness.</span></p><hr /><p><img src="./assets/s3.webp" alt="s3"  /></p><p><strong><span>1</span></strong><span>Blow ye the trumpet in Zion, and sound an alarm in my holy mountain: let all the inhabitants of the land tremble: for the day of the LORD cometh, for </span><em><span>it</span></em><span> </span><em><span>is</span></em><span> nigh at hand;</span>
+<strong><span>2</span></strong><span>A day of darkness and of gloominess, a day of clouds and of thick darkness, as the morning spread upon the mountains: a great people and a strong; there hath not been ever the like, neither shall be any more after it, </span><em><span>even</span></em><span> to the years of many generations.</span>
+<strong><span>3</span></strong><span>A fire devoureth before them; and behind them a flame burneth: the land </span><em><span>is</span></em><span> as the garden of Eden before them, and behind them a desolate wilderness; yea, and nothing shall escape them.</span>
+<strong><span>4</span></strong><span>The appearance of them </span><em><span>is</span></em><span> as the appearance of horses; and as horsemen, so shall they run.</span>
+<strong><span>5</span></strong><span>Like the noise of chariots on the tops of mountains shall they leap, like the noise of a flame of fire that devoureth the stubble, as a strong people set in battle array.</span>
+<strong><span>6</span></strong><span>Before their face the people shall be much pained: all faces shall gather blackness.</span>
+<strong><span>7</span></strong><span>They shall run like mighty men; they shall climb the wall like men of war; and they shall march every one on his ways, and they shall not break their ranks:</span>
+<strong><span>8</span></strong><span>Neither shall one thrust another; they shall walk every one in his path: and </span><em><span>when</span></em><span> they fall upon the sword, they shall not be wounded.</span>
+<strong><span>9</span></strong><span>They shall run to and fro in the city; they shall run upon the wall, they shall climb up upon the houses; they shall enter in at the windows like a thief.</span>
+<strong><span>10</span></strong><span>The earth shall quake before them; the heavens shall tremble: the sun and the moon shall be dark, and the stars shall withdraw their shining:</span>
+<strong><span>11</span></strong><span>And the LORD shall utter his voice before his army: for his camp </span><em><span>is</span></em><span> very great: for </span><em><span>he</span></em><span> </span><em><span>is</span></em><span> strong that executeth his word: for the day of the LORD </span><em><span>is</span></em><span> great and very terrible; and who can abide it?</span></p><p><strong><span>12</span></strong><span>¶ Therefore also now, saith the LORD, turn ye </span><em><span>even</span></em><span> to me with all your heart, and with fasting, and with weeping, and with mourning:</span>
+<strong><span>13</span></strong><span>And rend your heart, and not your garments, and turn unto the LORD your God: for he </span><em><span>is</span></em><span> gracious and merciful, slow to anger, and of great kindness, and repenteth him of the evil.</span>
+<strong><span>14</span></strong><span>Who knoweth </span><em><span>if</span></em><span> he will return and repent, and leave a blessing behind him; </span><em><span>even</span></em><span> a meat offering and a drink offering unto the LORD your God?</span></p><p><strong><span>15</span></strong><span>¶ Blow the trumpet in Zion, sanctify a fast, call a solemn assembly:</span>
+<strong><span>16</span></strong><span>Gather the people, sanctify the congregation, assemble the elders, gather the children, and those that suck the breasts: let the bridegroom go forth of his chamber, and the bride out of her closet.</span>
+<strong><span>17</span></strong><span>Let the priests, the ministers of the LORD, weep between the porch and the altar, and let them say, Spare thy people, O LORD, and give not thine heritage to reproach, that the heathen should rule over them: wherefore should they say among the people, Where </span><em><span>is</span></em><span> their God?</span></p><p><strong><span>18</span></strong><span>¶ Then will the LORD be jealous for his land, and pity his people.</span>
+<strong><span>19</span></strong><span>Yea, the LORD will answer and say unto his people, Behold, I will send you corn, and wine, and oil, and ye shall be satisfied therewith: and I will no more make you a reproach among the heathen:</span>
+<strong><span>20</span></strong><span>But I will remove far off from you the northern </span><em><span>army</span></em><span>, and will drive him into a land barren and desolate, with his face toward the east sea, and his hinder part toward the utmost sea, and his stink shall come up, and his ill savour shall come up, because he hath done great things.</span></p><p><strong><span>21</span></strong><span>¶ Fear not, O land; be glad and rejoice: for the LORD will do great things.</span>
+<strong><span>22</span></strong><span>Be not afraid, ye beasts of the field: for the pastures of the wilderness do spring, for the tree beareth her fruit, the fig tree and the vine do yield their strength.</span>
+<strong><span>23</span></strong><span>Be glad then, ye children of Zion, and rejoice in the LORD your God: for he hath given you the former rain moderately, and he will cause to come down for you the rain, the former rain, and the latter rain in the first </span><em><span>month</span></em><span>.</span>
+<strong><span>24</span></strong><span>And the floors shall be full of wheat, and the fats shall overflow with wine and oil.</span>
+<strong><span>25</span></strong><span>And I will restore to you the years that the locust hath eaten, the cankerworm, and the caterpiller, and the palmerworm, my great army which I sent among you.</span>
+<strong><span>26</span></strong><span>And ye shall eat in plenty, and be satisfied, and praise the name of the LORD your God, that hath dealt wondrously with you: and my people shall never be ashamed.</span>
+<strong><span>27</span></strong><span>And ye shall know that I </span><em><span>am</span></em><span> in the midst of Israel, and </span><em><span>that</span></em><span> I </span><em><span>am</span></em><span> the LORD your God, and none else: and my people shall never be ashamed.</span></p><p><strong><span>28</span></strong><span>¶ And it shall come to pass afterward, </span><em><span>that</span></em><span> I will pour out my spirit upon all flesh; and your sons and your daughters shall prophesy, your old men shall dream dreams, your young men shall see visions:</span>
+<strong><span>29</span></strong><span>And also upon the servants and upon the handmaids in those days will I pour out my spirit.</span>
+<strong><span>30</span></strong><span>And I will shew wonders in the heavens and in the earth, blood, and fire, and pillars of smoke.</span>
+<strong><span>31</span></strong><span>The sun shall be turned into darkness, and the moon into blood, before the great and the terrible day of the LORD come.</span>
+<strong><span>32</span></strong><span>And it shall come to pass, </span><em><span>that</span></em><span> whosoever shall call on the name of the LORD shall be delivered: for in mount Zion and in Jerusalem shall be deliverance, as the LORD hath said, and in the remnant whom the LORD shall call.</span></p><hr /><p><img src="./assets/s4.webp" alt="s4"  /></p><p><strong><span>1</span></strong><span>For, behold, in those days, and in that time, when I shall bring again the captivity of Judah and Jerusalem,</span>
+<strong><span>2</span></strong><span>I will also gather all nations, and will bring them down into the valley of Jehoshaphat, and will plead with them there for my people and </span><em><span>for</span></em><span> my heritage Israel, whom they have scattered among the nations, and parted my land.</span>
+<strong><span>3</span></strong><span>And they have cast lots for my people; and have given a boy for an harlot, and sold a girl for wine, that they might drink.</span>
+<strong><span>4</span></strong><span>Yea, and what have ye to do with me, O Tyre, and Zidon, and all the coasts of Palestine? will ye render me a recompence? and if ye recompense me, swiftly </span><em><span>and</span></em><span> speedily will I return your recompence upon your own head;</span>
+<strong><span>5</span></strong><span>Because ye have taken my silver and my gold, and have carried into your temples my goodly pleasant things:</span>
+<strong><span>6</span></strong><span>The children also of Judah and the children of Jerusalem have ye sold unto the Grecians, that ye might remove them far from their border.</span>
+<strong><span>7</span></strong><span>Behold, I will raise them out of the place whither ye have sold them, and will return your recompence upon your own head:</span>
+<strong><span>8</span></strong><span>And I will sell your sons and your daughters into the hand of the children of Judah, and they shall sell them to the Sabeans, to a people far off: for the LORD hath spoken </span><em><span>it</span></em><span>.</span></p><p><strong><span>9</span></strong><span>¶ Proclaim ye this among the Gentiles; Prepare war, wake up the mighty men, let all the men of war draw near; let them come up:</span>
+<strong><span>10</span></strong><span>Beat your plowshares into swords, and your pruninghooks into spears: let the weak say, I </span><em><span>am</span></em><span> strong.</span>
+<strong><span>11</span></strong><span>Assemble yourselves, and come, all ye heathen, and gather yourselves together round about: thither cause thy mighty ones to come down, O LORD.</span>
+<strong><span>12</span></strong><span>Let the heathen be wakened, and come up to the valley of Jehoshaphat: for there will I sit to judge all the heathen round about.</span>
+<strong><span>13</span></strong><span>Put ye in the sickle, for the harvest is ripe: come, get you down; for the press is full, the fats overflow; for their wickedness </span><em><span>is</span></em><span> great.</span>
+<strong><span>14</span></strong><span>Multitudes, multitudes in the valley of decision: for the day of the LORD </span><em><span>is</span></em><span> near in the valley of decision.</span>
+<strong><span>15</span></strong><span>The sun and the moon shall be darkened, and the stars shall withdraw their shining.</span>
+<strong><span>16</span></strong><span>The LORD also shall roar out of Zion, and utter his voice from Jerusalem; and the heavens and the earth shall shake: but the LORD </span><em><span>will</span></em><span> </span><em><span>be</span></em><span> the hope of his people, and the strength of the children of Israel.</span>
+<strong><span>17</span></strong><span>So shall ye know that I </span><em><span>am</span></em><span> the LORD your God dwelling in Zion, my holy mountain: then shall Jerusalem be holy, and there shall no strangers pass through her any more.</span></p><p><strong><span>18</span></strong><span>¶ And it shall come to pass in that day, </span><em><span>that</span></em><span> the mountains shall drop down new wine, and the hills shall flow with milk, and all the rivers of Judah shall flow with waters, and a fountain shall come forth of the house of the LORD, and shall water the valley of Shittim.</span>
+<strong><span>19</span></strong><span>Egypt shall be a desolation, and Edom shall be a desolate wilderness, for the violence </span><em><span>against</span></em><span> the children of Judah, because they have shed innocent blood in their land.</span>
+<strong><span>20</span></strong><span>But Judah shall dwell for ever, and Jerusalem from generation to generation.</span>
+<strong><span>21</span></strong><span>For I will cleanse their blood </span><em><span>that</span></em><span> I have not cleansed: for the LORD dwelleth in Zion.</span></p><hr /><p><img src="./assets/s15.webp" referrerpolicy="no-referrer" alt="s15"></p><p><span>Dear Heavenly </span><em><strong><span>Father</span></strong></em>
 <span>You know </span><em><span>everything</span></em><span> about me,</span>
 <span>and you know that I’m a </span><em><span>sinner</span></em><span>.</span></p><p>&nbsp;</p><p><span>For many years, I have </span><em><span>loved my sins</span></em><span>.</span>
 <span>I hereby </span><em><span>repent</span></em><span> from all </span><em><span>my sinful ways</span></em><span>.</span></p><p>&nbsp;</p><p><span>I’m willing to </span><em><span>change with </span><strong><span>Your</span></strong><span> help</span></em><span>,</span>
@@ -1004,6 +1079,6 @@ strong {
 <span>and today this very day, I receive that </span><em><span>righteousness</span></em><span>.</span></p><p>&nbsp;</p><p><span>I </span><em><span>hereby</span></em><span> put my </span><em><span>faith</span></em><span> in Him, the </span><em><strong><span>savior</span></strong></em><span> of the world.</span>
 <span>So please God have </span><em><span>mercy</span></em><span> on me, a </span><em><span>sinner</span></em><span>.</span>
 <em><strong><span>Save me Jesus Christ</span></strong></em><span>, and today this very day,</span>
-<em><strong><span>I commit my life to you Lord Jesus Christ</span></strong></em><span>.</span></p><p><img src="./assets/amen.webp" referrerpolicy="no-referrer" alt="amen"></p><hr /><p><img src="./assets/The-road-to-salvation.webp" referrerpolicy="no-referrer" alt="The-road-to-salvation"></p><p><span>Download the document here:</span></p><p><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='./assets/the-road-to-salvation-main.pdf'><span>PDF</span></a><span> </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"></p><p><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='./assets/the-road-to-salvation-main.webp'><span>Webp</span></a><span> </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"></p><p><span>You can also see the document as a web-page: </span><a href='the-road-to-salvation.html'><span>Here</span></a><span>.</span></p><hr /><p><img src="./assets/logo-1.webp" referrerpolicy="no-referrer" alt="logo-1"></p><p><span>If you have demonic powers effecting your life,</span></p><p><span>you might want to look at this prayer.</span></p><p><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='./assets/prayer-of-deliverance.pdf'><span>PDF</span></a><span> </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"></p><p><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='./assets/prayer-of-deliverance.webp'><span>Webp</span></a><span> </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"></p><p><span>You can also see the document as a web-page: </span><a href='prayer-of-deliverance.html'><span>Here</span></a><span>.</span></p><hr /><p>&nbsp;</p></div></div>
+<em><strong><span>I commit my life to you Lord Jesus Christ</span></strong></em><span>.</span></p><p><img src="./assets/s16.webp" referrerpolicy="no-referrer" alt="s16"></p><hr /><p>&nbsp;</p></div></div>
 </body>
 </html>
