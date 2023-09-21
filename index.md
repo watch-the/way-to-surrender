@@ -116,6 +116,18 @@
 
 ---
 
+![s17](./assets/s17.webp)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Fg5grFeLz6M?si=Wuj-wDPTN0P70Q1-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+![s17](./assets/s17-1695302077160-5.webp)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dKe6lOOJCVE?si=wRQtCn6q2GdbWIU_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
 <iframe src="https://player.rss.com/good-old-news/1129120" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1129120/">Joel | RSS.com</a></iframe>
 
 <img src="./assets/s2.webp" alt="s2"  />
@@ -217,6 +229,12 @@
 
 ---
 
+![s18](./assets/s18.webp)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uuabITeO4l8?si=PhSTkZtIFRguld2H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
 ![s15](./assets/s15.webp)
 
 Dear Heavenly ***Father***
@@ -252,6 +270,12 @@ So please God have *mercy* on me, a *sinner*.
 ***I commit my life to you Lord Jesus Christ***.
 
 ![s16](./assets/s16.webp)
+
+---
+
+![s19](./assets/s19.webp)
+
+<iframe src="https://player.rss.com/good-old-news/1136487" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1136487/">Romans 8 | RSS.com</a></iframe>
 
 ---
 
