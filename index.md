@@ -1,3 +1,9 @@
+<img src="./assets/dark.webp" alt="dark" style="zoom:25%;" />
+[Dark Theme](./index-2.html)
+
+<img src="./assets/light.webp" alt="light" style="zoom:25%;" />
+[Light Theme](./index.html)
+
 ![s1](./assets/s1.webp)
 
 ---
@@ -487,3 +493,4 @@ Download Locations:
 
 ---
 
+[List Of Future Web-Sites](https://the-lord-jesus-will.github.io/show-you/).
