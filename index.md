@@ -1,16 +1,16 @@
-<img src="./assets/dark.webp" alt="dark" style="zoom:25%;" />
-[Dark Theme](./index-2.html)
+<p><video src="./assets/choose-theme.webm" autoplay loop muted></video></p>
 
-<img src="./assets/light.webp" alt="light" style="zoom:25%;" />
-[Light Theme](./index.html)
+[Dark Theme](./index-2.html) / [Light Theme](./index.html).
 
-![s1](./assets/s1.webp)
+<p><video src="./assets/Delayed-Rapture-10-3-2023.webm" autoplay loop muted></video></p>
+
+
 
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1f8uTVA_47A?si=E1ZSY-D2xnHC6v0K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-![s11](./assets/s11.webp)
+<p><video src="./assets/Luke-4-14-21-10-3-2023.webm" autoplay loop muted></video></p>
 
 **14**¶ And Jesus returned in the power of the Spirit into Galilee: and there went out a fame of him through all the region round about.
 **15**And he taught in their synagogues, being glorified of all.
@@ -24,7 +24,7 @@
 
 ---
 
-![s12](./assets/s12.webp)
+<p><video src="./assets/Isaiah-61-1-3-10-3-2023.webm" autoplay loop muted></video></p>
 
 **1**The Spirit of the Lord GOD *is* upon me; because the LORD hath anointed me to preach good tidings unto the meek; he hath sent me to bind up the brokenhearted, to proclaim liberty to the captives, and the opening of the prison to *them* *that* *are* bound;
 **2**<font color="#ffff00">To proclaim the acceptable year of the LORD</font>, and the <font color="#ff0000">day of vengeance of our God; to comfort all that mourn</font>;
@@ -32,7 +32,7 @@
 
 ---
 
-![s13](./assets/s13.webp)
+<p><video src="./assets/1-John-1-1-10-10-3-2023.webm" autoplay loop muted></video></p>
 
 **Category:** General Epistles
 
@@ -67,13 +67,13 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_liL8E9t9_Y?si=_lZbLLG7dOQJK_ED" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-![s5](./assets/s5.webp)
+<p><video src="./assets/Matthew-24-22-10-3-2023.webm" autoplay loop muted></video></p>
 
 **22**<font color="#ff0000">And except those days should be shortened, there should no flesh be saved: but for the elect’s sake those days shall be shortened</font>.
 
 ---
 
-![s6](./assets/s6.webp)
+<p><video src="./assets/2-Thessalonians-2-9-12-10-3-2023.webm" autoplay loop muted></video></p>
 
 **9***Even* *him*, whose coming is after the working of Satan with all power and signs and lying wonders,
 **10**And with all deceivableness of unrighteousness in them that perish; because they received not the love of the truth, that they might be saved.
@@ -82,19 +82,19 @@
 
 ---
 
-![s7](./assets/s7.webp)
+<p><video src="./assets/Matthew-24-24-10-3-2023.webm" autoplay loop muted></video></p>
 
 **24**<font color="#ff0000">For there shall arise false Christs, and false prophets, and shall shew great signs and wonders; insomuch that, if</font> *it* *were* <font color="#ff0000">possible, they shall deceive the very elect</font>.
 
 ---
 
-![s8](./assets/s8.webp)
+<p><video src="./assets/Luke-21-28-10-3-2023.webm" autoplay loop muted></video></p>
 
 **28**<font color="#ff0000">And when these things begin to come to pass, then look up, and lift up your heads; for your redemption draweth nigh</font>.
 
 ---
 
-![s8](./assets/s8-1695146688418-1.webp)
+<p><video src="./assets/Romans-12-1-3-10-3-2023.webm" autoplay loop muted></video></p>
 
 **1**I beseech you therefore, brethren, by the mercies of God, that ye present your bodies a living sacrifice, holy, acceptable unto God, *which* *is* your reasonable service.
 **2**And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what *is* that good, and acceptable, and perfect, will of God.
@@ -102,7 +102,7 @@
 
 ---
 
-![s9](./assets/s9.webp)
+<p><video src="./assets/2-Corinthians-3-13-18-10-3-2023.webm" autoplay loop muted></video></p>
 
 **13**And not as Moses, *which* put a vail over his face, that the children of Israel could not stedfastly look to the end of that which is abolished:
 **14**But their minds were blinded: for until this day remaineth the same vail untaken away in the reading of the old testament; which *vail* is done away in Christ.
@@ -113,7 +113,7 @@
 
 ---
 
-![s10](./assets/s10.webp)
+<p><video src="./assets/2-Corinthians-12-7-10-10-3-2023.webm" autoplay loop muted></video></p>
 
 **7**And lest I should be exalted above measure through the abundance of the revelations, there was given to me a thorn in the flesh, the messenger of Satan to buffet me, lest I should be exalted above measure.
 **8**For this thing I besought the Lord thrice, that it might depart from me.
@@ -122,13 +122,13 @@
 
 ---
 
-![s17](./assets/s17.webp)
+<p><video src="./assets/Counter-Weight-10-3-2023.webm" autoplay loop muted></video></p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Fg5grFeLz6M?si=Wuj-wDPTN0P70Q1-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
-![s17](./assets/s17-1695302077160-5.webp)
+<p><video src="./assets/Counter-Weight-10-3-2023.webm" autoplay loop muted></video></p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dKe6lOOJCVE?si=wRQtCn6q2GdbWIU_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -136,7 +136,7 @@
 
 <iframe src="https://player.rss.com/good-old-news/1129120" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1129120/">Joel | RSS.com</a></iframe>
 
-<img src="./assets/s2.webp" alt="s2"  />
+<p><video src="./assets/Joel-1-1-20-10-3-2023.webm" autoplay loop muted></video></p>
 
 **Category:** Minor Prophets
 
@@ -165,7 +165,7 @@
 
 ---
 
-<img src="./assets/s3.webp" alt="s3"  />
+<p><video src="./assets/Joel-2-1-32-10-3-2023.webm" autoplay loop muted></video></p>
 
 **1**Blow ye the trumpet in Zion, and sound an alarm in my holy mountain: let all the inhabitants of the land tremble: for the day of the LORD cometh, for *it* *is* nigh at hand;
 **2**A day of darkness and of gloominess, a day of clouds and of thick darkness, as the morning spread upon the mountains: a great people and a strong; there hath not been ever the like, neither shall be any more after it, *even* to the years of many generations.
@@ -207,7 +207,7 @@
 
 ---
 
-<img src="./assets/s4.webp" alt="s4"  />
+<p><video src="./assets/Joel-3-1-21-10-3-2023.webm" autoplay loop muted></video></p>
 
 **1**For, behold, in those days, and in that time, when I shall bring again the captivity of Judah and Jerusalem,
 **2**I will also gather all nations, and will bring them down into the valley of Jehoshaphat, and will plead with them there for my people and *for* my heritage Israel, whom they have scattered among the nations, and parted my land.
@@ -235,13 +235,13 @@
 
 ---
 
-![s18](./assets/s18.webp)
+<p><video src="./assets/Paul-Washer-Shocking-Message-10-3-2023.webm" autoplay loop muted></video></p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uuabITeO4l8?si=PhSTkZtIFRguld2H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
-![s15](./assets/s15.webp)
+<p><video src="./assets/The-Road-To-Salvation-10-3-2023.webm" autoplay loop muted></video></p>
 
 Dear Heavenly ***Father***
 ***You*** know *everything* about me,
@@ -275,13 +275,15 @@ So please ***God*** have *mercy* on me, a *sinner*.
 Save me ***Jesus Christ***, and today this very day,
 ***I commit my life to you Lord Jesus Christ***.
 
-![s16](./assets/s16.webp)
+<p><video src="./assets/I-Pray-These-Things-In-The-M-10-3-2023.webm" autoplay loop muted></video></p>
 
 You can download the ***Road To Salvation*** in more formats:  [Here](assets\the-road-to-salvation.zip).
 
 ---
 
-![s19](./assets/s19.webp)
+<p><video src="./assets/Romans-8-1-39-10-3-2023.webm" autoplay loop muted></video></p>
+
+
 
 <iframe src="https://player.rss.com/good-old-news/1137630" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1137630/">Romans 8 | RSS.com</a></iframe>
 
@@ -327,7 +329,7 @@ You can download the ***Road To Salvation*** in more formats:  [Here](assets\the
 
 ---
 
-![s20](./assets/s20.webp)
+<p><video src="./assets/Psalm-27-1-14-10-3-2023.webm" autoplay loop muted></video></p>
 
 <iframe src="https://player.rss.com/good-old-news/1137626" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1137626/">Psalm 27 | RSS.com</a></iframe>
 
@@ -350,7 +352,9 @@ You can download the ***Road To Salvation*** in more formats:  [Here](assets\the
 
 ---
 
-![s21](./assets/s21.webp)
+<p><video src="./assets/Psalm-91-1-16-10-3-2023.webm" autoplay loop muted></video></p>
+
+
 
 <iframe src="https://player.rss.com/good-old-news/1137628" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1137628/">Psalm 91 | RSS.com</a></iframe>
 
@@ -493,4 +497,4 @@ Download Locations:
 
 ---
 
-[List Of Future Web-Sites](https://the-lord-jesus-will.github.io/show-you/).
+[List Of Future Web-Sites](https://the-lord-jesus-will.github.io/show-you/).~~~
