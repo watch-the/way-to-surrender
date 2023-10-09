@@ -1,2305 +1,1236 @@
 <!doctype html>
 <html>
-
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width initial-scale=1'>
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <style type='text/css'>
-        html {
-            overflow-x: initial !important;
-        }
-
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #333333;
-            --select-text-bg-color: #B5D6FC;
-            --select-text-font-color: auto;
-            --monospace: "Lucida Console", Consolas, "Courier", monospace;
-            --title-bar-height: 20px;
-        }
-
-        .mac-os-11 {
-            --title-bar-height: 28px;
-        }
-
-        html {
-            font-size: 14px;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            white-space: pre-wrap;
-        }
-
-        body {
-            margin: 0px;
-            padding: 0px;
-            height: auto;
-            inset: 0px;
-            font-size: 1rem;
-            line-height: 1.42857;
-            overflow-x: hidden;
-            background: inherit;
-            tab-size: 4;
-        }
-
-        iframe {
-            margin: auto;
-        }
-
-        a.url {
-            word-break: break-all;
-        }
-
-        a:active,
-        a:hover {
-            outline: 0px;
-        }
-
-        .in-text-selection,
-        ::selection {
-            text-shadow: none;
-            background: var(--select-text-bg-color);
-            color: var(--select-text-font-color);
-        }
-
-        #write {
-            margin: 0px auto;
-            height: auto;
-            width: inherit;
-            word-break: normal;
-            overflow-wrap: break-word;
-            position: relative;
-            white-space: normal;
-            overflow-x: visible;
-            padding-top: 36px;
-        }
-
-        #write.first-line-indent p {
-            text-indent: 2em;
-        }
-
-        #write.first-line-indent li p,
-        #write.first-line-indent p * {
-            text-indent: 0px;
-        }
-
-        #write.first-line-indent li {
-            margin-left: 2em;
-        }
-
-        .for-image #write {
-            padding-left: 8px;
-            padding-right: 8px;
-        }
-
-        body.typora-export {
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-
-        .typora-export .footnote-line,
-        .typora-export li,
-        .typora-export p {
-            white-space: pre-wrap;
-        }
-
-        .typora-export .task-list-item input {
-            pointer-events: none;
-        }
-
-        @media screen and (max-width: 500px) {
-            body.typora-export {
-                padding-left: 0px;
-                padding-right: 0px;
-            }
-
-            #write {
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-        }
-
-        #write li>figure:last-child {
-            margin-bottom: 0.5rem;
-        }
-
-        #write ol,
-        #write ul {
-            position: relative;
-        }
-
-        img {
-            max-width: 100%;
-            vertical-align: middle;
-            image-orientation: from-image;
-        }
-
-        button,
-        input,
-        select,
-        textarea {
-            color: inherit;
-            font: inherit;
-        }
-
-        input[type="checkbox"],
-        input[type="radio"] {
-            line-height: normal;
-            padding: 0px;
-        }
-
-        *,
-        ::after,
-        ::before {
-            box-sizing: border-box;
-        }
-
-        #write h1,
-        #write h2,
-        #write h3,
-        #write h4,
-        #write h5,
-        #write h6,
-        #write p,
-        #write pre {
-            width: inherit;
-        }
-
-        #write h1,
-        #write h2,
-        #write h3,
-        #write h4,
-        #write h5,
-        #write h6,
-        #write p {
-            position: relative;
-        }
-
-        p {
-            line-height: inherit;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            break-after: avoid-page;
-            break-inside: avoid;
-            orphans: 4;
-        }
-
-        p {
-            orphans: 4;
-        }
-
-        h1 {
-            font-size: 2rem;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-        }
-
-        h3 {
-            font-size: 1.6rem;
-        }
-
-        h4 {
-            font-size: 1.4rem;
-        }
-
-        h5 {
-            font-size: 1.2rem;
-        }
-
-        h6 {
-            font-size: 1rem;
-        }
-
-        .md-math-block,
-        .md-rawblock,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .md-blockmeta {
-            color: rgb(204, 204, 204);
-            font-weight: 700;
-            font-style: italic;
-        }
-
-        a {
-            cursor: pointer;
-        }
-
-        sup.md-footnote {
-            padding: 2px 4px;
-            background-color: rgba(238, 238, 238, 0.7);
-            color: rgb(85, 85, 85);
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        sup.md-footnote a,
-        sup.md-footnote a:hover {
-            color: inherit;
-            text-transform: inherit;
-            text-decoration: inherit;
-        }
-
-        #write input[type="checkbox"] {
-            cursor: pointer;
-            width: inherit;
-            height: inherit;
-        }
-
-        figure {
-            overflow-x: auto;
-            margin: 1.2em 0px;
-            max-width: calc(100% + 16px);
-            padding: 0px;
-        }
-
-        figure>table {
-            margin: 0px;
-        }
-
-        thead,
-        tr {
-            break-inside: avoid;
-            break-after: auto;
-        }
-
-        thead {
-            display: table-header-group;
-        }
-
-        table {
-            border-collapse: collapse;
-            border-spacing: 0px;
-            width: 100%;
-            overflow: auto;
-            break-inside: auto;
-            text-align: left;
-        }
-
-        table.md-table td {
-            min-width: 32px;
-        }
-
-        .CodeMirror-gutters {
-            border-right: 0px;
-            background-color: inherit;
-        }
-
-        .CodeMirror-linenumber {
-            user-select: none;
-        }
-
-        .CodeMirror {
-            text-align: left;
-        }
-
-        .CodeMirror-placeholder {
-            opacity: 0.3;
-        }
-
-        .CodeMirror pre {
-            padding: 0px 4px;
-        }
-
-        .CodeMirror-lines {
-            padding: 0px;
-        }
-
-        div.hr:focus {
-            cursor: none;
-        }
-
-        #write pre {
-            white-space: pre-wrap;
-        }
-
-        #write.fences-no-line-wrapping pre {
-            white-space: pre;
-        }
-
-        #write pre.ty-contain-cm {
-            white-space: normal;
-        }
-
-        .CodeMirror-gutters {
-            margin-right: 4px;
-        }
-
-        .md-fences {
-            font-size: 0.9rem;
-            display: block;
-            break-inside: avoid;
-            text-align: left;
-            overflow: visible;
-            white-space: pre;
-            background: inherit;
-            position: relative !important;
-        }
-
-        .md-fences-adv-panel {
-            width: 100%;
-            margin-top: 10px;
-            text-align: center;
-            padding-top: 0px;
-            padding-bottom: 8px;
-            overflow-x: auto;
-        }
-
-        #write .md-fences.mock-cm {
-            white-space: pre-wrap;
-        }
-
-        .md-fences.md-fences-with-lineno {
-            padding-left: 0px;
-        }
-
-        #write.fences-no-line-wrapping .md-fences.mock-cm {
-            white-space: pre;
-            overflow-x: auto;
-        }
-
-        .md-fences.mock-cm.md-fences-with-lineno {
-            padding-left: 8px;
-        }
-
-        .CodeMirror-line,
-        twitterwidget {
-            break-inside: avoid;
-        }
-
-        svg {
-            break-inside: avoid;
-        }
-
-        .footnotes {
-            opacity: 0.8;
-            font-size: 0.9rem;
-            margin-top: 1em;
-            margin-bottom: 1em;
-        }
-
-        .footnotes+.footnotes {
-            margin-top: 0px;
-        }
-
-        .md-reset {
-            margin: 0px;
-            padding: 0px;
-            border: 0px;
-            outline: 0px;
-            vertical-align: top;
-            background: 0px 0px;
-            text-decoration: none;
-            text-shadow: none;
-            float: none;
-            position: static;
-            width: auto;
-            height: auto;
-            white-space: nowrap;
-            cursor: inherit;
-            -webkit-tap-highlight-color: transparent;
-            line-height: normal;
-            font-weight: 400;
-            text-align: left;
-            box-sizing: content-box;
-            direction: ltr;
-        }
-
-        li div {
-            padding-top: 0px;
-        }
-
-        blockquote {
-            margin: 1rem 0px;
-        }
-
-        li .mathjax-block,
-        li p {
-            margin: 0.5rem 0px;
-        }
-
-        li blockquote {
-            margin: 1rem 0px;
-        }
-
-        li {
-            margin: 0px;
-            position: relative;
-        }
-
-        blockquote> :last-child {
-            margin-bottom: 0px;
-        }
-
-        blockquote> :first-child,
-        li> :first-child {
-            margin-top: 0px;
-        }
-
-        .footnotes-area {
-            color: rgb(136, 136, 136);
-            margin-top: 0.714rem;
-            padding-bottom: 0.143rem;
-            white-space: normal;
-        }
-
-        #write .footnote-line {
-            white-space: pre-wrap;
-        }
-
-        @media print {
-
-            body,
-            html {
-                border: 1px solid transparent;
-                height: 99%;
-                break-after: avoid;
-                break-before: avoid;
-                font-variant-ligatures: no-common-ligatures;
-            }
-
-            #write {
-                margin-top: 0px;
-                border-color: transparent !important;
-                padding-top: 0px !important;
-                padding-bottom: 0px !important;
-            }
-
-            .typora-export * {
-                -webkit-print-color-adjust: exact;
-            }
-
-            .typora-export #write {
-                break-after: avoid;
-            }
-
-            .typora-export #write::after {
-                height: 0px;
-            }
-
-            .is-mac table {
-                break-inside: avoid;
-            }
-
-            #write>p:nth-child(1) {
-                margin-top: 0px;
-            }
-
-            .typora-export-show-outline .typora-export-sidebar {
-                display: none;
-            }
-
-            figure {
-                overflow-x: visible;
-            }
-        }
-
-        .footnote-line {
-            margin-top: 0.714em;
-            font-size: 0.7em;
-        }
-
-        a img,
-        img a {
-            cursor: pointer;
-        }
-
-        pre.md-meta-block {
-            font-size: 0.8rem;
-            min-height: 0.8rem;
-            white-space: pre-wrap;
-            background: rgb(204, 204, 204);
-            display: block;
-            overflow-x: hidden;
-        }
-
-        p>.md-image:only-child:not(.md-img-error) img,
-        p>img:only-child {
-            display: block;
-            margin: auto;
-        }
-
-        #write.first-line-indent p>.md-image:only-child:not(.md-img-error) img {
-            left: -2em;
-            position: relative;
-        }
-
-        p>.md-image:only-child {
-            display: inline-block;
-            width: 100%;
-        }
-
-        #write .MathJax_Display {
-            margin: 0.8em 0px 0px;
-        }
-
-        .md-math-block {
-            width: 100%;
-        }
-
-        .md-math-block:not(:empty)::after {
-            display: none;
-        }
-
-        .MathJax_ref {
-            fill: currentcolor;
-        }
-
-        [contenteditable="true"]:active,
-        [contenteditable="true"]:focus,
-        [contenteditable="false"]:active,
-        [contenteditable="false"]:focus {
-            outline: 0px;
-            box-shadow: none;
-        }
-
-        .md-task-list-item {
-            position: relative;
-            list-style-type: none;
-        }
-
-        .task-list-item.md-task-list-item {
-            padding-left: 0px;
-        }
-
-        .md-task-list-item>input {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            margin-left: -1.2em;
-            margin-top: calc(1em - 10px);
-            border: none;
-        }
-
-        .math {
-            font-size: 1rem;
-        }
-
-        .md-toc {
-            min-height: 3.58rem;
-            position: relative;
-            font-size: 0.9rem;
-            border-radius: 10px;
-        }
-
-        .md-toc-content {
-            position: relative;
-            margin-left: 0px;
-        }
-
-        .md-toc-content::after,
-        .md-toc::after {
-            display: none;
-        }
-
-        .md-toc-item {
-            display: block;
-            color: rgb(65, 131, 196);
-        }
-
-        .md-toc-item a {
-            text-decoration: none;
-        }
-
-        .md-toc-inner:hover {
-            text-decoration: underline;
-        }
-
-        .md-toc-inner {
-            display: inline-block;
-            cursor: pointer;
-        }
-
-        .md-toc-h1 .md-toc-inner {
-            margin-left: 0px;
-            font-weight: 700;
-        }
-
-        .md-toc-h2 .md-toc-inner {
-            margin-left: 2em;
-        }
-
-        .md-toc-h3 .md-toc-inner {
-            margin-left: 4em;
-        }
-
-        .md-toc-h4 .md-toc-inner {
-            margin-left: 6em;
-        }
-
-        .md-toc-h5 .md-toc-inner {
-            margin-left: 8em;
-        }
-
-        .md-toc-h6 .md-toc-inner {
-            margin-left: 10em;
-        }
-
-        @media screen and (max-width: 48em) {
-            .md-toc-h3 .md-toc-inner {
-                margin-left: 3.5em;
-            }
-
-            .md-toc-h4 .md-toc-inner {
-                margin-left: 5em;
-            }
-
-            .md-toc-h5 .md-toc-inner {
-                margin-left: 6.5em;
-            }
-
-            .md-toc-h6 .md-toc-inner {
-                margin-left: 8em;
-            }
-        }
-
-        a.md-toc-inner {
-            font-size: inherit;
-            font-style: inherit;
-            font-weight: inherit;
-            line-height: inherit;
-        }
-
-        .footnote-line a:not(.reversefootnote) {
-            color: inherit;
-        }
-
-        .reversefootnote {
-            font-family: ui-monospace, sans-serif;
-        }
-
-        .md-attr {
-            display: none;
-        }
-
-        .md-fn-count::after {
-            content: ".";
-        }
-
-        code,
-        pre,
-        samp,
-        tt {
-            font-family: var(--monospace);
-        }
-
-        kbd {
-            margin: 0px 0.1em;
-            padding: 0.1em 0.6em;
-            font-size: 0.8em;
-            color: rgb(36, 39, 41);
-            background: rgb(255, 255, 255);
-            border: 1px solid rgb(173, 179, 185);
-            border-radius: 3px;
-            box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset;
-            white-space: nowrap;
-            vertical-align: middle;
-        }
-
-        .md-comment {
-            color: rgb(162, 127, 3);
-            opacity: 0.6;
-            font-family: var(--monospace);
-        }
-
-        code {
-            text-align: left;
-            vertical-align: initial;
-        }
-
-        a.md-print-anchor {
-            white-space: pre !important;
-            border-width: initial !important;
-            border-style: none !important;
-            border-color: initial !important;
-            display: inline-block !important;
-            position: absolute !important;
-            width: 1px !important;
-            right: 0px !important;
-            outline: 0px !important;
-            background: 0px 0px !important;
-            text-decoration: initial !important;
-            text-shadow: initial !important;
-        }
-
-        .os-windows.monocolor-emoji .md-emoji {
-            font-family: "Segoe UI Symbol", sans-serif;
-        }
-
-        .md-diagram-panel>svg {
-            max-width: 100%;
-        }
-
-        [lang="flow"] svg,
-        [lang="mermaid"] svg {
-            max-width: 100%;
-            height: auto;
-        }
-
-        [lang="mermaid"] .node text {
-            font-size: 1rem;
-        }
-
-        table tr th {
-            border-bottom: 0px;
-        }
-
-        video {
-            max-width: 100%;
-            display: block;
-            margin: 0px auto;
-        }
-
-        iframe {
-            max-width: 100%;
-            width: 100%;
-            border: none;
-        }
-
-        .highlight td,
-        .highlight tr {
-            border: 0px;
-        }
-
-        mark {
-            background: rgb(255, 255, 0);
-            color: rgb(0, 0, 0);
-        }
-
-        .md-html-inline .md-plain,
-        .md-html-inline strong,
-        mark .md-inline-math,
-        mark strong {
-            color: inherit;
-        }
-
-        .md-expand mark .md-meta {
-            opacity: 0.3 !important;
-        }
-
-        mark .md-meta {
-            color: rgb(0, 0, 0);
-        }
-
-        @media print {
-
-            .typora-export h1,
-            .typora-export h2,
-            .typora-export h3,
-            .typora-export h4,
-            .typora-export h5,
-            .typora-export h6 {
-                break-inside: avoid;
-            }
-        }
-
-        .md-diagram-panel .messageText {
-            stroke: none !important;
-        }
-
-        .md-diagram-panel .start-state {
-            fill: var(--node-fill);
-        }
-
-        .md-diagram-panel .edgeLabel rect {
-            opacity: 1 !important;
-        }
-
-        .md-fences.md-fences-math {
-            font-size: 1em;
-        }
-
-        .md-fences-advanced:not(.md-focus) {
-            padding: 0px;
-            white-space: nowrap;
-            border: 0px;
-        }
-
-        .md-fences-advanced:not(.md-focus) {
-            background: inherit;
-        }
-
-        .typora-export-show-outline .typora-export-content {
-            max-width: 1440px;
-            margin: auto;
-            display: flex;
-            flex-direction: row;
-        }
-
-        .typora-export-sidebar {
-            width: 300px;
-            font-size: 0.8rem;
-            margin-top: 80px;
-            margin-right: 18px;
-        }
-
-        .typora-export-show-outline #write {
-            --webkit-flex: 2;
-            flex: 2 1 0%;
-        }
-
-        .typora-export-sidebar .outline-content {
-            position: fixed;
-            top: 0px;
-            max-height: 100%;
-            overflow: hidden auto;
-            padding-bottom: 30px;
-            padding-top: 60px;
-            width: 300px;
-        }
-
-        @media screen and (max-width: 1024px) {
-
-            .typora-export-sidebar,
-            .typora-export-sidebar .outline-content {
-                width: 240px;
-            }
-        }
-
-        @media screen and (max-width: 800px) {
-            .typora-export-sidebar {
-                display: none;
-            }
-        }
-
-        .outline-content li,
-        .outline-content ul {
-            margin-left: 0px;
-            margin-right: 0px;
-            padding-left: 0px;
-            padding-right: 0px;
-            list-style: none;
-            overflow-wrap: anywhere;
-        }
-
-        .outline-content ul {
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-
-        .outline-content strong {
-            font-weight: 400;
-        }
-
-        .outline-expander {
-            width: 1rem;
-            height: 1.42857rem;
-            position: relative;
-            display: table-cell;
-            vertical-align: middle;
-            cursor: pointer;
-            padding-left: 4px;
-        }
-
-        .outline-expander::before {
-            content: "";
-            position: relative;
-            font-family: Ionicons;
-            display: inline-block;
-            font-size: 8px;
-            vertical-align: middle;
-        }
-
-        .outline-item {
-            padding-top: 3px;
-            padding-bottom: 3px;
-            cursor: pointer;
-        }
-
-        .outline-expander:hover::before {
-            content: "";
-        }
-
-        .outline-h1>.outline-item {
-            padding-left: 0px;
-        }
-
-        .outline-h2>.outline-item {
-            padding-left: 1em;
-        }
-
-        .outline-h3>.outline-item {
-            padding-left: 2em;
-        }
-
-        .outline-h4>.outline-item {
-            padding-left: 3em;
-        }
-
-        .outline-h5>.outline-item {
-            padding-left: 4em;
-        }
-
-        .outline-h6>.outline-item {
-            padding-left: 5em;
-        }
-
-        .outline-label {
-            cursor: pointer;
-            display: table-cell;
-            vertical-align: middle;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .outline-label:hover {
-            text-decoration: underline;
-        }
-
-        .outline-item:hover {
-            border-color: rgb(245, 245, 245);
-            background-color: var(--item-hover-bg-color);
-        }
-
-        .outline-item:hover {
-            margin-left: -28px;
-            margin-right: -28px;
-            border-left: 28px solid transparent;
-            border-right: 28px solid transparent;
-        }
-
-        .outline-item-single .outline-expander::before,
-        .outline-item-single .outline-expander:hover::before {
-            display: none;
-        }
-
-        .outline-item-open>.outline-item>.outline-expander::before {
-            content: "";
-        }
-
-        .outline-children {
-            display: none;
-        }
-
-        .info-panel-tab-wrapper {
-            display: none;
-        }
-
-        .outline-item-open>.outline-children {
-            display: block;
-        }
-
-        .typora-export .outline-item {
-            padding-top: 1px;
-            padding-bottom: 1px;
-        }
-
-        .typora-export .outline-item:hover {
-            margin-right: -8px;
-            border-right: 8px solid transparent;
-        }
-
-        .typora-export .outline-expander::before {
-            content: "+";
-            font-family: inherit;
-            top: -1px;
-        }
-
-        .typora-export .outline-expander:hover::before,
-        .typora-export .outline-item-open>.outline-item>.outline-expander::before {
-            content: "−";
-        }
-
-        .typora-export-collapse-outline .outline-children {
-            display: none;
-        }
-
-        .typora-export-collapse-outline .outline-item-open>.outline-children,
-        .typora-export-no-collapse-outline .outline-children {
-            display: block;
-        }
-
-        .typora-export-no-collapse-outline .outline-expander::before {
-            content: "" !important;
-        }
-
-        .typora-export-show-outline .outline-item-active>.outline-item .outline-label {
-            font-weight: 700;
-        }
-
-        .md-inline-math-container mjx-container {
-            zoom: 0.95;
-        }
-
-        mjx-container {
-            break-inside: avoid;
-        }
-
-
-        /* 
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+/* 
  *     Typora Theme - Lapis    /    Author - YiNN 
  *     https://github.com/YiNNx/typora-theme-lapis
  */
 
-        :root {
-            --text-color: #fafa88c2;
-            /* Text */
-            --primary-color: #7eafff;
-            /* Primary Color */
-            --bg-color: #1e222a;
-            /* Background */
+:root {
+  --text-color: #ffff00;
+  /* Text */
+  --primary-color: #00d500;
+  /* Primary Color */
+  --bg-color: #1e222a;
+  /* Background */
 
-            --marker-color: #7d8a9f;
-            /* List Marker */
-            --highlight-color: #e4e4e4e3;
-            /* Highlight */
-            --header-span-color: #47556d;
-            /* h2 Span Color */
-            --block-bg-color: #080e1d;
-            /* Block Background */
+  --marker-color: #7d8a9f;
+  /* List Marker */
+  --highlight-color: #e4e4e4e3;
+  /* Highlight */
+  --header-span-color: #47556d;
+  /* h2 Span Color */
+  --block-bg-color: #080e1d;
+  /* Block Background */
 
-            /* Overwrite of Typora Base Color */
-            --control-text-hover-color: #a2b6d4;
-            --rawblock-edit-panel-bd: var(--block-bg-color);
-            --item-hover-bg-color: rgb(246 248 250);
-            --active-file-bg-color: var(--block-bg-color);
-        }
+  /* Overwrite of Typora Base Color */
+  --control-text-hover-color: #a2b6d4;
+  --rawblock-edit-panel-bd: var(--block-bg-color);
+  --item-hover-bg-color: rgb(246 248 250);
+  --active-file-bg-color: var(--block-bg-color);
+}
 
-        /*
+/*
   * Font-face for Cantarell, Source Han Serif CN and JetBrains Mono
   */
 
-        /*
+/*
   * Basic Style
   */
 
-        html {
-            font-size: 24px;
-            background: url(https://caught-up.net/bgs/HeaderImage-3.jpg) no-repeat center center fixed;
-            background-size: cover;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-        }
+html {
+  font-size: 1.8em;
+  background: url(https://caught-up.net/bgs/HeaderImage-3.jpg) no-repeat center
+    center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
 
-        #write {
-            max-width: 950px;
-            color: var(--text-color);
-            line-height: 1.6;
-            word-spacing: 0px;
-            letter-spacing: 0px;
-            word-break: break-word;
-            word-wrap: break-word;
-            text-align: justify;
+#write {
+  max-width: 950px;
+  color: var(--text-color);
+  line-height: 1.6;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-align: justify;
 
-            font-family: "VeronaRegular", "Montagu Slab", "Cantarell", "SourceHanSerifCN",
-                "JetBrainsMono";
-            margin-bottom: 20rem;
-        }
+  font-family: "VeronaRegular", "Montagu Slab", "Cantarell", "SourceHanSerifCN",
+    "JetBrainsMono";
+  margin-bottom: 20rem;
+}
 
-        /* Strong */
+/* Strong */
 
-        #write strong {
-            color: var(--primary-color);
-            margin-right: 7px;
-        }
+#write strong {
+  color: var(--primary-color);
+  margin-right: 7px;
+}
 
-        /* Link */
+/* Link */
 
-        #write a {
-            color: var(--primary-color);
-        }
+#write a {
+  color: var(--primary-color);
+}
 
-        #write a:hover {
-            text-decoration: none !important;
-            border-bottom: 1px solid #a7d959;
-            font-weight: 400;
-        }
+#write a:hover {
+  text-decoration: none !important;
+  border-bottom: 1px solid #a7d959;
+}
 
-        #write a:hover,
-        p:hover {
-            font-weight: 400;
-        }
+#write .md-p a,
+#write .md-heading a {
+  text-decoration: none;
+  word-wrap: break-word;
+  border-bottom: 1px solid var(--primary-color);
+  margin: 2px;
+}
 
-        #write .md-p a,
-        #write .md-heading a {
-            text-decoration: none;
-            word-wrap: break-word;
-            border-bottom: 1px solid var(--primary-color);
-            margin: 2px;
-        }
+#write h2.md-heading a {
+  text-decoration: underline;
+  border-bottom: 0;
+  text-decoration-thickness: 1.2px;
+  text-underline-offset: 2px;
+}
 
-        #write h2.md-heading a {
-            text-decoration: underline;
-            border-bottom: 0;
-            text-decoration-thickness: 1.2px;
-            text-underline-offset: 2px;
-        }
+[md-inline="url"],
+[md-inline="link"] > .md-content,
+[md-inline="image"] > .md-meta {
+  word-break: break-all;
+  font-family: "VeronaRegular", "Montagu Slab", "JetBrainsMono";
+  padding-left: 0.15rem;
+  padding-right: 0rem;
+  color: var(--marker-color);
+}
 
-        [md-inline="url"],
-        [md-inline="link"]>.md-content,
-        [md-inline="image"]>.md-meta {
-            word-break: break-all;
-            font-weight: 200;
-            font-family: "VeronaRegular", "Montagu Slab", "JetBrainsMono";
-            padding-left: 0.15rem;
-            padding-right: 0rem;
-            color: var(--marker-color);
-        }
-
-        /* 
+/* 
   * TOC
   */
 
-        .md-toc-content {
-            font-family: "VeronaRegular", "Montagu Slab", "SourceHanSerifCN";
-        }
+.md-toc-content {
+  font-family: "VeronaRegular", "Montagu Slab", "SourceHanSerifCN";
+}
 
-        .md-toc-content:empty:before {
-            color: var(--primary-color);
-        }
+.md-toc-content:empty:before {
+  color: var(--primary-color);
+}
 
-        #write div.md-toc-tooltip {
-            font-family: "VeronaRegular", "Montagu Slab", "SourceHanSerifCN";
-            color: var(--primary-color);
-            position: static;
-            margin-top: 10px;
-            line-height: 1.6rem;
-            padding: 0.3rem 0.75rem;
-            border-top: none;
-            /* border-left: 2px solid var(--primary-color);
+#write div.md-toc-tooltip {
+  font-family: "VeronaRegular", "Montagu Slab", "SourceHanSerifCN";
+  color: var(--primary-color);
+  position: static;
+  margin-top: 10px;
+  line-height: 1.6rem;
+  padding: 0.3rem 0.75rem;
+  border-top: none;
+  /* border-left: 2px solid var(--primary-color);
       */
-            border-radius: 0.5rem;
-        }
+  border-radius: 0.5rem;
+}
 
-        .md-toc:focus .md-toc-content {
-            border-color: var(--bg-color);
-            margin: 9px -1px;
-            margin-top: 9px;
-        }
+.md-toc:focus .md-toc-content {
+  border-color: var(--bg-color);
+  margin: 9px -1px;
+  margin-top: 9px;
+}
 
-        .md-toc .md-toc-content {
-            border-color: var(--bg-color);
-            margin: 10px 0px;
-            margin-top: 10px;
-        }
+.md-toc .md-toc-content {
+  border-color: var(--bg-color);
+  margin: 10px 0px;
+  margin-top: 10px;
+}
 
-        /* mark */
+/* mark */
 
-        mark {
-            background: var(--highlight-color);
-            padding: 1px 0.15rem;
-            border-radius: 1px;
-            color: inherit;
-        }
+mark {
+  background: var(--highlight-color);
+  padding: 1px 0.15rem;
+  border-radius: 1px;
+  color: inherit;
+}
 
-        /* 
+/* 
   * Paragraph
   */
 
-        #write+p,
-        #write blockquote p {
-            font-size: 1.1rem;
-            padding-top: 0.2rem;
-            padding-bottom: 0.2rem;
-            margin: 0;
-            line-height: 1.8rem;
-            color: var(--text-color);
-        }
+#write + p,
+#write blockquote p {
+  font-size: 1.1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  margin: 0;
+  line-height: 1.8rem;
+  color: var(--text-color);
+}
 
-        /*
+/*
   * Header
   */
 
-        #write h1,
-        #write h2,
-        #write h3,
-        #write h4,
-        #write h5,
-        #write h6 {
-            font-family: "VeronaRegular", "Montagu Slab", "SourceHanSerifCN";
-            padding: 0px;
-            color: var(--primary-color);
-        }
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-family: "VeronaRegular", "Montagu Slab", "SourceHanSerifCN";
+  padding: 0px;
+  color: var(--primary-color);
+}
 
-        #write h1 {
-            text-align: center;
-        }
+#write h1 {
+  text-align: center;
+}
 
-        #write h2 {
-            background-color: var(--header-span-color);
-            color: var(--bg-color);
-            padding: 1px 12.5px;
-            border-radius: 4px;
-            display: inline-block;
-        }
+#write h2 {
+  background-color: var(--header-span-color);
+  color: var(--bg-color);
+  padding: 1px 12.5px;
+  border-radius: 4px;
+  display: inline-block;
+}
 
-        #write h2 a {
-            color: var(--bg-color);
-            border-bottom-color: var(--bg-color) !important;
-        }
+#write h2 a {
+  color: var(--bg-color);
+  border-bottom-color: var(--bg-color) !important;
+}
 
-        #write h2 strong {
-            color: var(--bg-color);
-        }
+#write h2 strong {
+  color: var(--bg-color);
+}
 
-        #write h2 code {
-            color: var(--bg-color);
-            background-color: var(--header-span-color);
-        }
+#write h2 code {
+  color: var(--bg-color);
+  background-color: var(--header-span-color);
+}
 
-        @media print {
-            :root {
-                --text-color: rgb(0, 0, 0);
-            }
-        }
+@media print {
+  :root {
+    --text-color: rgb(0, 0, 0);
+  }
+}
 
-        #write h1 {
-            font-size: 2rem;
-        }
+#write h1 {
+  font-size: 2rem;
+}
 
-        #write h2 {
-            font-size: 1.5rem;
-        }
+#write h2 {
+  font-size: 1.5rem;
+}
 
-        #write h3 {
-            font-size: 1.4rem;
-        }
+#write h3 {
+  font-size: 1.4rem;
+}
 
-        #write h4 {
-            font-size: 1.2rem;
-        }
+#write h4 {
+  font-size: 1.2rem;
+}
 
-        #write h5 {
-            font-size: 1.1rem;
-        }
+#write h5 {
+  font-size: 1.1rem;
+}
 
-        #write h6 {
-            font-size: 1.1rem;
-        }
+#write h6 {
+  font-size: 1.1rem;
+}
 
-        #write h1 {
-            padding-top: 0.9rem;
-            margin-bottom: 2.3rem;
-        }
+#write h1 {
+  padding-top: 0.9rem;
+  margin-bottom: 2.3rem;
+}
 
-        #write h2 {
-            margin: 0.3em 0;
-        }
+#write h2 {
+  margin: 0.3em 0;
+}
 
-        #write h3 {
-            margin: 1em 0 1em;
-        }
+#write h3 {
+  margin: 1em 0 1em;
+}
 
-        #write h4 {
-            margin: 0.8em 0 0.8em;
-        }
+#write h4 {
+  margin: 0.8em 0 0.8em;
+}
 
-        #write h5 {
-            margin: 0.6em 0 0.6em;
-        }
+#write h5 {
+  margin: 0.6em 0 0.6em;
+}
 
-        #write h6 {
-            margin: 0.4em 0 0.4em;
-        }
+#write h6 {
+  margin: 0.4em 0 0.4em;
+}
 
-        /*
+/*
   * List
   */
 
-        ::marker {
-            font-weight: 400;
-            color: var(--marker-color);
-        }
+::marker {
+  color: var(--marker-color);
+}
 
-        li.md-list-item {
-            margin: 0.4rem 0;
-        }
+li.md-list-item {
+  margin: 0.4rem 0;
+}
 
-        #write ul,
-        #write ol {
-            margin-top: 8px;
-            margin-bottom: 8px;
-            padding-left: 20px;
-        }
+#write ul,
+#write ol {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 20px;
+}
 
-        #write ul {
-            list-style-type: disc;
-        }
+#write ul {
+  list-style-type: disc;
+}
 
-        #write em {
-            padding: 0 3px 0 0;
-        }
+#write em {
+  padding: 0 3px 0 0;
+}
 
-        #write ul ul {
-            list-style-type: square;
-        }
+#write ul ul {
+  list-style-type: square;
+}
 
-        #write ol {
-            list-style-type: decimal;
-        }
+#write ol {
+  list-style-type: decimal;
+}
 
-        #write li section {
-            margin-top: 5px;
-            margin-bottom: 5px;
-            line-height: 1.7rem;
-            text-align: justify;
-            color: var(--text-color);
-            font-weight: 500;
-        }
+#write li section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 1.7rem;
+  text-align: justify;
+  color: var(--text-color);
+}
 
-        /*
+/*
   * Quote
   */
-        #write blockquote {
-            display: block;
-            font-size: 0.9em;
-            overflow: auto;
-            border-left: 3px solid var(--primary-color);
-            padding: 15px 30px 15px 20px;
-            margin-bottom: 20px;
-            margin-top: 20px;
-            background: var(--block-bg-color);
-        }
+#write blockquote {
+  display: block;
+  font-size: 0.9em;
+  overflow: auto;
+  border-left: 3px solid var(--primary-color);
+  padding: 15px 30px 15px 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background: var(--block-bg-color);
+}
 
-        /*
+/*
   * Inline code
   */
 
-        #write code {
-            color: var(--primary-color);
-            font-size: 94%;
-            font-weight: 200;
-            word-wrap: break-word;
-            padding: 2px 4px 2px;
-            border-radius: 3px;
-            margin: 2px;
-            font-family: "VeronaRegular", "Montagu Slab", "JetBrainsMono";
-            word-break: break-all;
-        }
+#write code {
+  color: var(--primary-color);
+  font-size: 94%;
+  word-wrap: break-word;
+  padding: 2px 4px 2px;
+  border-radius: 3px;
+  margin: 2px;
+  font-family: "VeronaRegular", "Montagu Slab", "JetBrainsMono";
+  word-break: break-all;
+}
 
-        /*
+/*
   * Img
   */
-        #write img {
-            margin: 0 auto;
-            max-width: 100%;
-        }
+#write img {
+  margin: 0 auto;
+  max-width: 100%;
+}
 
-        #write p>.md-image:only-child:not(.md-img-error) img,
-        #write p>img:only-child {
-            filter: drop-shadow(#d2dff4 0px 0px 8px);
-            border-radius: 3rem;
-            display: block;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+#write p > .md-image:only-child:not(.md-img-error) img,
+#write p > img:only-child {
+  filter: drop-shadow(#d2dff4 0px 0px 8px);
+  border-radius: 3rem;
+  display: block;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
-        /*
+/*
   * Table
   */
-        #write table.md-table {
-            display: table;
-            text-align: justify;
-            overflow-x: auto;
-            border-collapse: collapse;
-            border-spacing: 0px;
-            font-size: 1em;
-            margin: 0px 0px 20px;
-            width: 100%;
-        }
+#write table.md-table {
+  display: table;
+  text-align: justify;
+  overflow-x: auto;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  font-size: 1em;
+  margin: 0px 0px 20px;
+  width: 100%;
+}
 
-        #write tbody {
-            border: 0;
-        }
+#write tbody {
+  border: 0;
+}
 
-        #write table.md-table tr {
-            border: 0;
-            border-top: 1px solid #ccc;
-        }
+#write table.md-table tr {
+  border: 0;
+  border-top: 1px solid #ccc;
+}
 
-        #write table.md-table tr th,
-        #write table.md-table tr td {
-            font-size: 1rem;
-            border: 1px solid #d9dfe4;
-            padding: 5px 10px;
-            text-align: justify;
-        }
+#write table.md-table tr th,
+#write table.md-table tr td {
+  font-size: 1rem;
+  border: 1px solid #d9dfe4;
+  padding: 5px 10px;
+  text-align: justify;
+}
 
-        #write table.md-table tr th {
-            font-family: "VeronaRegular", "Montagu Slab", SourceHanSerifCN;
-            text-align: center;
-            min-width: 10rem;
-            font-weight: 500;
-            color: var(--primary-color);
-        }
+#write table.md-table tr th {
+  font-family: "VeronaRegular", "Montagu Slab", SourceHanSerifCN;
+  text-align: center;
+  min-width: 10rem;
+  color: var(--primary-color);
+}
 
-        table.md-table td {
-            min-width: 32px;
-        }
+table.md-table td {
+  min-width: 32px;
+}
 
-        /* Footnote */
+/* Footnote */
 
-        sup.md-footnote {
-            color: var(--primary-color);
-        }
+sup.md-footnote {
+  color: var(--primary-color);
+}
 
-        .md-def-name {
-            color: var(--primary-color);
-        }
+.md-def-name {
+  color: var(--primary-color);
+}
 
-        /*
+/*
   * Math Script 
   */
 
-        .md-inline-math script {
-            color: var(--primary-color);
-        }
+.md-inline-math script {
+  color: var(--primary-color);
+}
 
-        .md-rawblock-control:not(.md-rawblock-tooltip) {
-            background: var(--bg-color);
-            color: var(--md-char-color);
-        }
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+  background: var(--bg-color);
+  color: var(--md-char-color);
+}
 
-        .code-tooltip {
-            box-shadow: none;
-        }
+.code-tooltip {
+  box-shadow: none;
+}
 
-        .md-rawblock-tooltip.md-rawblock-control {
-            border-radius: 1rem;
-        }
+.md-rawblock-tooltip.md-rawblock-control {
+  border-radius: 1rem;
+}
 
-        .md-rawblock .md-rawblock-tooltip {
-            inset: auto 0.3rem auto auto;
-            transform: translateY(-120%);
-        }
+.md-rawblock .md-rawblock-tooltip {
+  inset: auto 0.3rem auto auto;
+  transform: translateY(-120%);
+}
 
-        /* 
+/* 
   * Comment
   */
-        .md-comment {
-            color: #a8a8a9;
-            opacity: 1;
-            font-family: "VeronaRegular", "Montagu Slab", "JetBrainsMono";
-        }
+.md-comment {
+  color: #a8a8a9;
+  opacity: 1;
+  font-family: "VeronaRegular", "Montagu Slab", "JetBrainsMono";
+}
 
-        /* Checkbox */
+/* Checkbox */
 
-        #write input[type="checkbox"] {
-            width: 0;
-        }
+#write input[type="checkbox"] {
+  width: 0;
+}
 
-        .task-list-item input::before {
-            content: "";
-            display: inline-block;
-            width: 1.0125rem;
-            height: 1.0125rem;
-            vertical-align: middle;
-            text-align: center;
-            border: 1px solid var(--marker-color);
-            border-radius: 1.2rem;
-            background-color: #fdfdfd;
-            margin-left: -0.1rem;
-            margin-right: 0.1rem;
-            margin-top: -0.6rem;
-        }
+.task-list-item input::before {
+  content: "";
+  display: inline-block;
+  width: 1.0125rem;
+  height: 1.0125rem;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid var(--marker-color);
+  border-radius: 1.2rem;
+  background-color: #fdfdfd;
+  margin-left: -0.1rem;
+  margin-right: 0.1rem;
+  margin-top: -0.6rem;
+}
 
-        .task-list-item input:checked::before {
-            content: "✓";
-            font-weight: 500;
-            -webkit-text-stroke: 1px var(--primary-color);
-            color: var(--primary-color);
-            background-color: var(--bg-color);
-            font-size: 0.75rem;
-            line-height: 0.8rem;
-        }
+.task-list-item input:checked::before {
+  content: "✓";
+  -webkit-text-stroke: 1px var(--primary-color);
+  color: var(--primary-color);
+  background-color: var(--bg-color);
+  font-size: 0.75rem;
+  line-height: 0.8rem;
+}
 
-        blockquote .task-list-item input::before {
-            margin-top: 0.2rem;
-        }
+blockquote .task-list-item input::before {
+  margin-top: 0.2rem;
+}
 
-        /*
+/*
   * Sidebar
   */
-        #typora-sidebar {
-            font-family: "VeronaRegular", "Montagu Slab", "Cantarell", "SourceHanSerifCN";
-            height: 100%;
-            color: var(--text-color);
-            font-size: 0.92rem;
-            background-color: var(--bg-color);
-        }
+#typora-sidebar {
+  font-family: "VeronaRegular", "Montagu Slab", "Cantarell", "SourceHanSerifCN";
+  height: 100%;
+  color: var(--text-color);
+  font-size: 0.92rem;
+  background-color: var(--bg-color);
+}
 
-        #sidebar-content.sidebar-content {
-            margin-top: 0.5rem;
-        }
+#sidebar-content.sidebar-content {
+  margin-top: 0.5rem;
+}
 
-        .html-for-mac #write input[type="checkbox"] {
-            margin-top: 0.65rem;
-        }
+.html-for-mac #write input[type="checkbox"] {
+  margin-top: 0.65rem;
+}
 
-        .html-for-mac #write .task-list-item input::before {
-            margin-top: -0.85rem;
-        }
+.html-for-mac #write .task-list-item input::before {
+  margin-top: -0.85rem;
+}
 
-        /*
+/*
   * Sidebar - FileNode
   */
 
-        .active-tab-files #info-panel-tab-file .info-panel-tab-border,
-        .active-tab-outline #info-panel-tab-outline .info-panel-tab-border,
-        .ty-show-search #info-panel-tab-search .info-panel-tab-border {
-            border-radius: 10px;
-            height: 1px;
-            background-color: var(--primary-color);
-        }
+.active-tab-files #info-panel-tab-file .info-panel-tab-border,
+.active-tab-outline #info-panel-tab-outline .info-panel-tab-border,
+.ty-show-search #info-panel-tab-search .info-panel-tab-border {
+  border-radius: 10px;
+  height: 1px;
+  background-color: var(--primary-color);
+}
 
-        .file-node-content {
-            color: var(--primary-color);
-            line-height: 1.6rem;
-        }
+.file-node-content {
+  color: var(--primary-color);
+  line-height: 1.6rem;
+}
 
-        span.file-node-title-name-part {
-            color: var(--text-color);
-        }
+span.file-node-title-name-part {
+  color: var(--text-color);
+}
 
-        span.file-node-title-ext-part {
-            color: var(--text-color);
-        }
+span.file-node-title-ext-part {
+  color: var(--text-color);
+}
 
-        .file-node-icon {
-            padding-right: 0.2rem;
-        }
+.file-node-icon {
+  padding-right: 0.2rem;
+}
 
-        .file-tree-node.active>.file-node-background {
-            border-left: 4px solid var(--primary-color);
-            border-color: var(--primary-color);
-        }
+.file-tree-node.active > .file-node-background {
+  border-left: 4px solid var(--primary-color);
+  border-color: var(--primary-color);
+}
 
-        /*
+/*
   * Sidebar - Outline
   */
 
-        #outline-content {
-            height: 100%;
-            overflow-x: hidden;
-            line-height: 1.4rem;
-            font-size: 0.96rem;
-        }
+#outline-content {
+  height: 100%;
+  overflow-x: hidden;
+  line-height: 1.4rem;
+  font-size: 0.96rem;
+}
 
-        #outline-content .outline-active,
-        .pin-outline .outline-active {
-            color: var(--primary-color);
-        }
+#outline-content .outline-active,
+.pin-outline .outline-active {
+  color: var(--primary-color);
+}
 
-        .outline-item {
-            padding-left: 2em;
-            padding-top: 0;
-        }
+.outline-item {
+  padding-left: 2em;
+  padding-top: 0;
+}
 
-        /* Meta Block */
+/* Meta Block */
 
-        pre.md-meta-block {
-            font-family: "VeronaRegular", "Montagu Slab", "JetBrainsMono";
-            color: var(--primary-color);
-            background: #f6f8fa;
-            padding: 1.5rem;
-            margin: -37px 0rem 3.8rem;
-            /* border-radius: 1rem; */
-            filter: drop-shadow(#d2dff4 0px 3px 3px);
-            /* border-top: 1px solid var(--primary-color); */
-            /* border-bottom: 1px solid var(--primary-color); */
-        }
+pre.md-meta-block {
+  font-family: "VeronaRegular", "Montagu Slab", "JetBrainsMono";
+  color: var(--primary-color);
+  background: #f6f8fa;
+  padding: 1.5rem;
+  margin: -37px 0rem 3.8rem;
+  /* border-radius: 1rem; */
+  filter: drop-shadow(#d2dff4 0px 3px 3px);
+  /* border-top: 1px solid var(--primary-color); */
+  /* border-bottom: 1px solid var(--primary-color); */
+}
 
-        pre.md-fences-advanced.md-focus .md-fences-adv-panel {
-            border-radius: 0.8rem;
-        }
+pre.md-fences-advanced.md-focus .md-fences-adv-panel {
+  border-radius: 0.8rem;
+}
 
-        /*
+/*
   * Scrollbar
   */
 
-        #outline-content::-webkit-scrollbar {
-            width: 0.5rem;
-        }
+#outline-content::-webkit-scrollbar {
+  width: 0.5rem;
+}
 
-        #file-library::-webkit-scrollbar {
-            width: 0.5rem;
-        }
+#file-library::-webkit-scrollbar {
+  width: 0.5rem;
+}
 
-        ::-webkit-scrollbar-track {
-            border-radius: 10px;
-        }
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
 
-        ::-webkit-scrollbar-thumb {
-            border-radius: 10px;
-            background: rgba(179, 179, 179, 0.425);
-        }
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(179, 179, 179, 0.425);
+}
 
-        ::-webkit-scrollbar {
-            width: 1rem;
-        }
+::-webkit-scrollbar {
+  width: 1rem;
+}
 
-        /* 
+/* 
   * Code Block - Style
   */
 
-        .md-fences:before {
-            content: " ";
-            display: block;
-            width: 100%;
-            background-size: 40px;
-            background-repeat: no-repeat;
-            background-color: #282c34;
-            margin-bottom: -7px;
-            border-radius: 5px;
-            background-position: 10px 10px;
-        }
+.md-fences:before {
+  content: " ";
+  display: block;
+  width: 100%;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-color: #282c34;
+  margin-bottom: -7px;
+  border-radius: 5px;
+  background-position: 10px 10px;
+}
 
-        .CodeMirror-wrap .CodeMirror-scroll {
-            overflow-x: auto;
-        }
+.CodeMirror-wrap .CodeMirror-scroll {
+  overflow-x: auto;
+}
 
-        .md-fences .cm-s-inner.CodeMirror {
-            margin: 1.5rem 0;
-        }
+.md-fences .cm-s-inner.CodeMirror {
+  margin: 1.5rem 0;
+}
 
-        .cm-s-inner.CodeMirror {
-            padding: 1.2rem 0.8rem;
-            color: #4f5467;
-            font-family: "VeronaRegular", "Montagu Slab", "JetBrainsMono";
-            border-radius: 10px;
-            /* border: 1px solid #eef2f5;*/
-            line-height: 1.6rem;
-        }
+.cm-s-inner.CodeMirror {
+  padding: 1.2rem 0.8rem;
+  color: #4f5467;
+  font-family: "VeronaRegular", "Montagu Slab", "JetBrainsMono";
+  border-radius: 10px;
+  /* border: 1px solid #eef2f5;*/
+  line-height: 1.6rem;
+}
 
-        .CodeMirror-gutters {
-            border-right: 1px solid #a2b6d452;
-            background: inherit;
-            white-space: nowrap;
-        }
+.CodeMirror-gutters {
+  border-right: 1px solid #a2b6d452;
+  background: inherit;
+  white-space: nowrap;
+}
 
-        pre.CodeMirror-line {
-            padding: 0 1.2rem;
-        }
+pre.CodeMirror-line {
+  padding: 0 1.2rem;
+}
 
-        .CodeMirror-linenumber {
-            padding: 0 3px 0 5px;
-            text-align: right;
-            color: var(--primary-color);
-        }
+.CodeMirror-linenumber {
+  padding: 0 3px 0 5px;
+  text-align: right;
+  color: var(--primary-color);
+}
 
-        /* 
+/* 
   * Code Block - Color Scheme
   */
 
-        .cm-s-inner .cm-keyword {
-            color: #1694b6 !important;
-        }
+.cm-s-inner .cm-keyword {
+  color: #1694b6 !important;
+}
 
-        .cm-s-inner .cm-operator {
-            color: #2f86d2 !important;
-        }
+.cm-s-inner .cm-operator {
+  color: #2f86d2 !important;
+}
 
-        .cm-s-inner .cm-variable,
-        .cm-s-inner .cm-builtin,
-        .cm-s-inner .cm-header,
-        .cm-s-inner .cm-tag,
-        .cm-s-inner .cm-property,
-        .cm-s-inner .cm-quote {
-            color: #b9218e !important;
-        }
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-builtin,
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-tag,
+.cm-s-inner .cm-property,
+.cm-s-inner .cm-quote {
+  color: #b9218e !important;
+}
 
-        .cm-s-inner .cm-variable-2 {
-            color: #7aadad !important;
-        }
+.cm-s-inner .cm-variable-2 {
+  color: #7aadad !important;
+}
 
-        .cm-s-inner .cm-variable-3,
-        .cm-s-inner .cm-type,
-        .cm-s-inner .cm-atom {
-            color: #378ed8 !important;
-        }
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type,
+.cm-s-inner .cm-atom {
+  color: #378ed8 !important;
+}
 
-        .cm-s-inner .cm-number {
-            color: #1a5494 !important;
-        }
+.cm-s-inner .cm-number {
+  color: #1a5494 !important;
+}
 
-        .cm-s-inner .cm-def,
-        .cm-s-inner .cm-qualifier {
-            color: #0744ac !important;
-        }
+.cm-s-inner .cm-def,
+.cm-s-inner .cm-qualifier {
+  color: #0744ac !important;
+}
 
-        .cm-s-inner .cm-string {
-            color: #6f42c2 !important;
-        }
+.cm-s-inner .cm-string {
+  color: #6f42c2 !important;
+}
 
-        .cm-s-inner .cm-string-2 {
-            color: #27638f !important;
-        }
+.cm-s-inner .cm-string-2 {
+  color: #27638f !important;
+}
 
-        .cm-s-inner .cm-comment {
-            color: #9a9a9a !important;
-        }
+.cm-s-inner .cm-comment {
+  color: #9a9a9a !important;
+}
 
-        .cm-s-inner .cm-meta {
-            color: #0b93be !important;
-        }
+.cm-s-inner .cm-meta {
+  color: #0b93be !important;
+}
 
-        .cm-s-inner .cm-attribute {
-            color: #8f6aa8 !important;
-        }
+.cm-s-inner .cm-attribute {
+  color: #8f6aa8 !important;
+}
 
-        .cm-s-inner .cm-error {
-            color: rgba(255, 255, 255, 1) !important;
-            background-color: #b9218e40 !important;
-        }
+.cm-s-inner .cm-error {
+  color: rgba(255, 255, 255, 1) !important;
+  background-color: #b9218e40 !important;
+}
 
-        .cm-s-inner .CodeMirror-matchingbracket {
-            text-decoration: underline;
-            color: white !important;
-        }
+.cm-s-inner .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
 
-        .CodeMirror div.CodeMirror-cursor {
-            border-left: 1px solid var(--primary-color);
-            z-index: 3;
-        }
+.CodeMirror div.CodeMirror-cursor {
+  border-left: 1px solid var(--primary-color);
+  z-index: 3;
+}
 
-        .cm-s-inner div.CodeMirror-selected {
-            background: rgba(167, 178, 189, 0.2) !important;
-        }
+.cm-s-inner div.CodeMirror-selected {
+  background: rgba(167, 178, 189, 0.2) !important;
+}
 
-        .cm-s-inner.CodeMirror-focused div.CodeMirror-selected {
-            background: rgba(167, 178, 189, 0.2) !important;
-        }
+.cm-s-inner.CodeMirror-focused div.CodeMirror-selected {
+  background: rgba(167, 178, 189, 0.2) !important;
+}
 
-        .cm-s-inner .CodeMirror-selected,
-        .cm-s-inner .CodeMirror-selectedtext {
-            background-color: rgba(167, 178, 189, 0) !important;
-        }
+.cm-s-inner .CodeMirror-selected,
+.cm-s-inner .CodeMirror-selectedtext {
+  background-color: rgba(167, 178, 189, 0) !important;
+}
 
-        .cm-s-inner .CodeMirror-line::-moz-selection,
-        .cm-s-inner .CodeMirror-line>span::-moz-selection,
-        .cm-s-inner .CodeMirror-line>span>span::-moz-selection {
-            background-color: rgba(167, 178, 189, 0.2);
-        }
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line > span::-moz-selection,
+.cm-s-inner .CodeMirror-line > span > span::-moz-selection {
+  background-color: rgba(167, 178, 189, 0.2);
+}
 
-        .cm-s-inner .CodeMirror-line::selection,
-        .cm-s-inner .CodeMirror-line>span::selection,
-        .cm-s-inner .CodeMirror-line>span>span::selection {
-            background-color: rgba(167, 178, 189, 0.2);
-        }
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line > span::selection,
+.cm-s-inner .CodeMirror-line > span > span::selection {
+  background-color: rgba(167, 178, 189, 0.2);
+}
 
-        .md-rawblock .md-rawblock-tooltip {
-            inset: auto 0.3rem auto auto;
-            transform: translateY(-120%);
-        }
+.md-rawblock .md-rawblock-tooltip {
+  inset: auto 0.3rem auto auto;
+  transform: translateY(-120%);
+}
 
-        /*
+/*
   * Sitting - Unibody
   */
 
-        .megamenu-menu-header {
-            border: none;
-            color: var(--text-color);
-        }
+.megamenu-menu-header {
+  border: none;
+  color: var(--text-color);
+}
 
-        .megamenu-menu-header #megamenu-back-btn,
-        .megamenu-menu-header .megamenu-menu-header-title-back,
-        .megamenu-menu-header .megamenu-menu-header-title-menu {
-            color: var(--text-color);
-        }
+.megamenu-menu-header #megamenu-back-btn,
+.megamenu-menu-header .megamenu-menu-header-title-back,
+.megamenu-menu-header .megamenu-menu-header-title-menu {
+  color: var(--text-color);
+}
 
-        .megamenu-menu {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            box-shadow: none !important;
-        }
+.megamenu-menu {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  box-shadow: none !important;
+}
 
-        header,
-        #megamenu-content {
-            background-color: var(--bg-color);
-            background-image: none !important;
-        }
+header,
+#megamenu-content {
+  background-color: var(--bg-color);
+  background-image: none !important;
+}
 
-        p {
-            backdrop-filter: blur(16px) saturate(180%);
-            -webkit-backdrop-filter: blur(16px) saturate(180%);
-            background-color: rgba(0, 0, 0, 0.75);
-            border-radius: 12px;
-            border: 2px solid rgba(0, 255, 255, 0.5);
-            padding: 15px;
-        }
+p {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 12px;
+  border: 2px solid rgba(0, 255, 255, 0.5);
+  padding: 15px;
+}
 
-        p:hover {
-            backdrop-filter: blur(16px) saturate(180%);
-            -webkit-backdrop-filter: blur(16px) saturate(180%);
-            background-color: rgba(43, 52, 0, 0.75);
-            color: yellow;
-            border-radius: 12px;
-            border: 4px solid rgba(0, 255, 255, 0.5);
-            padding: 13px;
-        }
+p:hover {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(93, 112, 0, 0.75);
+  color: #ffff00;
+  border-radius: 12px;
+  border: 4px solid rgba(0, 255, 255, 0.5);
+  padding: 13px;
+}
 
-        /* HR */
+/* Reset */
+*:before,
+*:after {
+  content: "";
+}
 
-        /* Reset */
-        *:before,
-        *:after {
-            content: "";
-        }
+hr {
+  border: 0;
+  margin: 3em auto;
+  max-width: 100%;
+  background-position: 50%;
+  box-sizing: border-box;
+}
 
-        hr {
-            border: 0;
-            margin: 3em auto;
-            max-width: 100%;
-            background-position: 50%;
-            box-sizing: border-box;
-        }
+hr {
+  height: auto;
+  text-align: center;
+}
+hr::after {
+  content: "🕊️🕊️🕊️🕊️🕊️🕊️🕊️";
+  font-size: 2em;
+}
 
-        hr {
-            height: auto;
-            text-align: center;
-        }
+i,
+em {
+  font-family: "VeronaElongated";
+  letter-spacing: 2px;
+  color: Fuchsia;
+  margin-right: 2px;
+}
 
-        hr::after {
-            content: "🕊️🕊️🕊️🕊️🕊️🕊️🕊️";
-            font-size: 2em;
-        }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+  font-family: "VeronaBold";
+  color: #00d500;
+}
 
-        i,
-        em {
-            font-family: "VeronaElongated";
-            font-size: 26px;
-            font-weight: 500;
-            color: var(--primary-color);
-            margin-right: 2px;
-        }
+::selection {
+  background: rgb(43, 52, 0);
+  color: yellow;
+}
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        b,
-        strong {
-            font-family: "VeronaBold";
-        }
 
-        strong {
-            font-size: 26px;
-        }
 
-        ::selection {
-            background: rgb(43, 52, 0);
-            color: yellow;
-        }
-
-    </style>
-    <title>index</title>
+</style><title>index</title>
 </head>
-
-<body class='typora-export os-windows'>
-    <div class='typora-export-content'>
-        <div id='write' class=''>
-            <p><video src="./assets/choose-theme.webm" autoplay loop muted></video></p>
-            <p><a href='./index-2.html'><span>Dark Theme</span></a><span> / </span><a href='./index.html'><span>Light Theme</span></a><span>.</span></p>
-            <p><video src="./assets/Delayed-Rapture-10-3-2023.webm" autoplay loop muted></video></p>
-            <p>&nbsp;</p>
-            <hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/1f8uTVA_47A?si=E1ZSY-D2xnHC6v0K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <p><video src="./assets/Luke-4-14-21-10-3-2023.webm" autoplay loop muted></video></p>
-            <p><strong><span>14</span></strong><span>¶ And Jesus returned in the power of the Spirit into Galilee: and there went out a fame of him through all the region round about.</span>
-                <strong><span>15</span></strong><span>And he taught in their synagogues, being glorified of all.</span>
-            </p>
-            <p><strong><span>16</span></strong><span>¶ And he came to Nazareth, where he had been brought up: and, as his custom was, he went into the synagogue on the sabbath day, and stood up for to read.</span>
-                <strong><span>17</span></strong><span>And there was delivered unto him the book of the prophet Esaias. And when he had opened the book, he found the place where it was written,</span>
-                <strong><span>18</span></strong><span>The Spirit of the Lord </span><em><span>is</span></em><span> upon me, because he hath anointed me to preach the gospel to the poor; he hath sent me to heal the brokenhearted, to preach deliverance to the captives, and recovering of sight to the blind, to set at liberty them that are bruised,</span>
-                <strong><span>19</span></strong><span>To preach the acceptable year of the Lord.</span>
-                <strong><span>20</span></strong><span>And he closed the book, and he gave </span><em><span>it</span></em><span> again to the minister, and sat down. And the eyes of all them that were in the synagogue were fastened on him.</span>
-                <strong><span>21</span></strong><span>And he began to say unto them, This day is this scripture fulfilled in your ears.</span>
-            </p>
-            <hr />
-            <p><video src="./assets/Isaiah-61-1-3-10-3-2023.webm" autoplay loop muted></video></p>
-            <p><strong><span>1</span></strong><span>The Spirit of the Lord GOD </span><em><span>is</span></em><span> upon me; because the LORD hath anointed me to preach good tidings unto the meek; he hath sent me to bind up the brokenhearted, to proclaim liberty to the captives, and the opening of the prison to </span><em><span>them</span></em><span> </span><em><span>that</span></em><span> </span><em><span>are</span></em><span> bound;</span>
-                <strong><span>2</span></strong>
-                <font color="#ffff00"><span>To proclaim the acceptable year of the LORD</span></font><span>, and the </span>
-                <font color="#ff0000"><span>day of vengeance of our God; to comfort all that mourn</span></font><span>;</span>
-                <strong><span>3</span></strong><span>To appoint unto them that mourn in Zion, to give unto them beauty for ashes, the oil of joy for mourning, the garment of praise for the spirit of heaviness; that they might be called trees of righteousness, the planting of the LORD, that he might be glorified.</span>
-            </p>
-            <hr />
-            <p><video src="./assets/1-John-1-1-10-10-3-2023.webm" autoplay loop muted></video></p>
-            <p><strong><span>Category:</span></strong><span> General Epistles</span></p>
-            <p><strong><span>1</span></strong><span>That which was from the beginning, which we have heard, which we have seen with our eyes, which we have looked upon, and our hands have handled, of the Word of life;</span>
-                <strong><span>2</span></strong><span>(For the life was manifested, and we have seen </span><em><span>it</span></em><span>, and bear witness, and shew unto you that eternal life, which was with the Father, and was manifested unto us;)</span>
-                <strong><span>3</span></strong><span>That which we have seen and heard declare we unto you, that ye also may have fellowship with us: and truly our fellowship </span><em><span>is</span></em><span> with the Father, and with his Son Jesus Christ.</span>
-                <strong><span>4</span></strong><span>And these things write we unto you, that your joy may be full.</span>
-                <strong><span>5</span></strong><span>This then is the message which we have heard of him, and declare unto you, that God is light, and in him is no darkness at all.</span>
-                <strong><span>6</span></strong><span>If we say that we have fellowship with him, and walk in darkness, we lie, and do not the truth:</span>
-                <strong><span>7</span></strong><span>But if we walk in the light, as he is in the light, we have fellowship one with another, and the blood of Jesus Christ his Son cleanseth us from all sin.</span>
-                <strong><span>8</span></strong><span>If we say that we have no sin, we deceive ourselves, and the truth is not in us.</span>
-                <strong><span>9</span></strong><span>If we confess our sins, he is faithful and just to forgive us </span><em><span>our</span></em><span> sins, and to cleanse us from all unrighteousness.</span>
-                <strong><span>10</span></strong><span>If we say that we have not sinned, we make him a liar, and his word is not in us.</span>
-            </p>
-            <hr /><iframe src="https://player.rss.com/good-old-news/1133304" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1133304/">Delated Rapture | RSS.com</a></iframe>
-            <hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/Wa-RGnCfb9k?si=eJ48XSyHv2_6aFPn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/UZZr2rbVtzk?si=0vaFr5Kfzlq_660U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/n7sbdh5QWcQ?si=JITDF6FEFL7Sjr13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/_liL8E9t9_Y?si=_lZbLLG7dOQJK_ED" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <p><video src="./assets/Matthew-24-22-10-3-2023.webm" autoplay loop muted></video></p>
-            <p><strong><span>22</span></strong>
-                <font color="#ff0000"><span>And except those days should be shortened, there should no flesh be saved: but for the elect’s sake those days shall be shortened</span></font><span>.</span>
-            </p>
-            <hr />
-            <p><video src="./assets/2-Thessalonians-2-9-12-10-3-2023.webm" autoplay loop muted></video></p>
-            <p><strong><span>9*</span></strong><span>Even* </span><em><span>him</span></em><span>, whose coming is after the working of Satan with all power and signs and lying wonders,</span>
-                <strong><span>10</span></strong><span>And with all deceivableness of unrighteousness in them that perish; because they received not the love of the truth, that they might be saved.</span>
-                <strong><span>11</span></strong><span>And for this cause God shall send them strong delusion, that they should believe a lie:</span>
-                <strong><span>12</span></strong><span>That they all might be damned who believed not the truth, but had pleasure in unrighteousness.</span>
-            </p>
-            <hr />
-            <p><video src="./assets/Matthew-24-24-10-3-2023.webm" autoplay loop muted></video></p>
-            <p><strong><span>24</span></strong>
-                <font color="#ff0000"><span>For there shall arise false Christs, and false prophets, and shall shew great signs and wonders; insomuch that, if</span></font><span> </span><em><span>it</span></em><span> </span><em><span>were</span></em><span> </span>
-                <font color="#ff0000"><span>possible, they shall deceive the very elect</span></font><span>.</span>
-            </p>
-            <hr />
-            <p><video src="./assets/Luke-21-28-10-3-2023.webm" autoplay loop muted></video></p>
-            <p><strong><span>28</span></strong>
-                <font color="#ff0000"><span>And when these things begin to come to pass, then look up, and lift up your heads; for your redemption draweth nigh</span></font><span>.</span>
-            </p>
-            <hr />
-            <p><video src="./assets/Romans-12-1-3-10-3-2023.webm" autoplay loop muted></video></p>
-            <p><strong><span>1</span></strong><span>I beseech you therefore, brethren, by the mercies of God, that ye present your bodies a living sacrifice, holy, acceptable unto God, </span><em><span>which</span></em><span> </span><em><span>is</span></em><span> your reasonable service.</span>
-                <strong><span>2</span></strong><span>And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what </span><em><span>is</span></em><span> that good, and acceptable, and perfect, will of God.</span>
-                <strong><span>3</span></strong><span>For I say, through the grace given unto me, to every man that is among you, not to think </span><em><span>of</span></em><span> </span><em><span>himself</span></em><span> more highly than he ought to think; but to think soberly, according as God hath dealt to every man the measure of faith.</span>
-            </p>
-            <hr />
-            <p><video src="./assets/2-Corinthians-3-13-18-10-3-2023.webm" autoplay loop muted></video></p>
-            <p><strong><span>13</span></strong><span>And not as Moses, </span><em><span>which</span></em><span> put a vail over his face, that the children of Israel could not stedfastly look to the end of that which is abolished:</span>
-                <strong><span>14</span></strong><span>But their minds were blinded: for until this day remaineth the same vail untaken away in the reading of the old testament; which </span><em><span>vail</span></em><span> is done away in Christ.</span>
-                <strong><span>15</span></strong><span>But even unto this day, when Moses is read, the vail is upon their heart.</span>
-                <strong><span>16</span></strong><span>Nevertheless when it shall turn to the Lord, the vail shall be taken away.</span>
-                <strong><span>17</span></strong><span>Now the Lord is that Spirit: and where the Spirit of the Lord </span><em><span>is</span></em><span>, there </span><em><span>is</span></em><span> liberty.</span>
-                <strong><span>18</span></strong><span>But we all, with open face beholding as in a glass the glory of the Lord, are changed into the same image from glory to glory, </span><em><span>even</span></em><span> as by the Spirit of the Lord.</span>
-            </p>
-            <hr />
-            <p><video src="./assets/2-Corinthians-12-7-10-10-3-2023.webm" autoplay loop muted></video></p>
-            <p><strong><span>7</span></strong><span>And lest I should be exalted above measure through the abundance of the revelations, there was given to me a thorn in the flesh, the messenger of Satan to buffet me, lest I should be exalted above measure.</span>
-                <strong><span>8</span></strong><span>For this thing I besought the Lord thrice, that it might depart from me.</span>
-                <strong><span>9</span></strong><span>And he said unto me, My grace is sufficient for thee: for my strength is made perfect in weakness. Most gladly therefore will I rather glory in my infirmities, that the power of Christ may rest upon me.</span>
-                <strong><span>10</span></strong><span>Therefore I take pleasure in infirmities, in reproaches, in necessities, in persecutions, in distresses for Christ’s sake: for when I am weak, then am I strong.</span>
-            </p>
-            <hr />
-            <p><video src="./assets/Counter-Weight-10-3-2023.webm" autoplay loop muted></video></p><iframe width="560" height="315" src="https://www.youtube.com/embed/Fg5grFeLz6M?si=Wuj-wDPTN0P70Q1-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <hr />
-            <p><video src="./assets/Counter-Weight-10-3-2023.webm" autoplay loop muted></video></p><iframe width="560" height="315" src="https://www.youtube.com/embed/dKe6lOOJCVE?si=wRQtCn6q2GdbWIU_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <hr /><iframe src="https://player.rss.com/good-old-news/1129120" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1129120/">Joel | RSS.com</a></iframe>
-            <p><video src="./assets/Joel-1-1-20-10-3-2023.webm" autoplay loop muted></video></p>
-            <p><strong><span>Category:</span></strong><span> Minor Prophets</span></p>
-            <p><strong><span>1</span></strong><span>The word of the LORD that came to Joel the son of Pethuel.</span>
-                <strong><span>2</span></strong><span>Hear this, ye old men, and give ear, all ye inhabitants of the land. Hath this been in your days, or even in the days of your fathers?</span>
-                <strong><span>3</span></strong><span>Tell ye your children of it, and </span><em><span>let</span></em><span> your children </span><em><span>tell</span></em><span> their children, and their children another generation.</span>
-                <strong><span>4</span></strong><span>That which the palmerworm hath left hath the locust eaten; and that which the locust hath left hath the cankerworm eaten; and that which the cankerworm hath left hath the caterpiller eaten.</span>
-                <strong><span>5</span></strong><span>Awake, ye drunkards, and weep; and howl, all ye drinkers of wine, because of the new wine; for it is cut off from your mouth.</span>
-                <strong><span>6</span></strong><span>For a nation is come up upon my land, strong, and without number, whose teeth </span><em><span>are</span></em><span> the teeth of a lion, and he hath the cheek teeth of a great lion.</span>
-                <strong><span>7</span></strong><span>He hath laid my vine waste, and barked my fig tree: he hath made it clean bare, and cast </span><em><span>it</span></em><span> away; the branches thereof are made white.</span>
-            </p>
-            <p><strong><span>8</span></strong><span>¶ Lament like a virgin girded with sackcloth for the husband of her youth.</span>
-                <strong><span>9</span></strong><span>The meat offering and the drink offering is cut off from the house of the LORD; the priests, the LORD’S ministers, mourn.</span>
-                <strong><span>10</span></strong><span>The field is wasted, the land mourneth; for the corn is wasted: the new wine is dried up, the oil languisheth.</span>
-                <strong><span>11</span></strong><span>Be ye ashamed, O ye husbandmen; howl, O ye vinedressers, for the wheat and for the barley; because the harvest of the field is perished.</span>
-                <strong><span>12</span></strong><span>The vine is dried up, and the fig tree languisheth; the pomegranate tree, the palm tree also, and the apple tree, </span><em><span>even</span></em><span> all the trees of the field, are withered: because joy is withered away from the sons of men.</span>
-                <strong><span>13</span></strong><span>Gird yourselves, and lament, ye priests: howl, ye ministers of the altar: come, lie all night in sackcloth, ye ministers of my God: for the meat offering and the drink offering is withholden from the house of your God.</span>
-            </p>
-            <p><strong><span>14</span></strong><span>¶ Sanctify ye a fast, call a solemn assembly, gather the elders </span><em><span>and</span></em><span> all the inhabitants of the land </span><em><span>into</span></em><span> the house of the LORD your God, and cry unto the LORD,</span>
-                <strong><span>15</span></strong><span>Alas for the day! for the day of the LORD </span><em><span>is</span></em><span> at hand, and as a destruction from the Almighty shall it come.</span>
-                <strong><span>16</span></strong><span>Is not the meat cut off before our eyes, </span><em><span>yea</span></em><span>, joy and gladness from the house of our God?</span>
-                <strong><span>17</span></strong><span>The seed is rotten under their clods, the garners are laid desolate, the barns are broken down; for the corn is withered.</span>
-                <strong><span>18</span></strong><span>How do the beasts groan! the herds of cattle are perplexed, because they have no pasture; yea, the flocks of sheep are made desolate.</span>
-                <strong><span>19</span></strong><span>O LORD, to thee will I cry: for the fire hath devoured the pastures of the wilderness, and the flame hath burned all the trees of the field.</span>
-                <strong><span>20</span></strong><span>The beasts of the field cry also unto thee: for the rivers of waters are dried up, and the fire hath devoured the pastures of the wilderness.</span>
-            </p>
-            <hr />
-            <p><video src="./assets/Joel-2-1-32-10-3-2023.webm" autoplay loop muted></video></p>
-            <p><strong><span>1</span></strong><span>Blow ye the trumpet in Zion, and sound an alarm in my holy mountain: let all the inhabitants of the land tremble: for the day of the LORD cometh, for </span><em><span>it</span></em><span> </span><em><span>is</span></em><span> nigh at hand;</span>
-                <strong><span>2</span></strong><span>A day of darkness and of gloominess, a day of clouds and of thick darkness, as the morning spread upon the mountains: a great people and a strong; there hath not been ever the like, neither shall be any more after it, </span><em><span>even</span></em><span> to the years of many generations.</span>
-                <strong><span>3</span></strong><span>A fire devoureth before them; and behind them a flame burneth: the land </span><em><span>is</span></em><span> as the garden of Eden before them, and behind them a desolate wilderness; yea, and nothing shall escape them.</span>
-                <strong><span>4</span></strong><span>The appearance of them </span><em><span>is</span></em><span> as the appearance of horses; and as horsemen, so shall they run.</span>
-                <strong><span>5</span></strong><span>Like the noise of chariots on the tops of mountains shall they leap, like the noise of a flame of fire that devoureth the stubble, as a strong people set in battle array.</span>
-                <strong><span>6</span></strong><span>Before their face the people shall be much pained: all faces shall gather blackness.</span>
-                <strong><span>7</span></strong><span>They shall run like mighty men; they shall climb the wall like men of war; and they shall march every one on his ways, and they shall not break their ranks:</span>
-                <strong><span>8</span></strong><span>Neither shall one thrust another; they shall walk every one in his path: and </span><em><span>when</span></em><span> they fall upon the sword, they shall not be wounded.</span>
-                <strong><span>9</span></strong><span>They shall run to and fro in the city; they shall run upon the wall, they shall climb up upon the houses; they shall enter in at the windows like a thief.</span>
-                <strong><span>10</span></strong><span>The earth shall quake before them; the heavens shall tremble: the sun and the moon shall be dark, and the stars shall withdraw their shining:</span>
-                <strong><span>11</span></strong><span>And the LORD shall utter his voice before his army: for his camp </span><em><span>is</span></em><span> very great: for </span><em><span>he</span></em><span> </span><em><span>is</span></em><span> strong that executeth his word: for the day of the LORD </span><em><span>is</span></em><span> great and very terrible; and who can abide it?</span>
-            </p>
-            <p><strong><span>12</span></strong><span>¶ Therefore also now, saith the LORD, turn ye </span><em><span>even</span></em><span> to me with all your heart, and with fasting, and with weeping, and with mourning:</span>
-                <strong><span>13</span></strong><span>And rend your heart, and not your garments, and turn unto the LORD your God: for he </span><em><span>is</span></em><span> gracious and merciful, slow to anger, and of great kindness, and repenteth him of the evil.</span>
-                <strong><span>14</span></strong><span>Who knoweth </span><em><span>if</span></em><span> he will return and repent, and leave a blessing behind him; </span><em><span>even</span></em><span> a meat offering and a drink offering unto the LORD your God?</span>
-            </p>
-            <p><strong><span>15</span></strong><span>¶ Blow the trumpet in Zion, sanctify a fast, call a solemn assembly:</span>
-                <strong><span>16</span></strong><span>Gather the people, sanctify the congregation, assemble the elders, gather the children, and those that suck the breasts: let the bridegroom go forth of his chamber, and the bride out of her closet.</span>
-                <strong><span>17</span></strong><span>Let the priests, the ministers of the LORD, weep between the porch and the altar, and let them say, Spare thy people, O LORD, and give not thine heritage to reproach, that the heathen should rule over them: wherefore should they say among the people, Where </span><em><span>is</span></em><span> their God?</span>
-            </p>
-            <p><strong><span>18</span></strong><span>¶ Then will the LORD be jealous for his land, and pity his people.</span>
-                <strong><span>19</span></strong><span>Yea, the LORD will answer and say unto his people, Behold, I will send you corn, and wine, and oil, and ye shall be satisfied therewith: and I will no more make you a reproach among the heathen:</span>
-                <strong><span>20</span></strong><span>But I will remove far off from you the northern </span><em><span>army</span></em><span>, and will drive him into a land barren and desolate, with his face toward the east sea, and his hinder part toward the utmost sea, and his stink shall come up, and his ill savour shall come up, because he hath done great things.</span>
-            </p>
-            <p><strong><span>21</span></strong><span>¶ Fear not, O land; be glad and rejoice: for the LORD will do great things.</span>
-                <strong><span>22</span></strong><span>Be not afraid, ye beasts of the field: for the pastures of the wilderness do spring, for the tree beareth her fruit, the fig tree and the vine do yield their strength.</span>
-                <strong><span>23</span></strong><span>Be glad then, ye children of Zion, and rejoice in the LORD your God: for he hath given you the former rain moderately, and he will cause to come down for you the rain, the former rain, and the latter rain in the first </span><em><span>month</span></em><span>.</span>
-                <strong><span>24</span></strong><span>And the floors shall be full of wheat, and the fats shall overflow with wine and oil.</span>
-                <strong><span>25</span></strong><span>And I will restore to you the years that the locust hath eaten, the cankerworm, and the caterpiller, and the palmerworm, my great army which I sent among you.</span>
-                <strong><span>26</span></strong><span>And ye shall eat in plenty, and be satisfied, and praise the name of the LORD your God, that hath dealt wondrously with you: and my people shall never be ashamed.</span>
-                <strong><span>27</span></strong><span>And ye shall know that I </span><em><span>am</span></em><span> in the midst of Israel, and </span><em><span>that</span></em><span> I </span><em><span>am</span></em><span> the LORD your God, and none else: and my people shall never be ashamed.</span>
-            </p>
-            <p><strong><span>28</span></strong><span>¶ And it shall come to pass afterward, </span><em><span>that</span></em><span> I will pour out my spirit upon all flesh; and your sons and your daughters shall prophesy, your old men shall dream dreams, your young men shall see visions:</span>
-                <strong><span>29</span></strong><span>And also upon the servants and upon the handmaids in those days will I pour out my spirit.</span>
-                <strong><span>30</span></strong><span>And I will shew wonders in the heavens and in the earth, blood, and fire, and pillars of smoke.</span>
-                <strong><span>31</span></strong><span>The sun shall be turned into darkness, and the moon into blood, before the great and the terrible day of the LORD come.</span>
-                <strong><span>32</span></strong><span>And it shall come to pass, </span><em><span>that</span></em><span> whosoever shall call on the name of the LORD shall be delivered: for in mount Zion and in Jerusalem shall be deliverance, as the LORD hath said, and in the remnant whom the LORD shall call.</span>
-            </p>
-            <hr />
-            <p><video src="./assets/Joel-3-1-21-10-3-2023.webm" autoplay loop muted></video></p>
-            <p><strong><span>1</span></strong><span>For, behold, in those days, and in that time, when I shall bring again the captivity of Judah and Jerusalem,</span>
-                <strong><span>2</span></strong><span>I will also gather all nations, and will bring them down into the valley of Jehoshaphat, and will plead with them there for my people and </span><em><span>for</span></em><span> my heritage Israel, whom they have scattered among the nations, and parted my land.</span>
-                <strong><span>3</span></strong><span>And they have cast lots for my people; and have given a boy for an harlot, and sold a girl for wine, that they might drink.</span>
-                <strong><span>4</span></strong><span>Yea, and what have ye to do with me, O Tyre, and Zidon, and all the coasts of Palestine? will ye render me a recompence? and if ye recompense me, swiftly </span><em><span>and</span></em><span> speedily will I return your recompence upon your own head;</span>
-                <strong><span>5</span></strong><span>Because ye have taken my silver and my gold, and have carried into your temples my goodly pleasant things:</span>
-                <strong><span>6</span></strong><span>The children also of Judah and the children of Jerusalem have ye sold unto the Grecians, that ye might remove them far from their border.</span>
-                <strong><span>7</span></strong><span>Behold, I will raise them out of the place whither ye have sold them, and will return your recompence upon your own head:</span>
-                <strong><span>8</span></strong><span>And I will sell your sons and your daughters into the hand of the children of Judah, and they shall sell them to the Sabeans, to a people far off: for the LORD hath spoken </span><em><span>it</span></em><span>.</span>
-            </p>
-            <p><strong><span>9</span></strong><span>¶ Proclaim ye this among the Gentiles; Prepare war, wake up the mighty men, let all the men of war draw near; let them come up:</span>
-                <strong><span>10</span></strong><span>Beat your plowshares into swords, and your pruninghooks into spears: let the weak say, I </span><em><span>am</span></em><span> strong.</span>
-                <strong><span>11</span></strong><span>Assemble yourselves, and come, all ye heathen, and gather yourselves together round about: thither cause thy mighty ones to come down, O LORD.</span>
-                <strong><span>12</span></strong><span>Let the heathen be wakened, and come up to the valley of Jehoshaphat: for there will I sit to judge all the heathen round about.</span>
-                <strong><span>13</span></strong><span>Put ye in the sickle, for the harvest is ripe: come, get you down; for the press is full, the fats overflow; for their wickedness </span><em><span>is</span></em><span> great.</span>
-                <strong><span>14</span></strong><span>Multitudes, multitudes in the valley of decision: for the day of the LORD </span><em><span>is</span></em><span> near in the valley of decision.</span>
-                <strong><span>15</span></strong><span>The sun and the moon shall be darkened, and the stars shall withdraw their shining.</span>
-                <strong><span>16</span></strong><span>The LORD also shall roar out of Zion, and utter his voice from Jerusalem; and the heavens and the earth shall shake: but the LORD </span><em><span>will</span></em><span> </span><em><span>be</span></em><span> the hope of his people, and the strength of the children of Israel.</span>
-                <strong><span>17</span></strong><span>So shall ye know that I </span><em><span>am</span></em><span> the LORD your God dwelling in Zion, my holy mountain: then shall Jerusalem be holy, and there shall no strangers pass through her any more.</span>
-            </p>
-            <p><strong><span>18</span></strong><span>¶ And it shall come to pass in that day, </span><em><span>that</span></em><span> the mountains shall drop down new wine, and the hills shall flow with milk, and all the rivers of Judah shall flow with waters, and a fountain shall come forth of the house of the LORD, and shall water the valley of Shittim.</span>
-                <strong><span>19</span></strong><span>Egypt shall be a desolation, and Edom shall be a desolate wilderness, for the violence </span><em><span>against</span></em><span> the children of Judah, because they have shed innocent blood in their land.</span>
-                <strong><span>20</span></strong><span>But Judah shall dwell for ever, and Jerusalem from generation to generation.</span>
-                <strong><span>21</span></strong><span>For I will cleanse their blood </span><em><span>that</span></em><span> I have not cleansed: for the LORD dwelleth in Zion.</span>
-            </p>
-            <hr />
-            <p><video src="./assets/Paul-Washer-Shocking-Message-10-3-2023.webm" autoplay loop muted></video></p><iframe width="560" height="315" src="https://www.youtube.com/embed/uuabITeO4l8?si=PhSTkZtIFRguld2H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <hr />
-            <p><video src="./assets/The-Road-To-Salvation-10-3-2023.webm" autoplay loop muted></video></p>
-            <p><span>Dear Heavenly </span><em><strong><span>Father</span></strong></em>
-                <em><strong><span>You</span></strong></em><span> know </span><em><span>everything</span></em><span> about me,</span>
-                <span>and you know that I’m a </span><em><span>sinner</span></em><span>.</span>
-            </p>
-            <p>&nbsp;</p>
-            <p><span>For many years, I have </span><em><span>loved my sins</span></em><span>.</span>
-                <span>I hereby </span><em><span>repent</span></em><span> from all </span><em><span>my sinful ways</span></em><span>.</span>
-            </p>
-            <p>&nbsp;</p>
-            <p><span>I’m willing to </span><em><span>change with </span><strong><span>Your</span></strong><span> help</span></em><span>,</span>
-                <span>I receive </span><em><strong><span>Your</span></strong></em><span> </span><em><span>forgiveness</span></em><span>, and I pray that </span><em><strong><span>You</span></strong><span> help me</span></em>
-                <em><span>forgive</span></em><span> those, who have </span><em><span>hurt me</span></em><span>.</span>
-            </p>
-            <p>&nbsp;</p>
-            <p><span>I know I only receive </span><em><span>forgiveness</span></em><span>, as I </span><em><span>forgive others</span></em><span>.</span></p>
-            <p>&nbsp;</p>
-            <p><span>Thank </span><em><strong><span>You</span></strong></em><span> that </span><em><strong><span>Jesus Christ</span></strong><span> died</span></em><span> on the cross for </span><em><span>us all</span></em><span>.</span>
-                <span>Thank </span><em><strong><span>You</span></strong></em><span> that </span><em><strong><span>He</span></strong></em><span> offers </span><em><strong><span>His</span></strong></em><span> </span><em><span>righteousness</span></em><span> to me,</span>
-                <span>and today this very day, I receive that </span><em><span>righteousness</span></em><span>.</span>
-            </p>
-            <p>&nbsp;</p>
-            <p><span>I </span><em><span>hereby</span></em><span> put my </span><em><span>faith</span></em><span> in </span><em><strong><span>Him</span></strong></em><span>, the </span><em><strong><span>savior</span></strong></em><span> of the world.</span>
-                <span>So please </span><em><strong><span>God</span></strong></em><span> have </span><em><span>mercy</span></em><span> on me, a </span><em><span>sinner</span></em><span>.</span>
-                <span>Save me </span><em><strong><span>Jesus Christ</span></strong></em><span>, and today this very day,</span>
-                <em><strong><span>I commit my life to you Lord Jesus Christ</span></strong></em><span>.</span>
-            </p>
-            <p><video src="./assets/I-Pray-These-Things-In-The-M-10-3-2023.webm" autoplay loop muted></video></p>
-            <p><span>You can download the </span><em><strong><span>Road To Salvation</span></strong></em><span> in more formats: </span><a href='assets\the-road-to-salvation.zip'><span>Here</span></a><span>.</span></p>
-            <hr />
-            <p><video src="./assets/Romans-8-1-39-10-3-2023.webm" autoplay loop muted></video></p>
-            <p>&nbsp;</p><iframe src="https://player.rss.com/good-old-news/1137630" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1137630/">Romans 8 | RSS.com</a></iframe>
-            <p><strong><span>1*</span></strong><span>There* </span><em><span>is</span></em><span> therefore now no condemnation to them which are in Christ Jesus, who walk not after the flesh, but after the Spirit.</span>
-                <strong><span>2</span></strong><span>For the law of the Spirit of life in Christ Jesus hath made me free from the law of sin and death.</span>
-                <strong><span>3</span></strong><span>For what the law could not do, in that it was weak through the flesh, God sending his own Son in the likeness of sinful flesh, and for sin, condemned sin in the flesh:</span>
-                <strong><span>4</span></strong><span>That the righteousness of the law might be fulfilled in us, who walk not after the flesh, but after the Spirit.</span>
-                <strong><span>5</span></strong><span>For they that are after the flesh do mind the things of the flesh; but they that are after the Spirit the things of the Spirit.</span>
-                <strong><span>6</span></strong><span>For to be carnally minded </span><em><span>is</span></em><span> death; but to be spiritually minded </span><em><span>is</span></em><span> life and peace.</span>
-                <strong><span>7</span></strong><span>Because the carnal mind </span><em><span>is</span></em><span> enmity against God: for it is not subject to the law of God, neither indeed can be.</span>
-                <strong><span>8</span></strong><span>So then they that are in the flesh cannot please God.</span>
-                <strong><span>9</span></strong><span>But ye are not in the flesh, but in the Spirit, if so be that the Spirit of God dwell in you. Now if any man have not the Spirit of Christ, he is none of his.</span>
-                <strong><span>10</span></strong><span>And if Christ </span><em><span>be</span></em><span> in you, the body </span><em><span>is</span></em><span> dead because of sin; but the Spirit </span><em><span>is</span></em><span> life because of righteousness.</span>
-                <strong><span>11</span></strong><span>But if the Spirit of him that raised up Jesus from the dead dwell in you, he that raised up Christ from the dead shall also quicken your mortal bodies by his Spirit that dwelleth in you.</span>
-                <strong><span>12</span></strong><span>Therefore, brethren, we are debtors, not to the flesh, to live after the flesh.</span>
-                <strong><span>13</span></strong><span>For if ye live after the flesh, ye shall die: but if ye through the Spirit do mortify the deeds of the body, ye shall live.</span>
-                <strong><span>14</span></strong><span>For as many as are led by the Spirit of God, they are the sons of God.</span>
-                <strong><span>15</span></strong><span>For ye have not received the spirit of bondage again to fear; but ye have received the Spirit of adoption, whereby we cry, Abba, Father.</span>
-                <strong><span>16</span></strong><span>The Spirit itself beareth witness with our spirit, that we are the children of God:</span>
-                <strong><span>17</span></strong><span>And if children, then heirs; heirs of God, and joint-heirs with Christ; if so be that we suffer with </span><em><span>him</span></em><span>, that we may be also glorified together.</span>
-                <strong><span>18</span></strong><span>For I reckon that the sufferings of this present time </span><em><span>are</span></em><span> not worthy </span><em><span>to</span></em><span> </span><em><span>be</span></em><span> </span><em><span>compared</span></em><span> with the glory which shall be revealed in us.</span>
-                <strong><span>19</span></strong><span>For the earnest expectation of the creature waiteth for the manifestation of the sons of God.</span>
-                <strong><span>20</span></strong><span>For the creature was made subject to vanity, not willingly, but by reason of him who hath subjected </span><em><span>the</span></em><span> </span><em><span>same</span></em><span> in hope,</span>
-                <strong><span>21</span></strong><span>Because the creature itself also shall be delivered from the bondage of corruption into the glorious liberty of the children of God.</span>
-                <strong><span>22</span></strong><span>For we know that the whole creation groaneth and travaileth in pain together until now.</span>
-                <strong><span>23</span></strong><span>And not only </span><em><span>they</span></em><span>, but ourselves also, which have the firstfruits of the Spirit, even we ourselves groan within ourselves, waiting for the adoption, </span><em><span>to</span></em><span> </span><em><span>wit</span></em><span>, the redemption of our body.</span>
-                <strong><span>24</span></strong><span>For we are saved by hope: but hope that is seen is not hope: for what a man seeth, why doth he yet hope for?</span>
-                <strong><span>25</span></strong><span>But if we hope for that we see not, </span><em><span>then</span></em><span> do we with patience wait for </span><em><span>it</span></em><span>.</span>
-                <strong><span>26</span></strong><span>Likewise the Spirit also helpeth our infirmities: for we know not what we should pray for as we ought: but the Spirit itself maketh intercession for us with groanings which cannot be uttered.</span>
-                <strong><span>27</span></strong><span>And he that searcheth the hearts knoweth what </span><em><span>is</span></em><span> the mind of the Spirit, because he maketh intercession for the saints according to </span><em><span>the</span></em><span> </span><em><span>will</span></em><span> </span><em><span>of</span></em><span> God.</span>
-                <strong><span>28</span></strong><span>And we know that all things work together for good to them that love God, to them who are the called according to </span><em><span>his</span></em><span> purpose.</span>
-                <strong><span>29</span></strong><span>For whom he did foreknow, he also did predestinate </span><em><span>to</span></em><span> </span><em><span>be</span></em><span> conformed to the image of his Son, that he might be the firstborn among many brethren.</span>
-                <strong><span>30</span></strong><span>Moreover whom he did predestinate, them he also called: and whom he called, them he also justified: and whom he justified, them he also glorified.</span>
-                <strong><span>31</span></strong><span>What shall we then say to these things? If God </span><em><span>be</span></em><span> for us, who </span><em><span>can</span></em><span> </span><em><span>be</span></em><span> against us?</span>
-                <strong><span>32</span></strong><span>He that spared not his own Son, but delivered him up for us all, how shall he not with him also freely give us all things?</span>
-                <strong><span>33</span></strong><span>Who shall lay any thing to the charge of God’s elect? </span><em><span>It</span></em><span> </span><em><span>is</span></em><span> God that justifieth.</span>
-                <strong><span>34</span></strong><span>Who </span><em><span>is</span></em><span> he that condemneth? </span><em><span>It</span></em><span> </span><em><span>is</span></em><span> Christ that died, yea rather, that is risen again, who is even at the right hand of God, who also maketh intercession for us.</span>
-                <strong><span>35</span></strong><span>Who shall separate us from the love of Christ? </span><em><span>shall</span></em><span> tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword?</span>
-                <strong><span>36</span></strong><span>As it is written, For thy sake we are killed all the day long; we are accounted as sheep for the slaughter.</span>
-                <strong><span>37</span></strong><span>Nay, in all these things we are more than conquerors through him that loved us.</span>
-                <strong><span>38</span></strong><span>For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,</span>
-                <strong><span>39</span></strong><span>Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.</span>
-            </p>
-            <hr />
-            <p><video src="./assets/Psalm-27-1-14-10-3-2023.webm" autoplay loop muted></video></p><iframe src="https://player.rss.com/good-old-news/1137626" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1137626/">Psalm 27 | RSS.com</a></iframe>
-            <p><em><span>A</span></em><span> </span><em><span>Psalm</span></em><span> of David.</span></p>
-            <p><strong><span>1</span></strong><span>The LORD </span><em><span>is</span></em><span> my light and my salvation; whom shall I fear? the LORD </span><em><span>is</span></em><span> the strength of my life; of whom shall I be afraid?</span>
-                <strong><span>2</span></strong><span>When the wicked, </span><em><span>even</span></em><span> mine enemies and my foes, came upon me to eat up my flesh, they stumbled and fell.</span>
-                <strong><span>3</span></strong><span>Though an host should encamp against me, my heart shall not fear: though war should rise against me, in this </span><em><span>will</span></em><span> I </span><em><span>be</span></em><span> confident.</span>
-                <strong><span>4</span></strong><span>One </span><em><span>thing</span></em><span> have I desired of the LORD, that will I seek after; that I may dwell in the house of the LORD all the days of my life, to behold the beauty of the LORD, and to enquire in his temple.</span>
-                <strong><span>5</span></strong><span>For in the time of trouble he shall hide me in his pavilion: in the secret of his tabernacle shall he hide me; he shall set me up upon a rock.</span>
-                <strong><span>6</span></strong><span>And now shall mine head be lifted up above mine enemies round about me: therefore will I offer in his tabernacle sacrifices of joy; I will sing, yea, I will sing praises unto the LORD.</span>
-                <strong><span>7</span></strong><span>Hear, O LORD, </span><em><span>when</span></em><span> I cry with my voice: have mercy also upon me, and answer me.</span>
-                <strong><span>8*</span></strong><span>When* </span><em><span>thou</span></em><span> </span><em><span>saidst</span></em><span>, Seek ye my face; my heart said unto thee, Thy face, LORD, will I seek.</span>
-                <strong><span>9</span></strong><span>Hide not thy face </span><em><span>far</span></em><span> from me; put not thy servant away in anger: thou hast been my help; leave me not, neither forsake me, O God of my salvation.</span>
-                <strong><span>10</span></strong><span>When my father and my mother forsake me, then the LORD will take me up.</span>
-                <strong><span>11</span></strong><span>Teach me thy way, O LORD, and lead me in a plain path, because of mine enemies.</span>
-                <strong><span>12</span></strong><span>Deliver me not over unto the will of mine enemies: for false witnesses are risen up against me, and such as breathe out cruelty.</span>
-                <strong><span>13*</span></strong><span>I* </span><em><span>had</span></em><span> </span><em><span>fainted</span></em><span>, unless I had believed to see the goodness of the LORD in the land of the living.</span>
-                <strong><span>14</span></strong><span>Wait on the LORD: be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD.</span>
-            </p>
-            <hr />
-            <p><video src="./assets/Psalm-91-1-16-10-3-2023.webm" autoplay loop muted></video></p>
-            <p>&nbsp;</p><iframe src="https://player.rss.com/good-old-news/1137628" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1137628/">Psalm 91 | RSS.com</a></iframe>
-            <p><strong><span>1</span></strong><span>He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty.</span>
-                <strong><span>2</span></strong><span>I will say of the LORD, </span><em><span>He</span></em><span> </span><em><span>is</span></em><span> my refuge and my fortress: my God; in him will I trust.</span>
-                <strong><span>3</span></strong><span>Surely he shall deliver thee from the snare of the fowler, </span><em><span>and</span></em><span> from the noisome pestilence.</span>
-                <strong><span>4</span></strong><span>He shall cover thee with his feathers, and under his wings shalt thou trust: his truth </span><em><span>shall</span></em><span> </span><em><span>be</span></em><span> </span><em><span>thy</span></em><span> shield and buckler.</span>
-                <strong><span>5</span></strong><span>Thou shalt not be afraid for the terror by night; </span><em><span>nor</span></em><span> for the arrow </span><em><span>that</span></em><span> flieth by day;</span>
-                <strong><span>6*</span></strong><span>Nor* for the pestilence </span><em><span>that</span></em><span> walketh in darkness; </span><em><span>nor</span></em><span> for the destruction </span><em><span>that</span></em><span> wasteth at noonday.</span>
-                <strong><span>7</span></strong><span>A thousand shall fall at thy side, and ten thousand at thy right hand; </span><em><span>but</span></em><span> it shall not come nigh thee.</span>
-                <strong><span>8</span></strong><span>Only with thine eyes shalt thou behold and see the reward of the wicked.</span>
-                <strong><span>9</span></strong><span>Because thou hast made the LORD, </span><em><span>which</span></em><span> </span><em><span>is</span></em><span> my refuge, </span><em><span>even</span></em><span> the most High, thy habitation;</span>
-                <strong><span>10</span></strong><span>There shall no evil befall thee, neither shall any plague come nigh thy dwelling.</span>
-                <strong><span>11</span></strong><span>For he shall give his angels charge over thee, to keep thee in all thy ways.</span>
-                <strong><span>12</span></strong><span>They shall bear thee up in </span><em><span>their</span></em><span> hands, lest thou dash thy foot against a stone.</span>
-                <strong><span>13</span></strong><span>Thou shalt tread upon the lion and adder: the young lion and the dragon shalt thou trample under feet.</span>
-                <strong><span>14</span></strong><span>Because he hath set his love upon me, therefore will I deliver him: I will set him on high, because he hath known my name.</span>
-                <strong><span>15</span></strong><span>He shall call upon me, and I will answer him: I </span><em><span>will</span></em><span> </span><em><span>be</span></em><span> with him in trouble; I will deliver him, and honour him.</span>
-                <strong><span>16</span></strong><span>With long life will I satisfy him, and shew him my salvation.</span>
-            </p>
-            <hr />
-            <p><span>You can use our bible: </span><a href='https://caught-up.net/bible/index.html'><span>Here</span></a><span>.</span></p>
-            <p>&nbsp;</p>
-            <p><span>Or download it at one of these links:</span></p>
-            <p><span>Download Locations: </span>
-                <img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='https://drive.google.com/file/d/12claUn5wws8BNZ15TrtzrjkHqA6AjI_W/view?usp=sharing'><span>First Location</span></a><span> </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32">
-                <img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='https://drive.google.com/file/d/1nIob4Lk8895arc1_rpdLj4Nz3uKY1JSI/view?usp=sharing'><span>Second Location</span></a><span> </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32">
-                <img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='https://drive.google.com/file/d/12GOanEAg04X7tkq3dVH9Z7wF0yHC81pB/view?usp=sharing'><span>Third Location</span></a><span> </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32">
-                <img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='https://drive.google.com/file/d/1ZIA2dnyxV4hOm00BzIZQzxnrKAkR0C04/view?usp=sharing'><span>Forth Location</span></a><span> </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32">
-            </p>
-            <hr />
-            <p><img src="./assets/lk-1-1695388205247-4.webp" referrerpolicy="no-referrer" alt="lk-1"></p>
-            <p><a href='https://www.jdfarag.org/'><span>Website</span></a>
-                <a href='https://www.youtube.com/@JDFaragTV'><span>YouTube</span></a>
-            </p>
-            <hr />
-            <p><img src="./assets/lk-2-1694374231772-35-1695388205246-3.webp" referrerpolicy="no-referrer" alt="lk-2"></p>
-            <p><a href='https://watchmanriver.org/'><span>WebSite</span></a>
-                <a href='https://www.youtube.com/@WatchmanRiver'><span>YouTube</span></a>
-            </p>
-            <hr />
-            <p><img src="./assets/lk-3-1695388205247-6.webp" referrerpolicy="no-referrer" alt="lk-3"></p>
-            <p><a href='https://www.youtube.com/@FaithInTheFire777'><span>YouTube</span></a></p>
-            <hr />
-            <p><img src="./assets/lk-4-1695388205247-5.webp" referrerpolicy="no-referrer" alt="lk-4"></p>
-            <p><a href='https://encouragemen.blog/blog/'><span>Blog 4 encouragements</span></a></p>
-            <hr />
-            <p><img src="./assets/lk-5-1695388205247-7.webp" referrerpolicy="no-referrer" alt="lk-5"></p>
-            <p><a href='https://www.youtube.com/@Generation2434'><span>YouTube</span></a></p>
-            <hr />
-            <p><img src="./assets/lk-6-1695388205247-8.webp" referrerpolicy="no-referrer" alt="lk-6"></p>
-            <p><a href='https://www.youtube.com/@LastDaysAWAKENING'><span>YouTube</span></a></p>
-            <hr />
-            <p><img src="./assets/lk-7-1695388205247-10.webp" referrerpolicy="no-referrer" alt="lk-7"></p>
-            <p><a href='https://www.bitchute.com/channel/hke6emnNyvWj/'><span>BitChute</span></a></p>
-            <hr />
-            <p><img src="./assets/lk8-1695388205247-9.webp" referrerpolicy="no-referrer" alt="lk8"></p>
-            <p><a href='https://www.rev310.net/'><span>WebSite</span></a></p>
-            <hr />
-            <p><img src="./assets/lk-9-1695388205247-11.webp" referrerpolicy="no-referrer" alt="lk-9"></p>
-            <p><a href='https://www.deanodle.org/'><span>Dean Odle</span></a></p>
-            <hr />
-            <p><img src="./assets/lk-10-1695388205247-12.webp" referrerpolicy="no-referrer" alt="lk-10"></p>
-            <p><a href='https://www.jesusencounterministries.com/'><span>Jesus Encounter Ministries</span></a>
-                <a href='https://www.youtube.com/channel/UCmMLO7vxbA78hTr6EgguIYA'><span>YouTube</span></a>
-            </p>
-            <hr />
-            <p><img src="./assets/lk-11-1695388205247-13.webp" referrerpolicy="no-referrer" alt="lk-11"></p>
-            <p><a href='https://www.omegadynamics.org/'><span>Omega Dynamics</span></a>
-                <a href='https://www.calicobuffalobasecamp.com/'><span>Buffalo Base Camp</span></a>
-                <a href='https://www.youtube.com/@jamiewalden756'><span>YouTube</span></a>
-            </p>
-            <hr />
-            <p><img src="./assets/lk-12-1695388205247-15.webp" referrerpolicy="no-referrer" alt="lk-12"></p>
-            <p><a href='https://richiefromboston.tv/'><span>richiefromboston.tv</span></a>
-                <a href='https://www.bitchute.com/channel/juH53r3AyWVW/'><span>BitChute</span></a>
-                <a href='https://www.tiktok.com/@richiefromboston'><span>TikTok</span></a>
-            </p>
-            <hr />
-            <p><img src="./assets/lk-13-1695388205247-14.webp" referrerpolicy="no-referrer" alt="lk-13"></p>
-            <p><a href='https://www.youtube.com/@jasonzelda/featured'><span>YouTube</span></a></p>
-            <hr />
-            <p><img src="./assets/lk-14-1695388205247-16.webp" referrerpolicy="no-referrer" alt="lk-14"></p>
-            <p><a href='https://thelastreformation.com/'><span>thelastreformation.com</span></a>
-                <a href='https://map.thelastreformation.com/#'><span>Map</span></a>
-                <a href='https://www.youtube.com/@TheLastReformation'><span>YouTube</span></a>
-                <a href='https://friendsoftorben.com/'><span>Friends of Torben</span></a>
-            </p>
-            <hr />
-            <p><img src="./assets/lk-15-1695388205247-17.webp" referrerpolicy="no-referrer" alt="lk-15"></p>
-            <p><a href='https://www.bitchute.com/channel/OVxXA0uDWdVr/'><span>BitChute</span></a></p>
-            <hr />
-            <p><img src="./assets/lk-16-1695388205247-18.webp" referrerpolicy="no-referrer" alt="lk-16"></p>
-            <p><a href='https://www.youtube.com/@pastorcaryschmidt'><span>YouTube</span></a></p>
-            <hr />
-            <p><a href='https://the-lord-jesus-will.github.io/show-you/'><span>List Of Future Web-Sites</span></a><span>.~~~</span></p>
-        </div>
-    </div>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><p><video src="./assets/choose-theme.webm" autoplay loop muted></video></p><p><a href='./index-2.html'><span>Dark Theme</span></a><span> / </span><a href='./index.html'><span>Light Theme</span></a><span>.</span></p><p><video src="./assets/Delayed-Rapture-10-3-2023.webm" autoplay loop muted></video></p><p>&nbsp;</p><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/1f8uTVA_47A?si=E1ZSY-D2xnHC6v0K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><p><video src="./assets/Luke-4-14-21-10-3-2023.webm" autoplay loop muted></video></p><p><strong><span>14</span></strong><span>¶ And Jesus returned in the power of the Spirit into Galilee: and there went out a fame of him through all the region round about.</span>
+<strong><span>15</span></strong><span>And he taught in their synagogues, being glorified of all.</span></p><p><strong><span>16</span></strong><span>¶ And he came to Nazareth, where he had been brought up: and, as his custom was, he went into the synagogue on the sabbath day, and stood up for to read.</span>
+<strong><span>17</span></strong><span>And there was delivered unto him the book of the prophet Esaias. And when he had opened the book, he found the place where it was written,</span>
+<strong><span>18</span></strong><span>The Spirit of the Lord </span><em><span>is</span></em><span> upon me, because he hath anointed me to preach the gospel to the poor; he hath sent me to heal the brokenhearted, to preach deliverance to the captives, and recovering of sight to the blind, to set at liberty them that are bruised,</span>
+<strong><span>19</span></strong><span>To preach the acceptable year of the Lord.</span>
+<strong><span>20</span></strong><span>And he closed the book, and he gave </span><em><span>it</span></em><span> again to the minister, and sat down. And the eyes of all them that were in the synagogue were fastened on him.</span>
+<strong><span>21</span></strong><span>And he began to say unto them, This day is this scripture fulfilled in your ears.</span></p><hr /><p><video src="./assets/Isaiah-61-1-3-10-3-2023.webm" autoplay loop muted></video></p><p><strong><span>1</span></strong><span>The Spirit of the Lord GOD </span><em><span>is</span></em><span> upon me; because the LORD hath anointed me to preach good tidings unto the meek; he hath sent me to bind up the brokenhearted, to proclaim liberty to the captives, and the opening of the prison to </span><em><span>them</span></em><span> </span><em><span>that</span></em><span> </span><em><span>are</span></em><span> bound;</span>
+<strong><span>2</span></strong><font color="#ffff00"><span>To proclaim the acceptable year of the LORD</span></font><span>, and the </span><font color="#ff0000"><span>day of vengeance of our God; to comfort all that mourn</span></font><span>;</span>
+<strong><span>3</span></strong><span>To appoint unto them that mourn in Zion, to give unto them beauty for ashes, the oil of joy for mourning, the garment of praise for the spirit of heaviness; that they might be called trees of righteousness, the planting of the LORD, that he might be glorified.</span></p><hr /><p><video src="./assets/1-John-1-1-10-10-3-2023.webm" autoplay loop muted></video></p><p><strong><span>Category:</span></strong><span> General Epistles</span></p><p><strong><span>1</span></strong><span>That which was from the beginning, which we have heard, which we have seen with our eyes, which we have looked upon, and our hands have handled, of the Word of life;</span>
+<strong><span>2</span></strong><span>(For the life was manifested, and we have seen </span><em><span>it</span></em><span>, and bear witness, and shew unto you that eternal life, which was with the Father, and was manifested unto us;)</span>
+<strong><span>3</span></strong><span>That which we have seen and heard declare we unto you, that ye also may have fellowship with us: and truly our fellowship </span><em><span>is</span></em><span> with the Father, and with his Son Jesus Christ.</span>
+<strong><span>4</span></strong><span>And these things write we unto you, that your joy may be full.</span>
+<strong><span>5</span></strong><span>This then is the message which we have heard of him, and declare unto you, that God is light, and in him is no darkness at all.</span>
+<strong><span>6</span></strong><span>If we say that we have fellowship with him, and walk in darkness, we lie, and do not the truth:</span>
+<strong><span>7</span></strong><span>But if we walk in the light, as he is in the light, we have fellowship one with another, and the blood of Jesus Christ his Son cleanseth us from all sin.</span>
+<strong><span>8</span></strong><span>If we say that we have no sin, we deceive ourselves, and the truth is not in us.</span>
+<strong><span>9</span></strong><span>If we confess our sins, he is faithful and just to forgive us </span><em><span>our</span></em><span> sins, and to cleanse us from all unrighteousness.</span>
+<strong><span>10</span></strong><span>If we say that we have not sinned, we make him a liar, and his word is not in us.</span></p><hr /><iframe src="https://player.rss.com/good-old-news/1133304" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1133304/">Delated Rapture | RSS.com</a></iframe><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/Wa-RGnCfb9k?si=eJ48XSyHv2_6aFPn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/UZZr2rbVtzk?si=0vaFr5Kfzlq_660U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/n7sbdh5QWcQ?si=JITDF6FEFL7Sjr13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><hr /><iframe width="560" height="315" src="https://www.youtube.com/embed/_liL8E9t9_Y?si=_lZbLLG7dOQJK_ED" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><p><video src="./assets/Matthew-24-22-10-3-2023.webm" autoplay loop muted></video></p><p><strong><span>22</span></strong><font color="#ff0000"><span>And except those days should be shortened, there should no flesh be saved: but for the elect’s sake those days shall be shortened</span></font><span>.</span></p><hr /><p><video src="./assets/2-Thessalonians-2-9-12-10-3-2023.webm" autoplay loop muted></video></p><p><strong><span>9*</span></strong><span>Even* </span><em><span>him</span></em><span>, whose coming is after the working of Satan with all power and signs and lying wonders,</span>
+<strong><span>10</span></strong><span>And with all deceivableness of unrighteousness in them that perish; because they received not the love of the truth, that they might be saved.</span>
+<strong><span>11</span></strong><span>And for this cause God shall send them strong delusion, that they should believe a lie:</span>
+<strong><span>12</span></strong><span>That they all might be damned who believed not the truth, but had pleasure in unrighteousness.</span></p><hr /><p><video src="./assets/Matthew-24-24-10-3-2023.webm" autoplay loop muted></video></p><p><strong><span>24</span></strong><font color="#ff0000"><span>For there shall arise false Christs, and false prophets, and shall shew great signs and wonders; insomuch that, if</span></font><span> </span><em><span>it</span></em><span> </span><em><span>were</span></em><span> </span><font color="#ff0000"><span>possible, they shall deceive the very elect</span></font><span>.</span></p><hr /><p><video src="./assets/Luke-21-28-10-3-2023.webm" autoplay loop muted></video></p><p><strong><span>28</span></strong><font color="#ff0000"><span>And when these things begin to come to pass, then look up, and lift up your heads; for your redemption draweth nigh</span></font><span>.</span></p><hr /><p><video src="./assets/Romans-12-1-3-10-3-2023.webm" autoplay loop muted></video></p><p><strong><span>1</span></strong><span>I beseech you therefore, brethren, by the mercies of God, that ye present your bodies a living sacrifice, holy, acceptable unto God, </span><em><span>which</span></em><span> </span><em><span>is</span></em><span> your reasonable service.</span>
+<strong><span>2</span></strong><span>And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what </span><em><span>is</span></em><span> that good, and acceptable, and perfect, will of God.</span>
+<strong><span>3</span></strong><span>For I say, through the grace given unto me, to every man that is among you, not to think </span><em><span>of</span></em><span> </span><em><span>himself</span></em><span> more highly than he ought to think; but to think soberly, according as God hath dealt to every man the measure of faith.</span></p><hr /><p><video src="./assets/2-Corinthians-3-13-18-10-3-2023.webm" autoplay loop muted></video></p><p><strong><span>13</span></strong><span>And not as Moses, </span><em><span>which</span></em><span> put a vail over his face, that the children of Israel could not stedfastly look to the end of that which is abolished:</span>
+<strong><span>14</span></strong><span>But their minds were blinded: for until this day remaineth the same vail untaken away in the reading of the old testament; which </span><em><span>vail</span></em><span> is done away in Christ.</span>
+<strong><span>15</span></strong><span>But even unto this day, when Moses is read, the vail is upon their heart.</span>
+<strong><span>16</span></strong><span>Nevertheless when it shall turn to the Lord, the vail shall be taken away.</span>
+<strong><span>17</span></strong><span>Now the Lord is that Spirit: and where the Spirit of the Lord </span><em><span>is</span></em><span>, there </span><em><span>is</span></em><span> liberty.</span>
+<strong><span>18</span></strong><span>But we all, with open face beholding as in a glass the glory of the Lord, are changed into the same image from glory to glory, </span><em><span>even</span></em><span> as by the Spirit of the Lord.</span></p><hr /><p><video src="./assets/2-Corinthians-12-7-10-10-3-2023.webm" autoplay loop muted></video></p><p><strong><span>7</span></strong><span>And lest I should be exalted above measure through the abundance of the revelations, there was given to me a thorn in the flesh, the messenger of Satan to buffet me, lest I should be exalted above measure.</span>
+<strong><span>8</span></strong><span>For this thing I besought the Lord thrice, that it might depart from me.</span>
+<strong><span>9</span></strong><span>And he said unto me, My grace is sufficient for thee: for my strength is made perfect in weakness. Most gladly therefore will I rather glory in my infirmities, that the power of Christ may rest upon me.</span>
+<strong><span>10</span></strong><span>Therefore I take pleasure in infirmities, in reproaches, in necessities, in persecutions, in distresses for Christ’s sake: for when I am weak, then am I strong.</span></p><hr /><p><video src="./assets/Counter-Weight-10-3-2023.webm" autoplay loop muted></video></p><iframe width="560" height="315" src="https://www.youtube.com/embed/Fg5grFeLz6M?si=Wuj-wDPTN0P70Q1-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><hr /><p><video src="./assets/Counter-Weight-10-3-2023.webm" autoplay loop muted></video></p><iframe width="560" height="315" src="https://www.youtube.com/embed/dKe6lOOJCVE?si=wRQtCn6q2GdbWIU_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><hr /><iframe src="https://player.rss.com/good-old-news/1129120" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1129120/">Joel | RSS.com</a></iframe><p><video src="./assets/Joel-1-1-20-10-3-2023.webm" autoplay loop muted></video></p><p><strong><span>Category:</span></strong><span> Minor Prophets</span></p><p><strong><span>1</span></strong><span>The word of the LORD that came to Joel the son of Pethuel.</span>
+<strong><span>2</span></strong><span>Hear this, ye old men, and give ear, all ye inhabitants of the land. Hath this been in your days, or even in the days of your fathers?</span>
+<strong><span>3</span></strong><span>Tell ye your children of it, and </span><em><span>let</span></em><span> your children </span><em><span>tell</span></em><span> their children, and their children another generation.</span>
+<strong><span>4</span></strong><span>That which the palmerworm hath left hath the locust eaten; and that which the locust hath left hath the cankerworm eaten; and that which the cankerworm hath left hath the caterpiller eaten.</span>
+<strong><span>5</span></strong><span>Awake, ye drunkards, and weep; and howl, all ye drinkers of wine, because of the new wine; for it is cut off from your mouth.</span>
+<strong><span>6</span></strong><span>For a nation is come up upon my land, strong, and without number, whose teeth </span><em><span>are</span></em><span> the teeth of a lion, and he hath the cheek teeth of a great lion.</span>
+<strong><span>7</span></strong><span>He hath laid my vine waste, and barked my fig tree: he hath made it clean bare, and cast </span><em><span>it</span></em><span> away; the branches thereof are made white.</span></p><p><strong><span>8</span></strong><span>¶ Lament like a virgin girded with sackcloth for the husband of her youth.</span>
+<strong><span>9</span></strong><span>The meat offering and the drink offering is cut off from the house of the LORD; the priests, the LORD’S ministers, mourn.</span>
+<strong><span>10</span></strong><span>The field is wasted, the land mourneth; for the corn is wasted: the new wine is dried up, the oil languisheth.</span>
+<strong><span>11</span></strong><span>Be ye ashamed, O ye husbandmen; howl, O ye vinedressers, for the wheat and for the barley; because the harvest of the field is perished.</span>
+<strong><span>12</span></strong><span>The vine is dried up, and the fig tree languisheth; the pomegranate tree, the palm tree also, and the apple tree, </span><em><span>even</span></em><span> all the trees of the field, are withered: because joy is withered away from the sons of men.</span>
+<strong><span>13</span></strong><span>Gird yourselves, and lament, ye priests: howl, ye ministers of the altar: come, lie all night in sackcloth, ye ministers of my God: for the meat offering and the drink offering is withholden from the house of your God.</span></p><p><strong><span>14</span></strong><span>¶ Sanctify ye a fast, call a solemn assembly, gather the elders </span><em><span>and</span></em><span> all the inhabitants of the land </span><em><span>into</span></em><span> the house of the LORD your God, and cry unto the LORD,</span>
+<strong><span>15</span></strong><span>Alas for the day! for the day of the LORD </span><em><span>is</span></em><span> at hand, and as a destruction from the Almighty shall it come.</span>
+<strong><span>16</span></strong><span>Is not the meat cut off before our eyes, </span><em><span>yea</span></em><span>, joy and gladness from the house of our God?</span>
+<strong><span>17</span></strong><span>The seed is rotten under their clods, the garners are laid desolate, the barns are broken down; for the corn is withered.</span>
+<strong><span>18</span></strong><span>How do the beasts groan! the herds of cattle are perplexed, because they have no pasture; yea, the flocks of sheep are made desolate.</span>
+<strong><span>19</span></strong><span>O LORD, to thee will I cry: for the fire hath devoured the pastures of the wilderness, and the flame hath burned all the trees of the field.</span>
+<strong><span>20</span></strong><span>The beasts of the field cry also unto thee: for the rivers of waters are dried up, and the fire hath devoured the pastures of the wilderness.</span></p><hr /><p><video src="./assets/Joel-2-1-32-10-3-2023.webm" autoplay loop muted></video></p><p><strong><span>1</span></strong><span>Blow ye the trumpet in Zion, and sound an alarm in my holy mountain: let all the inhabitants of the land tremble: for the day of the LORD cometh, for </span><em><span>it</span></em><span> </span><em><span>is</span></em><span> nigh at hand;</span>
+<strong><span>2</span></strong><span>A day of darkness and of gloominess, a day of clouds and of thick darkness, as the morning spread upon the mountains: a great people and a strong; there hath not been ever the like, neither shall be any more after it, </span><em><span>even</span></em><span> to the years of many generations.</span>
+<strong><span>3</span></strong><span>A fire devoureth before them; and behind them a flame burneth: the land </span><em><span>is</span></em><span> as the garden of Eden before them, and behind them a desolate wilderness; yea, and nothing shall escape them.</span>
+<strong><span>4</span></strong><span>The appearance of them </span><em><span>is</span></em><span> as the appearance of horses; and as horsemen, so shall they run.</span>
+<strong><span>5</span></strong><span>Like the noise of chariots on the tops of mountains shall they leap, like the noise of a flame of fire that devoureth the stubble, as a strong people set in battle array.</span>
+<strong><span>6</span></strong><span>Before their face the people shall be much pained: all faces shall gather blackness.</span>
+<strong><span>7</span></strong><span>They shall run like mighty men; they shall climb the wall like men of war; and they shall march every one on his ways, and they shall not break their ranks:</span>
+<strong><span>8</span></strong><span>Neither shall one thrust another; they shall walk every one in his path: and </span><em><span>when</span></em><span> they fall upon the sword, they shall not be wounded.</span>
+<strong><span>9</span></strong><span>They shall run to and fro in the city; they shall run upon the wall, they shall climb up upon the houses; they shall enter in at the windows like a thief.</span>
+<strong><span>10</span></strong><span>The earth shall quake before them; the heavens shall tremble: the sun and the moon shall be dark, and the stars shall withdraw their shining:</span>
+<strong><span>11</span></strong><span>And the LORD shall utter his voice before his army: for his camp </span><em><span>is</span></em><span> very great: for </span><em><span>he</span></em><span> </span><em><span>is</span></em><span> strong that executeth his word: for the day of the LORD </span><em><span>is</span></em><span> great and very terrible; and who can abide it?</span></p><p><strong><span>12</span></strong><span>¶ Therefore also now, saith the LORD, turn ye </span><em><span>even</span></em><span> to me with all your heart, and with fasting, and with weeping, and with mourning:</span>
+<strong><span>13</span></strong><span>And rend your heart, and not your garments, and turn unto the LORD your God: for he </span><em><span>is</span></em><span> gracious and merciful, slow to anger, and of great kindness, and repenteth him of the evil.</span>
+<strong><span>14</span></strong><span>Who knoweth </span><em><span>if</span></em><span> he will return and repent, and leave a blessing behind him; </span><em><span>even</span></em><span> a meat offering and a drink offering unto the LORD your God?</span></p><p><strong><span>15</span></strong><span>¶ Blow the trumpet in Zion, sanctify a fast, call a solemn assembly:</span>
+<strong><span>16</span></strong><span>Gather the people, sanctify the congregation, assemble the elders, gather the children, and those that suck the breasts: let the bridegroom go forth of his chamber, and the bride out of her closet.</span>
+<strong><span>17</span></strong><span>Let the priests, the ministers of the LORD, weep between the porch and the altar, and let them say, Spare thy people, O LORD, and give not thine heritage to reproach, that the heathen should rule over them: wherefore should they say among the people, Where </span><em><span>is</span></em><span> their God?</span></p><p><strong><span>18</span></strong><span>¶ Then will the LORD be jealous for his land, and pity his people.</span>
+<strong><span>19</span></strong><span>Yea, the LORD will answer and say unto his people, Behold, I will send you corn, and wine, and oil, and ye shall be satisfied therewith: and I will no more make you a reproach among the heathen:</span>
+<strong><span>20</span></strong><span>But I will remove far off from you the northern </span><em><span>army</span></em><span>, and will drive him into a land barren and desolate, with his face toward the east sea, and his hinder part toward the utmost sea, and his stink shall come up, and his ill savour shall come up, because he hath done great things.</span></p><p><strong><span>21</span></strong><span>¶ Fear not, O land; be glad and rejoice: for the LORD will do great things.</span>
+<strong><span>22</span></strong><span>Be not afraid, ye beasts of the field: for the pastures of the wilderness do spring, for the tree beareth her fruit, the fig tree and the vine do yield their strength.</span>
+<strong><span>23</span></strong><span>Be glad then, ye children of Zion, and rejoice in the LORD your God: for he hath given you the former rain moderately, and he will cause to come down for you the rain, the former rain, and the latter rain in the first </span><em><span>month</span></em><span>.</span>
+<strong><span>24</span></strong><span>And the floors shall be full of wheat, and the fats shall overflow with wine and oil.</span>
+<strong><span>25</span></strong><span>And I will restore to you the years that the locust hath eaten, the cankerworm, and the caterpiller, and the palmerworm, my great army which I sent among you.</span>
+<strong><span>26</span></strong><span>And ye shall eat in plenty, and be satisfied, and praise the name of the LORD your God, that hath dealt wondrously with you: and my people shall never be ashamed.</span>
+<strong><span>27</span></strong><span>And ye shall know that I </span><em><span>am</span></em><span> in the midst of Israel, and </span><em><span>that</span></em><span> I </span><em><span>am</span></em><span> the LORD your God, and none else: and my people shall never be ashamed.</span></p><p><strong><span>28</span></strong><span>¶ And it shall come to pass afterward, </span><em><span>that</span></em><span> I will pour out my spirit upon all flesh; and your sons and your daughters shall prophesy, your old men shall dream dreams, your young men shall see visions:</span>
+<strong><span>29</span></strong><span>And also upon the servants and upon the handmaids in those days will I pour out my spirit.</span>
+<strong><span>30</span></strong><span>And I will shew wonders in the heavens and in the earth, blood, and fire, and pillars of smoke.</span>
+<strong><span>31</span></strong><span>The sun shall be turned into darkness, and the moon into blood, before the great and the terrible day of the LORD come.</span>
+<strong><span>32</span></strong><span>And it shall come to pass, </span><em><span>that</span></em><span> whosoever shall call on the name of the LORD shall be delivered: for in mount Zion and in Jerusalem shall be deliverance, as the LORD hath said, and in the remnant whom the LORD shall call.</span></p><hr /><p><video src="./assets/Joel-3-1-21-10-3-2023.webm" autoplay loop muted></video></p><p><strong><span>1</span></strong><span>For, behold, in those days, and in that time, when I shall bring again the captivity of Judah and Jerusalem,</span>
+<strong><span>2</span></strong><span>I will also gather all nations, and will bring them down into the valley of Jehoshaphat, and will plead with them there for my people and </span><em><span>for</span></em><span> my heritage Israel, whom they have scattered among the nations, and parted my land.</span>
+<strong><span>3</span></strong><span>And they have cast lots for my people; and have given a boy for an harlot, and sold a girl for wine, that they might drink.</span>
+<strong><span>4</span></strong><span>Yea, and what have ye to do with me, O Tyre, and Zidon, and all the coasts of Palestine? will ye render me a recompence? and if ye recompense me, swiftly </span><em><span>and</span></em><span> speedily will I return your recompence upon your own head;</span>
+<strong><span>5</span></strong><span>Because ye have taken my silver and my gold, and have carried into your temples my goodly pleasant things:</span>
+<strong><span>6</span></strong><span>The children also of Judah and the children of Jerusalem have ye sold unto the Grecians, that ye might remove them far from their border.</span>
+<strong><span>7</span></strong><span>Behold, I will raise them out of the place whither ye have sold them, and will return your recompence upon your own head:</span>
+<strong><span>8</span></strong><span>And I will sell your sons and your daughters into the hand of the children of Judah, and they shall sell them to the Sabeans, to a people far off: for the LORD hath spoken </span><em><span>it</span></em><span>.</span></p><p><strong><span>9</span></strong><span>¶ Proclaim ye this among the Gentiles; Prepare war, wake up the mighty men, let all the men of war draw near; let them come up:</span>
+<strong><span>10</span></strong><span>Beat your plowshares into swords, and your pruninghooks into spears: let the weak say, I </span><em><span>am</span></em><span> strong.</span>
+<strong><span>11</span></strong><span>Assemble yourselves, and come, all ye heathen, and gather yourselves together round about: thither cause thy mighty ones to come down, O LORD.</span>
+<strong><span>12</span></strong><span>Let the heathen be wakened, and come up to the valley of Jehoshaphat: for there will I sit to judge all the heathen round about.</span>
+<strong><span>13</span></strong><span>Put ye in the sickle, for the harvest is ripe: come, get you down; for the press is full, the fats overflow; for their wickedness </span><em><span>is</span></em><span> great.</span>
+<strong><span>14</span></strong><span>Multitudes, multitudes in the valley of decision: for the day of the LORD </span><em><span>is</span></em><span> near in the valley of decision.</span>
+<strong><span>15</span></strong><span>The sun and the moon shall be darkened, and the stars shall withdraw their shining.</span>
+<strong><span>16</span></strong><span>The LORD also shall roar out of Zion, and utter his voice from Jerusalem; and the heavens and the earth shall shake: but the LORD </span><em><span>will</span></em><span> </span><em><span>be</span></em><span> the hope of his people, and the strength of the children of Israel.</span>
+<strong><span>17</span></strong><span>So shall ye know that I </span><em><span>am</span></em><span> the LORD your God dwelling in Zion, my holy mountain: then shall Jerusalem be holy, and there shall no strangers pass through her any more.</span></p><p><strong><span>18</span></strong><span>¶ And it shall come to pass in that day, </span><em><span>that</span></em><span> the mountains shall drop down new wine, and the hills shall flow with milk, and all the rivers of Judah shall flow with waters, and a fountain shall come forth of the house of the LORD, and shall water the valley of Shittim.</span>
+<strong><span>19</span></strong><span>Egypt shall be a desolation, and Edom shall be a desolate wilderness, for the violence </span><em><span>against</span></em><span> the children of Judah, because they have shed innocent blood in their land.</span>
+<strong><span>20</span></strong><span>But Judah shall dwell for ever, and Jerusalem from generation to generation.</span>
+<strong><span>21</span></strong><span>For I will cleanse their blood </span><em><span>that</span></em><span> I have not cleansed: for the LORD dwelleth in Zion.</span></p><hr /><p><video src="./assets/Paul-Washer-Shocking-Message-10-3-2023.webm" autoplay loop muted></video></p><iframe width="560" height="315" src="https://www.youtube.com/embed/uuabITeO4l8?si=PhSTkZtIFRguld2H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><hr /><p><video src="./assets/The-Road-To-Salvation-10-3-2023.webm" autoplay loop muted></video></p><p><span>Dear Heavenly </span><em><strong><span>Father</span></strong></em>
+<em><strong><span>You</span></strong></em><span> know </span><em><span>everything</span></em><span> about me,</span>
+<span>and you know that I’m a </span><em><span>sinner</span></em><span>.</span></p><p>&nbsp;</p><p><span>For many years, I have </span><em><span>loved my sins</span></em><span>.</span>
+<span>I hereby </span><em><span>repent</span></em><span> from all </span><em><span>my sinful ways</span></em><span>.</span></p><p>&nbsp;</p><p><span>I’m willing to </span><em><span>change with </span><strong><span>Your</span></strong><span> help</span></em><span>,</span>
+<span>I receive </span><em><strong><span>Your</span></strong></em><span> </span><em><span>forgiveness</span></em><span>, and I pray that </span><em><strong><span>You</span></strong><span> help me</span></em>
+<em><span>forgive</span></em><span> those, who have </span><em><span>hurt me</span></em><span>.</span></p><p>&nbsp;</p><p><span>I know I only receive </span><em><span>forgiveness</span></em><span>, as I </span><em><span>forgive others</span></em><span>.</span></p><p>&nbsp;</p><p><span>Thank </span><em><strong><span>You</span></strong></em><span> that </span><em><strong><span>Jesus Christ</span></strong><span> died</span></em><span> on the cross for </span><em><span>us all</span></em><span>.</span>
+<span>Thank </span><em><strong><span>You</span></strong></em><span> that </span><em><strong><span>He</span></strong></em><span> offers </span><em><strong><span>His</span></strong></em><span> </span><em><span>righteousness</span></em><span> to me,</span>
+<span>and today this very day, I receive that </span><em><span>righteousness</span></em><span>.</span></p><p>&nbsp;</p><p><span>I </span><em><span>hereby</span></em><span> put my </span><em><span>faith</span></em><span> in </span><em><strong><span>Him</span></strong></em><span>, the </span><em><strong><span>savior</span></strong></em><span> of the world.</span>
+<span>So please </span><em><strong><span>God</span></strong></em><span> have </span><em><span>mercy</span></em><span> on me, a </span><em><span>sinner</span></em><span>.</span>
+<span>Save me </span><em><strong><span>Jesus Christ</span></strong></em><span>, and today this very day,</span>
+<em><strong><span>I commit my life to you Lord Jesus Christ</span></strong></em><span>.</span></p><p><video src="./assets/I-Pray-These-Things-In-The-M-10-3-2023.webm" autoplay loop muted></video></p><p><span>You can download the </span><em><strong><span>Road To Salvation</span></strong></em><span> in more formats:  </span><a href='assets\the-road-to-salvation.zip'><span>Here</span></a><span>.</span></p><hr /><p><video src="./assets/Romans-8-1-39-10-3-2023.webm" autoplay loop muted></video></p><p>&nbsp;</p><iframe src="https://player.rss.com/good-old-news/1137630" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1137630/">Romans 8 | RSS.com</a></iframe><p><strong><span>1*</span></strong><span>There* </span><em><span>is</span></em><span> therefore now no condemnation to them which are in Christ Jesus, who walk not after the flesh, but after the Spirit.</span>
+<strong><span>2</span></strong><span>For the law of the Spirit of life in Christ Jesus hath made me free from the law of sin and death.</span>
+<strong><span>3</span></strong><span>For what the law could not do, in that it was weak through the flesh, God sending his own Son in the likeness of sinful flesh, and for sin, condemned sin in the flesh:</span>
+<strong><span>4</span></strong><span>That the righteousness of the law might be fulfilled in us, who walk not after the flesh, but after the Spirit.</span>
+<strong><span>5</span></strong><span>For they that are after the flesh do mind the things of the flesh; but they that are after the Spirit the things of the Spirit.</span>
+<strong><span>6</span></strong><span>For to be carnally minded </span><em><span>is</span></em><span> death; but to be spiritually minded </span><em><span>is</span></em><span> life and peace.</span>
+<strong><span>7</span></strong><span>Because the carnal mind </span><em><span>is</span></em><span> enmity against God: for it is not subject to the law of God, neither indeed can be.</span>
+<strong><span>8</span></strong><span>So then they that are in the flesh cannot please God.</span>
+<strong><span>9</span></strong><span>But ye are not in the flesh, but in the Spirit, if so be that the Spirit of God dwell in you. Now if any man have not the Spirit of Christ, he is none of his.</span>
+<strong><span>10</span></strong><span>And if Christ </span><em><span>be</span></em><span> in you, the body </span><em><span>is</span></em><span> dead because of sin; but the Spirit </span><em><span>is</span></em><span> life because of righteousness.</span>
+<strong><span>11</span></strong><span>But if the Spirit of him that raised up Jesus from the dead dwell in you, he that raised up Christ from the dead shall also quicken your mortal bodies by his Spirit that dwelleth in you.</span>
+<strong><span>12</span></strong><span>Therefore, brethren, we are debtors, not to the flesh, to live after the flesh.</span>
+<strong><span>13</span></strong><span>For if ye live after the flesh, ye shall die: but if ye through the Spirit do mortify the deeds of the body, ye shall live.</span>
+<strong><span>14</span></strong><span>For as many as are led by the Spirit of God, they are the sons of God.</span>
+<strong><span>15</span></strong><span>For ye have not received the spirit of bondage again to fear; but ye have received the Spirit of adoption, whereby we cry, Abba, Father.</span>
+<strong><span>16</span></strong><span>The Spirit itself beareth witness with our spirit, that we are the children of God:</span>
+<strong><span>17</span></strong><span>And if children, then heirs; heirs of God, and joint-heirs with Christ; if so be that we suffer with </span><em><span>him</span></em><span>, that we may be also glorified together.</span>
+<strong><span>18</span></strong><span>For I reckon that the sufferings of this present time </span><em><span>are</span></em><span> not worthy </span><em><span>to</span></em><span> </span><em><span>be</span></em><span> </span><em><span>compared</span></em><span> with the glory which shall be revealed in us.</span>
+<strong><span>19</span></strong><span>For the earnest expectation of the creature waiteth for the manifestation of the sons of God.</span>
+<strong><span>20</span></strong><span>For the creature was made subject to vanity, not willingly, but by reason of him who hath subjected </span><em><span>the</span></em><span> </span><em><span>same</span></em><span> in hope,</span>
+<strong><span>21</span></strong><span>Because the creature itself also shall be delivered from the bondage of corruption into the glorious liberty of the children of God.</span>
+<strong><span>22</span></strong><span>For we know that the whole creation groaneth and travaileth in pain together until now.</span>
+<strong><span>23</span></strong><span>And not only </span><em><span>they</span></em><span>, but ourselves also, which have the firstfruits of the Spirit, even we ourselves groan within ourselves, waiting for the adoption, </span><em><span>to</span></em><span> </span><em><span>wit</span></em><span>, the redemption of our body.</span>
+<strong><span>24</span></strong><span>For we are saved by hope: but hope that is seen is not hope: for what a man seeth, why doth he yet hope for?</span>
+<strong><span>25</span></strong><span>But if we hope for that we see not, </span><em><span>then</span></em><span> do we with patience wait for </span><em><span>it</span></em><span>.</span>
+<strong><span>26</span></strong><span>Likewise the Spirit also helpeth our infirmities: for we know not what we should pray for as we ought: but the Spirit itself maketh intercession for us with groanings which cannot be uttered.</span>
+<strong><span>27</span></strong><span>And he that searcheth the hearts knoweth what </span><em><span>is</span></em><span> the mind of the Spirit, because he maketh intercession for the saints according to </span><em><span>the</span></em><span> </span><em><span>will</span></em><span> </span><em><span>of</span></em><span> God.</span>
+<strong><span>28</span></strong><span>And we know that all things work together for good to them that love God, to them who are the called according to </span><em><span>his</span></em><span> purpose.</span>
+<strong><span>29</span></strong><span>For whom he did foreknow, he also did predestinate </span><em><span>to</span></em><span> </span><em><span>be</span></em><span> conformed to the image of his Son, that he might be the firstborn among many brethren.</span>
+<strong><span>30</span></strong><span>Moreover whom he did predestinate, them he also called: and whom he called, them he also justified: and whom he justified, them he also glorified.</span>
+<strong><span>31</span></strong><span>What shall we then say to these things? If God </span><em><span>be</span></em><span> for us, who </span><em><span>can</span></em><span> </span><em><span>be</span></em><span> against us?</span>
+<strong><span>32</span></strong><span>He that spared not his own Son, but delivered him up for us all, how shall he not with him also freely give us all things?</span>
+<strong><span>33</span></strong><span>Who shall lay any thing to the charge of God’s elect? </span><em><span>It</span></em><span> </span><em><span>is</span></em><span> God that justifieth.</span>
+<strong><span>34</span></strong><span>Who </span><em><span>is</span></em><span> he that condemneth? </span><em><span>It</span></em><span> </span><em><span>is</span></em><span> Christ that died, yea rather, that is risen again, who is even at the right hand of God, who also maketh intercession for us.</span>
+<strong><span>35</span></strong><span>Who shall separate us from the love of Christ? </span><em><span>shall</span></em><span> tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword?</span>
+<strong><span>36</span></strong><span>As it is written, For thy sake we are killed all the day long; we are accounted as sheep for the slaughter.</span>
+<strong><span>37</span></strong><span>Nay, in all these things we are more than conquerors through him that loved us.</span>
+<strong><span>38</span></strong><span>For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,</span>
+<strong><span>39</span></strong><span>Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.</span></p><hr /><p><video src="./assets/Psalm-27-1-14-10-3-2023.webm" autoplay loop muted></video></p><iframe src="https://player.rss.com/good-old-news/1137626" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1137626/">Psalm 27 | RSS.com</a></iframe><p><em><span>A</span></em><span> </span><em><span>Psalm</span></em><span> of David.</span></p><p><strong><span>1</span></strong><span>The LORD </span><em><span>is</span></em><span> my light and my salvation; whom shall I fear? the LORD </span><em><span>is</span></em><span> the strength of my life; of whom shall I be afraid?</span>
+<strong><span>2</span></strong><span>When the wicked, </span><em><span>even</span></em><span> mine enemies and my foes, came upon me to eat up my flesh, they stumbled and fell.</span>
+<strong><span>3</span></strong><span>Though an host should encamp against me, my heart shall not fear: though war should rise against me, in this </span><em><span>will</span></em><span> I </span><em><span>be</span></em><span> confident.</span>
+<strong><span>4</span></strong><span>One </span><em><span>thing</span></em><span> have I desired of the LORD, that will I seek after; that I may dwell in the house of the LORD all the days of my life, to behold the beauty of the LORD, and to enquire in his temple.</span>
+<strong><span>5</span></strong><span>For in the time of trouble he shall hide me in his pavilion: in the secret of his tabernacle shall he hide me; he shall set me up upon a rock.</span>
+<strong><span>6</span></strong><span>And now shall mine head be lifted up above mine enemies round about me: therefore will I offer in his tabernacle sacrifices of joy; I will sing, yea, I will sing praises unto the LORD.</span>
+<strong><span>7</span></strong><span>Hear, O LORD, </span><em><span>when</span></em><span> I cry with my voice: have mercy also upon me, and answer me.</span>
+<strong><span>8*</span></strong><span>When* </span><em><span>thou</span></em><span> </span><em><span>saidst</span></em><span>, Seek ye my face; my heart said unto thee, Thy face, LORD, will I seek.</span>
+<strong><span>9</span></strong><span>Hide not thy face </span><em><span>far</span></em><span> from me; put not thy servant away in anger: thou hast been my help; leave me not, neither forsake me, O God of my salvation.</span>
+<strong><span>10</span></strong><span>When my father and my mother forsake me, then the LORD will take me up.</span>
+<strong><span>11</span></strong><span>Teach me thy way, O LORD, and lead me in a plain path, because of mine enemies.</span>
+<strong><span>12</span></strong><span>Deliver me not over unto the will of mine enemies: for false witnesses are risen up against me, and such as breathe out cruelty.</span>
+<strong><span>13*</span></strong><span>I* </span><em><span>had</span></em><span> </span><em><span>fainted</span></em><span>, unless I had believed to see the goodness of the LORD in the land of the living.</span>
+<strong><span>14</span></strong><span>Wait on the LORD: be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD.</span></p><hr /><p><video src="./assets/Psalm-91-1-16-10-3-2023.webm" autoplay loop muted></video></p><p>&nbsp;</p><iframe src="https://player.rss.com/good-old-news/1137628" style="width: 100%" title="Good Old News" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><a href="https://rss.com/podcasts/good-old-news/1137628/">Psalm 91 | RSS.com</a></iframe><p><strong><span>1</span></strong><span>He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty.</span>
+<strong><span>2</span></strong><span>I will say of the LORD, </span><em><span>He</span></em><span> </span><em><span>is</span></em><span> my refuge and my fortress: my God; in him will I trust.</span>
+<strong><span>3</span></strong><span>Surely he shall deliver thee from the snare of the fowler, </span><em><span>and</span></em><span> from the noisome pestilence.</span>
+<strong><span>4</span></strong><span>He shall cover thee with his feathers, and under his wings shalt thou trust: his truth </span><em><span>shall</span></em><span> </span><em><span>be</span></em><span> </span><em><span>thy</span></em><span> shield and buckler.</span>
+<strong><span>5</span></strong><span>Thou shalt not be afraid for the terror by night; </span><em><span>nor</span></em><span> for the arrow </span><em><span>that</span></em><span> flieth by day;</span>
+<strong><span>6*</span></strong><span>Nor* for the pestilence </span><em><span>that</span></em><span> walketh in darkness; </span><em><span>nor</span></em><span> for the destruction </span><em><span>that</span></em><span> wasteth at noonday.</span>
+<strong><span>7</span></strong><span>A thousand shall fall at thy side, and ten thousand at thy right hand; </span><em><span>but</span></em><span> it shall not come nigh thee.</span>
+<strong><span>8</span></strong><span>Only with thine eyes shalt thou behold and see the reward of the wicked.</span>
+<strong><span>9</span></strong><span>Because thou hast made the LORD, </span><em><span>which</span></em><span> </span><em><span>is</span></em><span> my refuge, </span><em><span>even</span></em><span> the most High, thy habitation;</span>
+<strong><span>10</span></strong><span>There shall no evil befall thee, neither shall any plague come nigh thy dwelling.</span>
+<strong><span>11</span></strong><span>For he shall give his angels charge over thee, to keep thee in all thy ways.</span>
+<strong><span>12</span></strong><span>They shall bear thee up in </span><em><span>their</span></em><span> hands, lest thou dash thy foot against a stone.</span>
+<strong><span>13</span></strong><span>Thou shalt tread upon the lion and adder: the young lion and the dragon shalt thou trample under feet.</span>
+<strong><span>14</span></strong><span>Because he hath set his love upon me, therefore will I deliver him: I will set him on high, because he hath known my name.</span>
+<strong><span>15</span></strong><span>He shall call upon me, and I will answer him: I </span><em><span>will</span></em><span> </span><em><span>be</span></em><span> with him in trouble; I will deliver him, and honour him.</span>
+<strong><span>16</span></strong><span>With long life will I satisfy him, and shew him my salvation.</span></p><hr /><p><span>You can use our bible: </span><a href='https://caught-up.net/bible/index.html'><span>Here</span></a><span>.</span></p><p>&nbsp;</p><p><span>Or download it at one of these links:</span></p><p><span>Download Locations: </span>
+<img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='https://drive.google.com/file/d/12claUn5wws8BNZ15TrtzrjkHqA6AjI_W/view?usp=sharing'><span>First Location</span></a><span> </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32">
+<img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='https://drive.google.com/file/d/1nIob4Lk8895arc1_rpdLj4Nz3uKY1JSI/view?usp=sharing'><span>Second Location</span></a><span> </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32">
+<img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='https://drive.google.com/file/d/12GOanEAg04X7tkq3dVH9Z7wF0yHC81pB/view?usp=sharing'><span>Third Location</span></a><span> </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32">
+<img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"><span> </span><a href='https://drive.google.com/file/d/1ZIA2dnyxV4hOm00BzIZQzxnrKAkR0C04/view?usp=sharing'><span>Forth Location</span></a><span>  </span><img src="./assets/download-32.webp" referrerpolicy="no-referrer" alt="download-32"></p><hr /><p><img src="./assets/lk-1-1695388205247-4.webp" referrerpolicy="no-referrer" alt="lk-1"></p><p><a href='https://www.jdfarag.org/'><span>Website</span></a>
+<a href='https://www.youtube.com/@JDFaragTV'><span>YouTube</span></a></p><hr /><p><img src="./assets/lk-2-1694374231772-35-1695388205246-3.webp" referrerpolicy="no-referrer" alt="lk-2"></p><p><a href='https://watchmanriver.org/'><span>WebSite</span></a>
+<a href='https://www.youtube.com/@WatchmanRiver'><span>YouTube</span></a></p><hr /><p><img src="./assets/lk-3-1695388205247-6.webp" referrerpolicy="no-referrer" alt="lk-3"></p><p><a href='https://www.youtube.com/@FaithInTheFire777'><span>YouTube</span></a></p><hr /><p><img src="./assets/lk-4-1695388205247-5.webp" referrerpolicy="no-referrer" alt="lk-4"></p><p><a href='https://encouragemen.blog/blog/'><span>Blog 4 encouragements</span></a></p><hr /><p><img src="./assets/lk-5-1695388205247-7.webp" referrerpolicy="no-referrer" alt="lk-5"></p><p><a href='https://www.youtube.com/@Generation2434'><span>YouTube</span></a></p><hr /><p><img src="./assets/lk-6-1695388205247-8.webp" referrerpolicy="no-referrer" alt="lk-6"></p><p><a href='https://www.youtube.com/@LastDaysAWAKENING'><span>YouTube</span></a></p><hr /><p><img src="./assets/lk-7-1695388205247-10.webp" referrerpolicy="no-referrer" alt="lk-7"></p><p><a href='https://www.bitchute.com/channel/hke6emnNyvWj/'><span>BitChute</span></a></p><hr /><p><img src="./assets/lk8-1695388205247-9.webp" referrerpolicy="no-referrer" alt="lk8"></p><p><a href='https://www.rev310.net/'><span>WebSite</span></a></p><hr /><p><img src="./assets/lk-9-1695388205247-11.webp" referrerpolicy="no-referrer" alt="lk-9"></p><p><a href='https://www.deanodle.org/'><span>Dean Odle</span></a></p><hr /><p><img src="./assets/lk-10-1695388205247-12.webp" referrerpolicy="no-referrer" alt="lk-10"></p><p><a href='https://www.jesusencounterministries.com/'><span>Jesus Encounter Ministries</span></a>
+<a href='https://www.youtube.com/channel/UCmMLO7vxbA78hTr6EgguIYA'><span>YouTube</span></a></p><hr /><p><img src="./assets/lk-11-1695388205247-13.webp" referrerpolicy="no-referrer" alt="lk-11"></p><p><a href='https://www.omegadynamics.org/'><span>Omega Dynamics</span></a>
+<a href='https://www.calicobuffalobasecamp.com/'><span>Buffalo Base Camp</span></a>
+<a href='https://www.youtube.com/@jamiewalden756'><span>YouTube</span></a></p><hr /><p><img src="./assets/lk-12-1695388205247-15.webp" referrerpolicy="no-referrer" alt="lk-12"></p><p><a href='https://richiefromboston.tv/'><span>richiefromboston.tv</span></a>
+<a href='https://www.bitchute.com/channel/juH53r3AyWVW/'><span>BitChute</span></a>
+<a href='https://www.tiktok.com/@richiefromboston'><span>TikTok</span></a></p><hr /><p><img src="./assets/lk-13-1695388205247-14.webp" referrerpolicy="no-referrer" alt="lk-13"></p><p><a href='https://www.youtube.com/@jasonzelda/featured'><span>YouTube</span></a></p><hr /><p><img src="./assets/lk-14-1695388205247-16.webp" referrerpolicy="no-referrer" alt="lk-14"></p><p><a href='https://thelastreformation.com/'><span>thelastreformation.com</span></a>
+<a href='https://map.thelastreformation.com/#'><span>Map</span></a>
+<a href='https://www.youtube.com/@TheLastReformation'><span>YouTube</span></a>
+<a href='https://friendsoftorben.com/'><span>Friends of Torben</span></a></p><hr /><p><img src="./assets/lk-15-1695388205247-17.webp" referrerpolicy="no-referrer" alt="lk-15"></p><p><a href='https://www.bitchute.com/channel/OVxXA0uDWdVr/'><span>BitChute</span></a></p><hr /><p><img src="./assets/lk-16-1695388205247-18.webp" referrerpolicy="no-referrer" alt="lk-16"></p><p><a href='https://www.youtube.com/@pastorcaryschmidt'><span>YouTube</span></a></p><hr /><p><a href='https://the-lord-jesus-will.github.io/show-you/'><span>List Of Future Web-Sites</span></a><span>.~~~</span></p></div></div>
 </body>
-
 </html>
